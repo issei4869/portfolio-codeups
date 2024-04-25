@@ -1,0 +1,55 @@
+@use 'global' as *;
+
+.wpcf7-spinner {
+  display: none;
+}
+
+.wpcf7-list-item {
+  display: block;
+  margin: 0;
+}
+
+//エラー表示
+input.wpcf7-not-valid,
+textarea.wpcf7-not-valid {
+  border: 1px solid #c94800;
+  background: rgba(201, 72, 0, 0.2);
+}
+
+input.wpcf7-not-valid::placeholder {
+  color: $base-color;
+}
+
+.wpcf7-not-valid [type=checkbox] + span::before {
+  border: 1px solid #c94800;
+  background: rgba(201, 72, 0, 0.2);
+}
+
+//「入力してください」を非表示
+.wpcf7-not-valid-tip {
+  display: none;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output {
+  border: none;
+  text-align: center;
+  color: #c94800;
+  font-size: rem(14);
+}
+
+
+
+// input[type="submit"] {
+//   appearance: none;
+//   -webkit-appearance: none;
+//   -moz-appearance: none;
+//   font-size: 20px;
+//   font-weight: bold;
+//   width: 200px;
+//   padding: 10px;
+//   border-radius: 10px;
+//   background-color: #233b6c;
+//   border: none;
+//   color: #fff;
+//   cursor: pointer;
+// }

@@ -1,0 +1,11 @@
+@use 'global' as *;
+
+.privacypolicy {
+  
+}
+
+.privacypolicy__inner.inner {
+  @include mq('md') {
+    max-width: rem(850);
+  }
+}

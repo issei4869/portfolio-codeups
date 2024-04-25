@@ -1,0 +1,90 @@
+@use 'global' as *;
+
+.toggle-list__item {
+  
+}
+
+.toggle-list__item + .toggle-list__item {
+  margin-top: rem(-2);
+}
+
+.toggle-list__item-question,
+.toggle-list__item-answer {
+  color: $accent-color;
+  font-size: rem(24);
+  line-height: calc(35 / 24);
+  padding-left: rem(32);
+  cursor: pointer;
+}
+
+.toggle-list__item-question {
+  position: relative;
+  text-indent: rem(-3);
+  cursor: pointer;
+  @include mq(md){
+  }
+}
+
+.toggle-list__item-question ul {
+  display: none;
+}
+
+.toggle-list__item-top {
+  padding: rem(3) 0;
+  text-indent: rem(1);
+  // margin-top: rem(4);
+}
+
+.toggle-list__item-top + .toggle-list__item-top {
+  // margin-top: rem(3);
+}
+
+.toggle-list__item-answer {
+  position: relative;
+  margin-left: rem(24);
+  @include mq(md){
+    //padding: rem(20) rem(40) rem(15) rem(80);
+  }
+}
+
+.toggle-list__item-question::before,
+.toggle-list__item-answer::before {
+  content: "";
+  position: absolute;
+  top: 30%;
+  left: rem(3);
+  height: calc(rem(21) / 2 * tan(60deg));
+  width: rem(21);
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  background-color: $accent-color;
+  transition: .3s;
+  @include mq(md){
+    
+  }
+}
+
+.toggle-list__item-question::before {
+  transform: rotate(180deg);
+}
+
+.toggle-list__item-question--two::before {
+  transform: rotate(90deg);
+}
+
+.toggle-list__item-answer::before {
+  transform: rotate(90deg);
+}
+
+.toggle-list__item-question.is-open::before {
+  transform: rotate(90deg);
+}
+
+.toggle-list__item-question--two.is-open::before {
+  transform: rotate(180deg);
+}
+
+.toggle-list__item-answer.is-open::before {
+  transform: rotate(180deg);
+}
+
+

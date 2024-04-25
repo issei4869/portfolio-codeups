@@ -1,0 +1,17 @@
+@use 'global' as *;
+
+.file-swiper {
+  height: 100vh;
+  min-height: rem(400);
+}
+
+.file-swiper__img,
+.file-swiper__img img {
+  height: inherit;
+  min-height: inherit;
+}
+
+.file-swiper__img img {
+  width: 100%;
+  object-fit: cover;
+}

@@ -1,0 +1,14 @@
+@use 'global' as *;
+
+.blog-sidebar-items {
+
+}
+
+.blog-sidebar-items__item + .blog-sidebar-items__item{
+  margin-top: rem(39);
+}
+
+.blog-sidebar-items__btn {
+  margin-top: rem(40);
+  text-align: center;
+}

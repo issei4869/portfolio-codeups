@@ -1,0 +1,30 @@
+@use 'global' as *;
+
+.page-top {
+  position: fixed;
+  width: rem(53);
+  height: rem(53);
+  right: rem(12);
+  bottom: rem(150);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease 0s;
+  background-color: $base-color;
+  border-radius: 50%;
+  @include mq('md') {
+    width: rem(80);
+    height: rem(80);
+    right: rem(20);
+    bottom: rem(94);
+  }
+}
+
+.page-top.is-show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.page-top:hover.is-show {
+  opacity: 0.7;
+}

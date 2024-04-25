@@ -1,0 +1,87 @@
+@use 'global' as *;
+
+.form__wrap {
+  padding-bottom: rem(23);
+  border-bottom: rem(1) dashed $accent-color;
+  @include mq(md){
+    display: flex;
+    padding-bottom: rem(39);
+  }
+}
+
+.form__wrap + .form__wrap.form__wrap--privacy {
+  padding-bottom: 0;
+  border-bottom: 0;
+  display: flex;
+  justify-content: center;
+  @include mq('md') {
+    padding-top: rem(79);
+    padding-bottom: 0;
+  }
+}
+
+.form__wrap.form__wrap--textarea {
+  @include mq(md){
+    align-items: flex-start;
+  }
+}
+
+.form__wrap + .form__wrap {
+  padding-top: rem(24);
+  @include mq('md') {
+    padding-top: rem(40);
+  }
+}
+
+.form__label {
+  font-weight: $bold;
+  line-height: calc(23 / 16);
+  @include mq(md){
+    max-width: rem(220);
+    width: 100%;
+  }
+}
+
+.form__label span {
+  font-weight: $normal;
+  margin-left: rem(8);
+  padding: rem(2) rem(12) rem(2) rem(11);
+  display: inline-block;
+  font-size: rem(12);
+  line-height: calc(17 / 12);
+  letter-spacing: .4em;
+  text-indent: .4em;
+  color: $base-color;
+  background-color: #C94800;
+}
+
+.form__input,
+.form__select,
+.form__radio,
+.form__checkbox,
+.form__textarea {
+  margin-top: rem(17);
+  @include mq(md){
+    margin-top: 0;
+  }
+}
+
+.form__checkbox {
+  @include mq('md') {
+    margin-top: rem(2);
+  }
+}
+
+.form__input,
+.form__textarea,
+.form__select {
+  flex-grow: 1;
+}
+
+.form__submit {
+  margin-top: rem(25);
+  text-align: center;
+  @include mq('md') {
+    margin-top: rem(40);
+  }
+}

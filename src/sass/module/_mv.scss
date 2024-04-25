@@ -1,0 +1,79 @@
+@use 'global' as *;
+
+.mv {
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  min-height: rem(400);
+}
+
+.mv--sub {
+  height: rem(460);
+  @include mq('md') {
+    height: rem(548);
+  }
+}
+
+.mv__inner {
+  height: inherit;
+  min-height: inherit;
+}
+
+.mv__title-wrap {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+  color: #fff;
+  text-align: center;
+}
+
+.mv__title-wrap--sub {
+  @include mq('md') {
+    top: 61%;
+    transform: translate(-50%,-61%);
+  }
+}
+
+.mv__main-title {
+  font-size: rem(40);
+  color: $base-color;
+  font-family: $english-second-font-family;
+  line-height: calc(48 / 40);
+  letter-spacing: 0.54em;
+  text-indent: 0.54em;
+  @include mq(md){
+    font-size: rem(80);
+    line-height: calc(100 / 80);
+  }
+}
+
+.mv__main-title--sub {
+  letter-spacing: initial;
+  text-indent: initial;
+}
+
+.mv__sub-title {
+  //margin-top: rem(20);
+  font-size: rem(20);
+  color: $base-color;
+  font-family: $english-font-family;
+  line-height: calc(33 / 20);
+  @include mq(md){
+    
+  }
+}
+
+.mv__swiper,
+.mv__swiper-img,
+.mv__swiper-img img {
+  height: inherit;
+  min-height: inherit;
+}
+
+.mv__swiper-img img {
+  width: 100%;
+  object-fit: cover;
+}

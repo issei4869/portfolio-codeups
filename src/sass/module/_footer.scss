@@ -1,0 +1,162 @@
+@use 'global' as *;
+
+.footer {
+  padding: rem(48) 0 rem(56);
+  background-color: $accent-color;
+  @include mq(md){
+    padding: rem(80) 0;
+  }
+}
+
+.footer--404 {
+  padding-top: rem(52);
+  @include mq('md') {
+    padding-top: rem(80);
+  }
+}
+
+.footer__inner {
+  margin: 0 auto;
+  max-width: rem(530);
+  padding: 0 rem(14);
+  // max-width: rem(630);
+  // width: 100%;
+  @include mq(md){
+    max-width: rem(1130);
+    width: 100%;
+    padding: 0 rem(25);
+  }
+}
+
+.footer__content {
+
+}
+
+.footer__top {
+  @include mq(md){
+    margin-top: 0;
+    display: flex;
+    gap: rem(40);
+  }
+}
+
+.footer__logo {
+  max-width: rem(120);
+  width: 100%;
+  @include mq(md){
+      max-width: rem(200);
+  }
+}
+
+.footer__logo a {
+  //padding: rem(10) 0;
+  display: block;
+  @include mq(md){
+    //padding: rem(15) 0;
+  }
+}
+
+.footer__logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.footer__sns {
+  margin-top: rem(16);
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  @include mq(md){
+    margin-top: rem(35);
+  }
+}
+
+.footer__sns-icon {
+  display: block;
+  max-width: rem(24);
+  width: 100%;
+  @include mq('md') {
+    max-width: rem(32);
+  }
+}
+
+.footer__sns-icon + .footer__sns-icon {
+  margin-left: rem(16);
+  @include mq(md){
+    
+  }
+}
+
+.footer__sns-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.footer__bottom {
+  margin-top: rem(40);
+  display: flex;
+  // justify-content: space-between;
+  //gap: rem(25);
+  padding-left: rem(23);
+  @include mq(md){
+    margin-top: rem(24);
+    // display: block;
+    gap: rem(13);
+    padding-left: rem(22);
+    // max-width: rem(550);
+    // width: 100%;
+  }
+}
+
+.footer__wrap {
+  width: 50%;
+  @include mq('md') {
+    display: flex;
+    gap: rem(142);
+  }
+}
+
+.footer__wrap + .footer__wrap {
+  padding-left: rem(22);
+}
+
+// .footer__nav {
+//   @include mq(md){
+//     display: flex;
+//   }
+// }
+
+// .footer__nav:nth-child(2n) {
+//   margin-top: rem(40);
+//   @include mq('md') {
+//     margin-top: 0;
+//   }
+// }
+
+
+.footer__logo,
+.footer__sns-icon {
+  transition: all .3s;
+}
+
+.footer__logo:hover,
+.footer__sns-icon:hover {
+  opacity: 0.7;
+}
+
+.footer__copyright {
+  color: $base-color;
+  font-family: $english-font-family;
+  margin-top: rem(40);
+  display: block;
+  font-size: rem(12);
+  line-height: calc(18 / 12);
+  text-align: center;
+  @include mq(md){
+    margin-top: rem(80);
+    font-size: rem(14);
+    line-height: calc(18 / 14);
+  }
+}

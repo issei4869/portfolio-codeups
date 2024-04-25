@@ -1,0 +1,120 @@
+@use 'global' as *;
+
+.sub-aboutus {
+  position: relative;
+}
+
+.sub-aboutus::before {
+  content: "";
+  position: absolute;
+  background-image: url(../images/common/goldfish2.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  top: rem(-24);
+  left: rem(15);
+  min-width: rem(120);
+  min-height: rem(55);
+  z-index: -1;
+  @include mq('md') {
+    content: "";
+    position: absolute;
+    background-image: url(../images/common/goldfish2.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    top: rem(-151);
+    left: calc(50% - min(48%, rem(619)));
+    min-width: rem(301);
+    min-height: rem(138);
+  }
+}
+
+.sub-aboutus__inner {
+
+}
+
+.sub-aboutus__wrap {
+  @include mq('md') {
+    position: relative;
+  }
+}
+
+.sub-aboutus__img-left {
+  @include mq('md') {
+    position: absolute;
+    left: 0;
+    top: rem(-80);
+    max-width: calc((400 / 1080) * 100%);
+    aspect-ratio: 400 / 606;
+  }
+}
+
+.sub-aboutus__img-right {
+  width: 100%;
+  @include mq('md') {
+    margin-left: auto;
+    max-width: calc((880 / 1080 * 100%));
+    aspect-ratio: 880 / 581;
+  }
+}
+
+.sub-aboutus__img-left img,
+.sub-aboutus__img-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.sub-aboutus__content {
+  position: absolute;
+  top: 25%;
+  left: calc((35 / 345 * 100%));
+  z-index: 2;
+  @include mq('md') {
+    display: flex;
+    top: rem(99);
+    left: calc((199 / 1080 * 100%));
+    //margin-top: 0;
+  }
+}
+
+.sub-aboutus__main-title {
+  color: $accent-color;
+  font-family: $english-font-family;
+  font-size: rem(40);
+  @include mq('md') {
+    font-size: rem(80);
+    line-height: calc(100 / 80);
+    max-width: rem(400);
+    width: 100%;
+  }
+}
+
+.sub-aboutus__text-wrap {
+  @include mq('md') {
+    margin-top: rem(26);
+    padding: 0 rem(40);
+  }
+}
+
+.sub-aboutus__text {
+  line-height: calc(24 / 16);
+  margin-top: rem(40);
+  @include mq('md') {
+    color: $base-color;
+    max-width: rem(400);
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+.sub-aboutus__btn {
+  margin-top: rem(50);
+  text-align: center;
+  padding-bottom: rem(3);
+  @include mq('md') {
+    margin-top: calc(rem(40) + rem(1));
+  }
+}

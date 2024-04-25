@@ -1,0 +1,38 @@
+@use 'global' as *;
+
+.voice-list {
+  width: 100%;
+  @include mq(md){
+    // display: flex;
+    display: grid;
+    // flex-wrap: wrap;
+    max-width: initial;
+    column-gap: rem(40);
+    row-gap: rem(83);
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.voice-list__item {
+
+}
+
+.voice-list__item + .voice-list__item {
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: 0;
+    //margin-left: rem(40);
+  }
+}
+
+.voice-list__item:nth-of-type(2n+1) {
+  @include mq(md){
+    margin-left: 0;
+  }
+}
+
+.voice-list__item:nth-of-type(n+3) {
+  @include mq(md){
+    // margin-top: rem(80);
+  }
+}

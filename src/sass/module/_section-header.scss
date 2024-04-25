@@ -1,0 +1,78 @@
+@use 'global' as *;
+
+.section-header {
+  // display: inline-block;
+  text-align: center;
+}
+
+.section-header__title {
+  font-size: rem(32);
+  font-family: $english-font-family;
+  line-height: calc(40 / 32);
+  //height: auto;
+  @include mq('md') {
+    font-size: rem(40);
+    line-height: 1;
+  }
+}
+
+.section-header__title::first-letter {
+  color: $accent-color;
+}
+
+.section-header__subtitle {
+  margin-top: rem(4);
+  //display: block;
+  font-size: rem(12);
+  line-height: calc(18 / 12);
+  font-weight: $normal;
+  font-family: $base-font-family;
+  color: $accent-color;
+  text-align: center;
+  padding-bottom: rem(4);
+    @include mq('md') {
+    margin-top: rem(8);
+    padding-bottom: 0;
+  }
+}
+
+.section-header--white {
+  
+  .section-header__title {
+    
+  }
+
+  .section-header__title::first-letter {
+    @include mq('md') {
+      color: #fdffba;
+    }
+  }
+  
+  .section-header__subtitle {
+    @include mq('md') {
+      color: $base-color;
+    }
+  }
+  @include mq('md') {
+    color: $base-color;
+  }
+
+}
+
+
+
+.section-header__title--contact {
+  font-size: rem(80);
+  line-height: 1;
+  @include mq('md') {
+    font-size: rem(80);
+  }
+}
+
+.section-header__subtitle--contact {
+  margin-top: rem(-6);
+  padding-bottom: 0;
+  @include mq('md') {
+    margin-top: rem(-6);
+  }
+}

@@ -1,0 +1,8 @@
+@use 'global' as *;
+
+.layout-footer {
+  margin-top: calc(rem(100) + rem(2));
+  @include mq('md') {
+    margin-top: rem(160);
+  }
+}

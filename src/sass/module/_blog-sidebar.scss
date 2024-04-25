@@ -1,0 +1,47 @@
+@use 'global' as *;
+
+.blog-sidebar {
+
+}
+
+.blog-sidebar__inner.inner {
+  padding: 0 rem(19);
+  @include mq('md') {
+    padding: 0;
+  }
+}
+
+.blog-sidebar__inner--single.inner {
+  padding: 0 rem(25);
+  @include mq('md') {
+    padding: 0;
+  }
+}
+
+.blog-sidebar__list {
+  
+}
+
+.blog-sidebar__title {
+
+}
+
+.blog-sidebar__item {
+  
+}
+
+.blog-sidebar__review {
+  margin-top: rem(84);
+}
+
+.blog-sidebar__campaign {
+  margin-top: rem(88);
+}
+
+.blog-sidebar__archive {
+  margin-top: rem(88);
+}
+
+.blog-sidebar__toggle {
+  margin-top: rem(26);
+}

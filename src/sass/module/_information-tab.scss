@@ -1,0 +1,12 @@
+@use 'global' as *;
+
+.information-tab__items {
+  
+}
+
+.information-tab__content {
+  margin-top: rem(16);
+  @include mq('md') {
+    margin-top: rem(24);
+  }
+}

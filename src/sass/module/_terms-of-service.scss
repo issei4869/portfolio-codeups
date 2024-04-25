@@ -1,0 +1,11 @@
+@use 'global' as *;
+
+.terms-of-service {
+  
+}
+
+.terms-of-service__inner.inner {
+  @include mq('md') {
+    max-width: rem(850);
+  }
+}

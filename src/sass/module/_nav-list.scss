@@ -1,0 +1,13 @@
+@use 'global' as *;
+
+.nav-list {
+  
+}
+
+.nav-list__items:nth-child(2n) {
+  margin-top: rem(40);
+  @include mq('md') {
+    margin-top: 0;
+  }
+}
+

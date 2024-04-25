@@ -1,0 +1,15 @@
+@use 'global' as *;
+
+.layout-sub-footer {
+  margin-top: rem(100);
+  @include mq('md') {
+    margin-top: rem(157);
+  }
+}
+
+.layout-sub-footer--contact {
+  margin-top: rem(144);
+  @include mq('md') {
+    margin-top: rem(120);
+  }
+}

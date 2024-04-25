@@ -1,0 +1,16 @@
+@use 'global' as *;
+
+.campaign-swiper {
+  overflow: hidden;
+}
+
+.campaign-swiper__wrapper {
+  padding-left: rem(2);
+  padding-bottom: rem(3);
+  //position: relative;
+}
+
+.campaign-swiper__slide {
+  height: auto;
+  // box-shadow: rem(2) rem(2) rem(10) 0 rgba(0, 0, 0, .25);
+}

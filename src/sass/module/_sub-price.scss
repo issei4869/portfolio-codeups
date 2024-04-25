@@ -1,0 +1,19 @@
+@use 'global' as *;
+
+.sub-price {
+  
+}
+
+.sub-price__inner.inner {
+  @include mq('md') {
+    max-width: rem(752);
+  }
+  //text-align: center;
+}
+
+.sub-price__list + .sub-price__list {
+  margin-top: rem(40);
+  @include mq('md') {
+    margin-top: rem(80);
+  }
+}

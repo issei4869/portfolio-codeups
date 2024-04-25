@@ -1,0 +1,69 @@
+@use 'global' as *;
+
+.blog {
+  position: relative;
+  @include mq('md') {
+    padding-top: rem(100);
+  }
+}
+
+.blog::after {
+  @include mq('md') {
+    content: "";
+    position: absolute;
+    top: rem(25);
+    //left: rem(100);
+    left: calc(50% - min(48%, rem(619)));
+    background-image: url(../images/common/goldfish1.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: rem(437);
+    min-height: rem(201);
+  }
+}
+
+.blog__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -5;
+  width: 100%;
+  height: 60%;
+}
+
+.blog__bg img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1440 / 500;
+  object-fit: cover;
+}
+
+.blog__inner {
+  position: relative;
+}
+
+.blog__inner.inner {
+  padding: 0 rem(21);
+
+  @include mq('md') {
+    padding: 0 $padding-pc;
+  }
+}
+
+.blog__list {
+  margin-top: calc(rem(24) + rem(1));
+  margin: 0 auto;
+  @include mq('md') {
+    margin-top: rem(80);
+  }
+}
+
+.blog__btn {
+  margin-top: calc(rem(40) + rem(0));
+  text-align: center;
+  padding-bottom: rem(3);
+  @include mq('md') {
+    margin-top: rem(80);
+  }
+}

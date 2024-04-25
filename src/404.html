@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="robots" content="noindex" />
+  <!-- meta情報 -->
+  <title>CodeUps</title>
+  <meta name="description" content="新CodeUpsの課題です" />
+  <meta name="keywords" content="CodeUps" />
+  <!-- ogp -->
+  <meta property="og:title" content="CodeUps" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://issei-webproduction171.com" />
+  <meta property="og:image" content="" />
+  <meta property="og:site_name" content="CodeUps" />
+  <meta property="og:description" content="新CodeUpsの課題です" />
+
+  <!-- GoogleFont -->
+  <link href="https://fonts.googleapis.com/css2?family=Gotu&family=Lato:wght@300;400;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- ファビコン -->
+  <link rel="icon" href="確認中" />
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+  <!-- css -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <!-- JavaScript -->
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script defer src="./assets/js/jquery.inview.min.js"></script>
+  <script defer src="./assets/js/script.js"></script>
+</head>
+<body>
+  <div class="background">
+    <header class="layout-header header">
+      <div class="header__inner">
+        <h1 class="header__logo">
+          <a href="index.html#">
+            <img src="./assets/images/common/CodeUps1.svg" alt="白いCodeUpsのロゴ">
+          </a>
+        </h1>
+        <nav class="header__nav">
+          <ul class="header__nav-items">
+            <li class="header__nav-item">
+              <a href="<?php echo esc_url( home_url( '/campaign/' ) )?>">Campaign<span>キャンペーン</span></a>
+            </li>
+            <li class="header__nav-item">
+              <a href="<?php echo esc_url( home_url( '/about-us/' ) )?>">About us<span>私たちについて</span></a>
+            </li>
+            <li class="header__nav-item">
+              <a href="<?php echo esc_url( home_url( '/information/' ) )?>">Information<span>ダイビング情報</span></a>
+            </li>
+            <li class="header__nav-item">
+              <a href="<?php echo esc_url( home_url( '/blog/' ) )?>">Blog<span>ブログ</span></a>
+            </li>
+            <li class="header__nav-item">
+              <a href="<?php echo esc_url( home_url( '/voice/' ) )?>">Voice<span>お客様の声</span></a>
+            </li>
+            <li class="header__nav-item">
+              <a href="<?php echo esc_url( home_url( '/price/' ) )?>">Price<span>料金一覧</span></a>
+            </li>
+            <li class="header__nav-item">
+              <a href="faq.html#">FAQ<span>よくある質問</span></a>
+            </li>
+            <li class="header__nav-item">
+              <a href="<?php echo esc_url( home_url( '/contact/' ) )?>">Contact<span>お問合せ</span></a>
+            </li>
+          </ul>
+        </nav>
+        <button class="header__hamburger js-hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="header__drawer js-drawer">
+          <div class="header__drawer-inner">
+            <div class="header__drawer-contents">
+              <div class="header__drawer-wrap nav-list">
+                <ul class="nav-list__items nav-items">
+                  <li class="nav-items__item">
+                    <a href="<?php echo esc_url( home_url( '/campaign/' ) )?>"><span>キャンペーン</span></a>
+                  </li>
+                  <li class="nav-items__item">
+                    <a href="<?php echo esc_url( home_url( '/campaign/' ) )?>sub-campaign1">ライセンス取得</a>
+                  </li>
+                  <li class="nav-items__item">
+                    <a href="<?php echo esc_url( home_url( '/campaign/' ) )?>sub-campaign2">貸切体験ダイビング</a>
+                  </li>
+                  <li class="nav-items__item">
+                    <a href="<?php echo esc_url( home_url( '/campaign/' ) )?>sub-campaign3">ナイトダイビング</a>
+                  </li>
+                  <li class="nav-items__item">
+                    <a href="<?php echo esc_url( home_url( '/about-us/' ) )?>"><span>私たちについて</span></a>
+                  </li>
+                </ul>   
+                <ul class="nav-list__items nav-items">
+                  <li class="nav-items__item">
+                    <a href="<?php echo esc_url( home_url( '/information/' ) )?>"><span>ダイビング情報</span></a>
+                  </li>
+                  <li class="nav-items__item">
+                    <a class="js-link-menu" data-number="tab01" href="<?php echo esc_url( home_url( '/information/' ) )?>tab01">ライセンス講習</a>
+                  </li>
+                  <li class="nav-items__item">
+                    <a class="js-link-menu" data-number="tab03" href="<?php echo esc_url( home_url( '/information/' ) )?>tab03">体験ダイビング</a>
+                  </li>
+                  <li class="nav-items__item">
+                    <a class="js-link-menu" data-number="tab02" href="<?php echo esc_url( home_url( '/information/' ) )?>tab02">ファンダイビング</a>
+                  </li>
+                  <li class="nav-items__item">
+                    <a href="<?php echo esc_url( home_url( '/blog/' ) )?>"><span>ブログ</span></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="header__drawer-wrap nav-list">
+                <ul class="nav-list__items nav-items">
+                  <li class="nav-items__item">
+                    <a href="<?php echo esc_url( home_url( '/voice/' ) )?>"><span>お客様の声</span></a>
+                  </li>
+                  <li class="nav-items__item">
+                    <a href="<?php echo esc_url( home_url( '/price/' ) )?>"><span>料金一覧</span></a>
+                  </li>
+                  <li class="nav-items__item">
+                    <a href="<?php echo esc_url( home_url( '/price/' ) )?>sub-price1">ライセンス講習</a>
+                  </li>
+                  <li class="nav-items__item">
+                    <a href="<?php echo esc_url( home_url( '/price/' ) )?>sub-price2">体験ダイビング</a>
+                  </li>
+                  <li class="nav-items__item">
+                    <a href="<?php echo esc_url( home_url( '/price/' ) )?>sub-price3">ファンダイビング</a>
+                  </li>
+                </ul>   
+                <ul class="nav-list__items nav-items">
+                  <li class="nav-items__item">
+                    <a href="faq.html#"><span>よくある質問</span></a>
+                  </li>
+                  <li class="nav-items__item">
+                    <a href="privacypolicy.html#"><span>プライバシー<br class="u-mobile">ポリシー</span></a>
+                  </li>
+                  <li class="nav-items__item">
+                    <a href="terms-of-service.html#"><span>利用規約</span></a>
+                  </li>
+                  <li class="nav-items__item">
+                    <a href="<?php echo esc_url( home_url( '/contact/' ) )?>"><span>お問合せ</span></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <!-- パンくず -->
+      <div class="breadcrumb breadcrumb--404">
+        <div class="breadcrumb__inner inner">
+          <!-- Breadcrumb NavXTで出力される部分 ここから -->
+          <a href="index.html#">
+            <span>TOP</span>
+          </a>
+          <span>></span>
+          <span>404</span>
+          <!-- Breadcrumb NavXTで出力される部分 ここまで -->
+        </div>
+      </div>
+      <section class="error">
+        <div class="error__inner">
+          <div class="error__content">
+            <h2 class="error__title">404</h2>
+            <div class="error__text">申し訳ありません。
+              <br>お探しのページが見つかりません。
+            </div>
+            <div class="error__btn">
+              <!-- ボタンの共通パーツ -->
+              <a href="index.html#" class="btn btn--404">
+                <span>Page TOP</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer footer--404">
+      <div class="footer__inner">
+        <div class="footer__content">
+          <div class="footer__top">
+            <div class="footer__logo">
+              <a href="index.html#">
+                <img src="./assets/images/common/CodeUps1.svg" alt="白いCodeUpsのロゴ">
+              </a>
+            </div>
+            <div class="footer__sns">
+              <a class="footer__sns-icon" href="#" target="_blank" rel="noopener">
+                <img src="./assets/images/common/facebookLogo.svg" alt="Facebookのアイコン">
+              </a>
+              <a class="footer__sns-icon" href="#" target="_blank" rel="noopener">
+                <img src="./assets/images/common/instagramLogo.svg" alt="インスタグラムのアイコン">
+              </a>
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <div class="footer__wrap nav-list">
+              <ul class="nav-list__items nav-items">
+                <li class="nav-items__item">
+                  <a href="<?php echo esc_url( home_url( '/campaign/' ) )?>"><span>キャンペーン</span></a>
+                </li>
+                <li class="nav-items__item">
+                  <a href="<?php echo esc_url( home_url( '/campaign/' ) )?>sub-campaign1">ライセンス取得</a>
+                </li>
+                <li class="nav-items__item">
+                  <a href="<?php echo esc_url( home_url( '/campaign/' ) )?>sub-campaign2">貸切体験ダイビング</a>
+                </li>
+                <li class="nav-items__item">
+                  <a href="<?php echo esc_url( home_url( '/campaign/' ) )?>sub-campaign3">ナイトダイビング</a>
+                </li>
+                <li class="nav-items__item">
+                  <a href="<?php echo esc_url( home_url( '/about-us/' ) )?>"><span>私たちについて</span></a>
+                </li>
+              </ul>   
+              <ul class="nav-list__items nav-items">
+                <li class="nav-items__item">
+                  <a href="<?php echo esc_url( home_url( '/information/' ) )?>"><span>ダイビング情報</span></a>
+                </li>
+                <li class="nav-items__item">
+                  <a class="js-link-menu" data-number="tab01" href="<?php echo esc_url( home_url( '/information/' ) )?>tab01">ライセンス講習</a>
+                </li>
+                <li class="nav-items__item">
+                  <a class="js-link-menu" data-number="tab03" href="<?php echo esc_url( home_url( '/information/' ) )?>tab03">体験ダイビング</a>
+                </li>
+                <li class="nav-items__item">
+                  <a class="js-link-menu" data-number="tab02" href="<?php echo esc_url( home_url( '/information/' ) )?>tab02">ファンダイビング</a>
+                </li>
+                <li class="nav-items__item">
+                  <a href="<?php echo esc_url( home_url( '/blog/' ) )?>"><span>ブログ</span></a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__wrap nav-list">
+              <ul class="nav-list__items nav-items">
+                <li class="nav-items__item">
+                  <a href="<?php echo esc_url( home_url( '/voice/' ) )?>"><span>お客様の声</span></a>
+                </li>
+                <li class="nav-items__item">
+                  <a href="<?php echo esc_url( home_url( '/price/' ) )?>"><span>料金一覧</span></a>
+                </li>
+                <li class="nav-items__item">
+                  <a href="<?php echo esc_url( home_url( '/price/' ) )?>sub-price1">ライセンス講習</a>
+                </li>
+                <li class="nav-items__item">
+                  <a href="<?php echo esc_url( home_url( '/price/' ) )?>sub-price2">体験ダイビング</a>
+                </li>
+                <li class="nav-items__item">
+                  <a href="<?php echo esc_url( home_url( '/price/' ) )?>sub-price3">ファンダイビング</a>
+                </li>
+              </ul>   
+              <ul class="nav-list__items nav-items">
+                <li class="nav-items__item">
+                  <a href="faq.html#"><span>よくある質問</span></a>
+                </li>
+                <li class="nav-items__item">
+                  <a href="privacypolicy.html#"><span>プライバシー<br class="u-mobile">ポリシー</span></a>
+                </li>
+                <li class="nav-items__item">
+                  <a href="terms-of-service.html#"><span>利用規約</span></a>
+                </li>
+                <li class="nav-items__item">
+                  <a href="<?php echo esc_url( home_url( '/contact/' ) )?>"><span>お問合せ</span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <small class="footer__copyright">Copyright &copy; 2021 - 2023 CodeUps LLC. All Rights Reserved.</small>
+      </div>
+    </footer>
+    <div class="page-top" id="page-topbtn"><a href=""><img src="./assets/images/common/totop.png" alt="上にスクロールするボタン"></a></div>
+  </div>
+</body>
+</html>
