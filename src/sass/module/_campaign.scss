@@ -57,18 +57,20 @@
 .campaign__button .campaign__prev::after,
 .campaign__button .campaign__next::after {
   content: "";
-  background-repeat: no-repeat;
-  background-size: contain;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  background-color: $accent-color;
   width: rem(80);
   height: rem(80);
+  transition: all 0.3s;
 }
 
 .campaign__button .campaign__prev::after {
-  background-image: url(../images/common/swiperbtn1.png);
+  mask-image: url(../images/common/swiperbtn1.png);
 }
 
 .campaign__button .campaign__next::after {
-  background-image: url(../images/common/swiperbtn2.png);
+  mask-image: url(../images/common/swiperbtn2.png);
 }
 
 .campaign__button .campaign__prev:hover::after,

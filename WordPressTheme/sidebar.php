@@ -8,7 +8,7 @@
         <!-- サイドバータイトル -->
         <div class="blog-sidebar__title sidebar-header">
           <div class="sidebar-header__icon">
-            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/sidebar-icon.png" alt="クジラのアイコン">
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/guitar-icon2.png" alt="エレキギターアイコン">
           </div>
           <div class="sidebar-header__title">人気記事</div>
         </div>
@@ -53,7 +53,7 @@
         <!-- サイドバータイトル -->
         <div class="blog-sidebar__title sidebar-header">
           <div class="sidebar-header__icon">
-            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/sidebar-icon.png" alt="クジラのアイコン">
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/guitar-icon2.png" alt="エレキギターアイコン">
           </div>
           <div class="sidebar-header__title">口コミ</div>
         </div>
@@ -112,7 +112,7 @@
         <!-- サイドバータイトル -->
         <div class="blog-sidebar__title sidebar-header">
           <div class="sidebar-header__icon">
-            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/sidebar-icon.png" alt="クジラのアイコン">
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/guitar-icon2.png" alt="エレキギターアイコン">
           </div>
           <div class="sidebar-header__title">キャンペーン</div>
         </div>
@@ -192,7 +192,7 @@
         <!-- サイドバータイトル -->
         <div class="blog-sidebar__title sidebar-header">
           <div class="sidebar-header__icon">
-            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/sidebar-icon.png" alt="クジラのアイコン">
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/guitar-icon2.png" alt="エレキギターアイコン">
           </div>
           <div class="sidebar-header__title">アーカイブ</div>
         </div>

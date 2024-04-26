@@ -145,10 +145,10 @@
           </div>
         </div>
       </div>
-      <small class="footer__copyright">Copyright &copy; 2021 - 2023 CodeUps LLC. All Rights Reserved.</small>
+      <small class="footer__copyright">Copyright &copy; 2024 Hasegawa Music School LLC. All Rights Reserved.</small>
     </div>
   </footer>
-  <div class="page-top" id="page-topbtn"><a href="#"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/totop.png" alt="上にスクロールするボタン"></a></div>
+  <div class="page-top" id="page-topbtn"><a href="#"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/totop-yellow1.png" alt="上にスクロールするボタン"></a></div>
   <!-- functions.phpを読み込むために必要 -->
   <?php wp_footer(); ?>
   <?php if (is_404()){ echo '</div>'; }; ?>

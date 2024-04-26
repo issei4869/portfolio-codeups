@@ -974,7 +974,14 @@ a {
 /*****以下下層ページに追加*****/
 
 .campaign-card__text {
+	display: none;
 	flex-grow: 1;
+}
+
+.campaign-card__date,
+.campaign-card__comment,
+.campaign-card__btn {
+	display: none;
 }
 
 .campaign-swiper {
@@ -1076,19 +1083,25 @@ a {
 
 .campaign__button .campaign__prev::after,
 .campaign__button .campaign__next::after {
-	background-repeat: no-repeat;
-	background-size: contain;
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-size: contain;
+	background-color: #F0C600;
 	content: "";
 	height: 5rem;
+	mask-repeat: no-repeat;
+	mask-size: contain;
+	transition: all 0.3s;
 	width: 5rem;
 }
 
 .campaign__button .campaign__prev::after {
-	background-image: url(../images/common/swiperbtn1.png);
+	-webkit-mask-image: url(../images/common/swiperbtn1.png);
+	mask-image: url(../images/common/swiperbtn1.png);
 }
 
 .campaign__button .campaign__next::after {
-	background-image: url(../images/common/swiperbtn2.png);
+	-webkit-mask-image: url(../images/common/swiperbtn2.png);
+	mask-image: url(../images/common/swiperbtn2.png);
 }
 
 .campaign__button .campaign__prev:hover::after,
@@ -1140,7 +1153,7 @@ a {
 }
 
 .contact::before {
-	background-image: url(../images/common/goldfish4.png);
+	background-image: url(../images/common/goldmusic4.png);
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -1364,24 +1377,6 @@ a {
 	-o-object-fit: cover;
 	object-fit: cover;
 	width: 100%;
-}
-
-.fish {
-	position: relative;
-}
-
-.fish::before {
-	background-image: url(../images/common/goldfish2.png);
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	content: "";
-	left: 0.9375rem;
-	min-height: 3.4375rem;
-	min-width: 7.5rem;
-	position: absolute;
-	top: -1.5rem;
-	z-index: -1;
 }
 
 .footer {
@@ -2093,6 +2088,25 @@ a {
 	width: 100%;
 }
 
+.music {
+	position: relative;
+}
+
+.music::before {
+	background-image: url(../images/common/music-icon1.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	content: "";
+	left: calc(50% - min(46%, 20.5rem));
+	min-height: 3.125rem;
+	min-width: 3.3125rem;
+	position: absolute;
+	top: -3.75rem;
+	transform: rotate(15deg);
+	z-index: -1;
+}
+
 .mv {
 	height: 100vh;
 	min-height: 25rem;
@@ -2191,13 +2205,18 @@ a {
 }
 
 .nav-items__item a span::before {
-	background-image: url(../images/common/starfish.png);
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: contain;
+	-webkit-mask-image: url(../images/common/vocal-icon1.png);
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center center;
+	-webkit-mask-size: contain;
+	background-color: #fff;
 	content: "";
 	height: 1.125rem;
 	left: -1.375rem;
+	mask-image: url(../images/common/vocal-icon1.png);
+	mask-position: center center;
+	mask-repeat: no-repeat;
+	mask-size: contain;
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -2205,7 +2224,7 @@ a {
 }
 
 .nav-items__item--sitemap a span::before {
-	background-image: url(../images/common/starfish3.png);
+	background-color: #0D2936;
 }
 
 .nav-items__item:nth-child(n+2) a span {
@@ -2363,13 +2382,9 @@ a {
 	width: 0.5rem;
 }
 
-.sidebar-header__icon svg {
+.sidebar-header__icon img {
 	height: 2.625rem;
 	width: 2.625rem;
-}
-
-.sidebar-header__icon svg path {
-	fill: #0D2936;
 }
 
 .sidebar-header__title {
@@ -2468,20 +2483,6 @@ a {
 	position: relative;
 }
 
-.sub-aboutus::before {
-	background-image: url(../images/common/goldfish2.png);
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	content: "";
-	left: 0.9375rem;
-	min-height: 3.4375rem;
-	min-width: 7.5rem;
-	position: absolute;
-	top: -1.5rem;
-	z-index: -1;
-}
-
 .sub-aboutus__img-right {
 	width: 100%;
 }
@@ -2516,6 +2517,10 @@ a {
 	margin-top: 3.125rem;
 	padding-bottom: 0.1875rem;
 	text-align: center;
+}
+
+.sub-blog__inner {
+	max-width: 32.5rem;
 }
 
 /*****サイドバー*****/
@@ -2587,15 +2592,15 @@ a {
 	justify-content: center;
 }
 
+.sub-price-list__wrapper img {
+	height: 1.5rem;
+	width: 1.5rem;
+}
+
 .sub-price-list__wrapper span {
 	color: #fff;
 	font-weight: 700;
 	line-height: 1.5;
-}
-
-.sub-price-list__wrapper span svg {
-	height: 1.5rem;
-	width: 1.5rem;
 }
 
 .sub-price-list__text,
@@ -2632,7 +2637,7 @@ a {
 }
 
 .sub-voice__inner.inner {
-	max-width: 37.5rem;
+	max-width: 31.25rem;
 }
 
 .sub-voice__list {
@@ -2728,7 +2733,11 @@ a {
 	align-items: end;
 	display: flex;
 	gap: 0.5rem;
-	justify-content: center;
+	justify-content: space-between;
+}
+
+.voice-card__content {
+	width: 100%;
 }
 
 .voice-card__age {
@@ -2778,6 +2787,10 @@ a {
 
 .voice-list__item + .voice-list__item {
 	margin-top: 2.5rem;
+}
+
+.voice__inner {
+	max-width: 31.25rem;
 }
 
 .voice__list {
@@ -3044,16 +3057,16 @@ html {
 }
 
 .aboutus::before {
-	background-image: url(../images/common/seaanemone.png);
+	background-image: url(../images/common/guitar-icon1.png);
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	bottom: -5.5625rem;
 	content: "";
-	height: 11.3125rem;
+	height: 9.75rem;
 	position: absolute;
 	right: calc(50% - min(48%, 39.8125rem));
-	width: 12.125rem;
+	width: 9.75rem;
 	z-index: 100;
 }
 
@@ -3184,19 +3197,6 @@ html {
 	padding-top: 6.25rem;
 }
 
-.blog::after {
-	background-image: url(../images/common/goldfish1.png);
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	content: "";
-	left: calc(50% - min(48%, 38.6875rem));
-	min-height: 12.5625rem;
-	min-width: 27.3125rem;
-	position: absolute;
-	top: 1.5625rem;
-}
-
 .blog__inner.inner {
 	padding: 0 25px;
 }
@@ -3306,6 +3306,7 @@ html {
 }
 
 .campaign-card__text {
+	display: block;
 	line-height: 1.5;
 	margin-top: 1.5625rem;
 }
@@ -3313,6 +3314,7 @@ html {
 .campaign-card__date,
 .campaign-card__comment,
 .campaign-card__btn {
+	display: block;
 	text-align: center;
 }
 
@@ -3463,13 +3465,6 @@ html {
 	max-width: 46.875rem;
 }
 
-.fish::before {
-	left: calc(50% - min(48%, 38.6875rem));
-	min-height: 8.625rem;
-	min-width: 18.8125rem;
-	top: -4.375rem;
-}
-
 .footer {
 	padding: 5rem 0;
 }
@@ -3590,7 +3585,7 @@ html {
 }
 
 .gallery::before {
-	background-image: url(../images/common/goldfish4.png);
+	background-image: url(../images/common/music-icon1.png);
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -3600,6 +3595,7 @@ html {
 	position: absolute;
 	right: calc(50% - min(48%, 39.6875rem));
 	top: -4.6875rem;
+	transform: rotate(15deg);
 }
 
 .gallery__list {
@@ -3700,6 +3696,13 @@ html {
 	padding-right: 25px;
 }
 
+.music::before {
+	left: calc(50% - min(48%, 38.6875rem));
+	min-height: 6.25rem;
+	min-width: 6.25rem;
+	top: -7.0625rem;
+}
+
 .mv--sub {
 	height: 34.25rem;
 }
@@ -3748,7 +3751,7 @@ html {
 }
 
 .price::after {
-	background-image: url(../images/common/goldfish3.png);
+	background-image: url(../images/common/goldmusic3.png);
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -3857,16 +3860,17 @@ html {
 }
 
 .sub-aboutus::before {
-	background-image: url(../images/common/goldfish2.png);
+	background-image: url(../images/common/guitar-icon1.png);
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	content: "";
-	left: calc(50% - min(48%, 38.6875rem));
-	min-height: 8.625rem;
-	min-width: 18.8125rem;
+	height: 9.75rem;
+	left: calc(50% - min(48%, 39.8125rem));
 	position: absolute;
-	top: -9.4375rem;
+	top: -13.4375rem;
+	width: 9.75rem;
+	z-index: -1;
 }
 
 .sub-aboutus__wrap {
@@ -3921,6 +3925,8 @@ html {
 	display: grid;
 	gap: 5rem;
 	grid-template-columns: 1fr 18.375rem;
+	min-width: 0;
+	min-width: initial;
 }
 
 .sub-blog__wrapper {
@@ -3962,7 +3968,7 @@ html {
 	flex-direction: column-reverse;
 }
 
-.sub-price-list__wrapper span svg {
+.sub-price-list__wrapper img {
 	height: 4rem;
 	width: 4rem;
 }
@@ -4081,29 +4087,34 @@ html {
 }
 
 .voice::before {
-	background-image: url(../images/common/goldfish2.png);
+	background-image: url(../images/common/drum-icon1.png);
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	content: "";
 	left: calc(50% - min(48%, 38.6875rem));
-	min-height: 8.625rem;
-	min-width: 18.8125rem;
+	min-height: 7rem;
+	min-width: 7rem;
 	position: absolute;
 	top: -7.375rem;
 }
 
 .voice::after {
-	background-image: url(../images/common/ibaratatsu.png);
+	background-image: url(../images/common/piano-icon1.png);
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	bottom: -4.25rem;
 	content: "";
-	min-height: 10.125rem;
-	min-width: 4.4375rem;
+	min-height: 5rem;
+	min-width: 6.4375rem;
 	position: absolute;
 	right: calc(50% - min(47%, 33.75rem));
+}
+
+.voice__inner {
+	max-width: none;
+	max-width: initial;
 }
 
 .voice__list {

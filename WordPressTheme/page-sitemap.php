@@ -17,7 +17,7 @@
   <!-- パンくず -->
   <?php get_template_part('parts/breadcrumb') ?>
   
-  <div class="layout-sitemap sitemap fish">
+  <div class="layout-sitemap sitemap music">
     <div class="sitemap__inner inner">
       <div class="sitemap__content">
         <div class="sitemap__wrap nav-list">

@@ -18,7 +18,7 @@
   <?php get_template_part('parts/breadcrumb') ?>
 
   <!-- Voice -->
-  <div class="layout-sub-voice sub-voice fish">
+  <div class="layout-sub-voice sub-voice music">
     <div class="sub-voice__inner inner">
       <!-- Tabの共通パーツ -->
       <?php if ( have_posts() ) : ?>

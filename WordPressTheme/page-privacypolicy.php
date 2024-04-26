@@ -17,7 +17,7 @@
   <!-- パンくず -->
   <?php get_template_part('parts/breadcrumb') ?>
   
-  <section class="layout-privacypolicy privacypolicy fish">
+  <section class="layout-privacypolicy privacypolicy music">
     <div class="privacypolicy__inner inner">
       <div class="privacypolicy__explanation explanation">
         <h2 class="explanation__title">

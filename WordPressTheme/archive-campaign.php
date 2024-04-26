@@ -16,7 +16,7 @@
   <!-- パンくず -->
   <?php get_template_part('parts/breadcrumb') ?>
   <!-- Campaignカード -->
-  <div class="layout-sub-campaign sub-campaign fish">
+  <div class="layout-sub-campaign sub-campaign music">
     <div class="sub-campaign__inner inner">
       <!-- Tabの共通パーツ -->
       <?php if ( have_posts() ) : ?>

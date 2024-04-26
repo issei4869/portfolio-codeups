@@ -11,14 +11,14 @@
   @include mq('md') {
     content: "";
     position: absolute;
-    background-image: url(../images/common/goldfish2.png);
+    background-image: url(../images/common/drum-icon1.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     top: rem(-118);
     left: calc(50% - min(48%, rem(619)));
-    min-width: rem(301);
-    min-height: rem(138);
+    min-width: rem(112);
+    min-height: rem(112);
   }
 }
 
@@ -26,19 +26,22 @@
   @include mq('md') {
     content: "";
     position: absolute;
-    background-image: url(../images/common/ibaratatsu.png);
+    background-image: url(../images/common/piano-icon1.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     bottom: rem(-68);
     right: calc(50% - min(47%, rem(540)));
-    min-width: rem(71);
-    min-height: rem(162);
+    min-width: rem(103);
+    min-height: rem(80);
   }
 }
 
 .voice__inner {
-  
+  max-width: rem(500);
+  @include mq('md') {
+    max-width: initial;
+  }
 }
 
 .voice__inner.inner {

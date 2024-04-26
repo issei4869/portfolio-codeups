@@ -27,19 +27,19 @@
   }
 }
 
-.sub-price-list__wrapper span {
-  color: $base-color;
-  font-weight: $bold;
-  line-height: calc(24 / 16);
-}
-
-.sub-price-list__wrapper span svg {
+.sub-price-list__wrapper img {
   width: rem(24);
   height: rem(24);
   @include mq('md') {
     width: rem(64);
     height: rem(64);
   }
+}
+
+.sub-price-list__wrapper span {
+  color: $base-color;
+  font-weight: $bold;
+  line-height: calc(24 / 16);
 }
 
 .sub-price-list__head.u-desktop {

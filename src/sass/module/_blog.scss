@@ -7,22 +7,6 @@
   }
 }
 
-.blog::after {
-  @include mq('md') {
-    content: "";
-    position: absolute;
-    top: rem(25);
-    //left: rem(100);
-    left: calc(50% - min(48%, rem(619)));
-    background-image: url(../images/common/goldfish1.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-width: rem(437);
-    min-height: rem(201);
-  }
-}
-
 .blog__bg {
   position: absolute;
   top: 0;

@@ -12,7 +12,7 @@
   display: flex;
   align-items: end;
   gap: rem(8);
-  justify-content: center;
+  justify-content: space-between;
   @include mq('md') {
     gap: rem(16);
   }
@@ -20,6 +20,7 @@
 
 .voice-card__content {
   // padding: rem(8) rem(16) rem(24) rem(16);
+  width: 100%;
   @include mq(md){
       
   }

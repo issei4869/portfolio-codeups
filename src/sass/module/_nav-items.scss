@@ -48,14 +48,15 @@
   right: 0;
   width: rem(18);
   height: rem(18);
-  background-image: url(../images/common/starfish.png);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: contain;
+  mask-image: url(../images/common/vocal-icon1.png);
+  mask-repeat: no-repeat;
+  mask-position: center center;
+  mask-size: contain;
+  background-color: $base-color;
 }
 
 .nav-items__item--sitemap a span::before {
-  background-image: url(../images/common/starfish3.png);
+  background-color: $font-color;
 }
 
 .nav-items__item:nth-child(n + 2) a span  {

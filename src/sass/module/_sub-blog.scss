@@ -5,10 +5,12 @@
 }
 
 .sub-blog__inner {
+  max-width: rem(520);
   @include mq(md){
     display: grid;
     grid-template-columns: 1fr rem(294);
     gap: rem(80);
+    min-width: initial;
   }
 }
 

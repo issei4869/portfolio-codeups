@@ -5,28 +5,18 @@
 }
 
 .sub-aboutus::before {
-  content: "";
-  position: absolute;
-  background-image: url(../images/common/goldfish2.png);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  top: rem(-24);
-  left: rem(15);
-  min-width: rem(120);
-  min-height: rem(55);
-  z-index: -1;
   @include mq('md') {
     content: "";
     position: absolute;
-    background-image: url(../images/common/goldfish2.png);
+    background-image: url(../images/common/guitar-icon1.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    top: rem(-151);
-    left: calc(50% - min(48%, rem(619)));
-    min-width: rem(301);
-    min-height: rem(138);
+    top: rem(-215);
+    left: calc(50% - min(48%, rem(637)));
+    width: rem(156);
+    height: rem(156);
+    z-index: -1;
   }
 }
 

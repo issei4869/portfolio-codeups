@@ -227,17 +227,21 @@
 
 .campaign-card__text {
   flex-grow: 1;
+  display: none;
   @include mq('md') {
     line-height: calc(24 / 16);
     margin-top: rem(25);
+    display: block;
   }
 }
 
 .campaign-card__date,
 .campaign-card__comment,
 .campaign-card__btn {
+  display: none;
   @include mq('md') {
     text-align: center;
+    display: block;
   }
 }
 

@@ -18,7 +18,7 @@
   <?php get_template_part('parts/breadcrumb') ?>
 
     <!-- Tab -->
-    <div class="layout-sub-information sub-information fish">
+    <div class="layout-sub-information sub-information music">
     <div class="sub-information__inner inner">
       <div data-id="#sub-info" id="sub-info" class="sub-information__tab information-tab">
         <ul class="information-tab__items information-tab-items">

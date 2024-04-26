@@ -18,7 +18,7 @@
   <?php get_template_part('parts/breadcrumb') ?>
   
   <!-- アコーディオン実装 -->
-  <div class="layout-faq faq fish">
+  <div class="layout-faq faq music">
     <div class="faq__inner inner">
       <?php 
         $faq = SCF::get_option_meta('faq_options', 'faq');

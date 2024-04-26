@@ -18,7 +18,7 @@
   <?php get_template_part('parts/breadcrumb') ?>
   
   <!-- お問い合わせフォーム -->
-  <div class="layout-contactform contactform fish">
+  <div class="layout-contactform contactform music">
     <div class="contactform__inner inner">
       <?php echo do_shortcode('[contact-form-7 id="049ca21" title="お問い合わせ"]'); ?>
     </div>
