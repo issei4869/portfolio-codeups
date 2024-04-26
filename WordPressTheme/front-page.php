@@ -124,7 +124,7 @@
             </div>
             <div class="aboutus__text-wrap">
               <div class="aboutus__text">
-                サイトをご覧いただきありがとうございます！
+                当サイトをご覧いただきありがとうございます！
                 <br>代表兼講師の長谷川一輝です。
                 <br>個々の生徒の目標やニーズに合わせて、自信を持って演奏できるよう全力でサポートします。
                 <br>音楽の力は無限大です。共に笑い楽しみ成長しましょう！
@@ -238,7 +238,7 @@
           <!-- セクションタイトルの共通パーツ -->
           <div class="voice__title section-header">
             <div class="section-header__title">Voice</div>
-            <h2 class="section-header__subtitle">お客様の声</h2>
+            <h2 class="section-header__subtitle">生徒様の声</h2>
           </div>
           <ul class="voice__list voice-list">
             <?php while($recent_query->have_posts()) : ?>

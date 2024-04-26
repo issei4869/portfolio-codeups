@@ -40,7 +40,7 @@
 .voice__inner {
   max-width: rem(500);
   @include mq('md') {
-    max-width: initial;
+    max-width: rem(1130);
   }
 }
 

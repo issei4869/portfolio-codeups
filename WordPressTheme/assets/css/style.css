@@ -4113,8 +4113,7 @@ html {
 }
 
 .voice__inner {
-	max-width: none;
-	max-width: initial;
+	max-width: 70.625rem;
 }
 
 .voice__list {

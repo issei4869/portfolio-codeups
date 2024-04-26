@@ -1,8 +1,8 @@
 <section class="mv">
   <div class="mv__inner">
     <div class="mv__title-wrap">
-        <h2 class="mv__main-title">DIVING</h2>
-        <p class="mv__sub-title">into the ocean</p>
+        <h2 class="mv__main-title">MUSIC</h2>
+        <p class="mv__sub-title">infinite power</p>
     </div>
     <?php
     $args = array(
