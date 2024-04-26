@@ -8,8 +8,7 @@
       </div>
       <div class="mv__swiper">
         <picture class="mv__swiper-img">
-          <source media="(min-width: 376px)" srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/sub-contact-mv1_pc.jpg">
-          <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/sub-contact-mv1_sp.jpg" alt="上から見た海の画像">
+          <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/contact-mv.jpeg" alt="お問合せページMV画像">
         </picture>
       </div>
     </div>

@@ -1,8 +1,8 @@
 <section class="mv">
   <div class="mv__inner">
     <div class="mv__title-wrap">
-        <h2 class="mv__main-title">MUSIC</h2>
-        <p class="mv__sub-title">infinite power</p>
+      <h2 class="mv__main-title">MUSIC</h2>
+      <p class="mv__sub-title">infinite power</p>
     </div>
     <?php
     $args = array(
@@ -15,7 +15,6 @@
     <div class="mv__swiper">
       <?php get_template_part('parts/common/file-swiper' ,null , $args); ?>
     </div>
-    ?>
   </div>
 </section>
 
