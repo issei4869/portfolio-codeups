@@ -203,7 +203,7 @@
 }
 
 .campaign-card__true {
-  color: $accent-color;
+  color: #f26651;
   //margin-left: rem(16);
   @include mq('md') {
     //margin-left: rem(24);
@@ -211,15 +211,15 @@
 }
 
 .campaign-card__true span {
-  font-size: rem(32);
+  font-size: rem(20);
   @include mq('md') {
-    font-size: rem(40);
+    font-size: rem(24);
   }
 }
 
 .campaign-card__true--sidebar span {
   @include mq('md') {
-    font-size: rem(32);
+    font-size: rem(24);
   }
 }
 
@@ -257,7 +257,8 @@
     margin-top: rem(31);
     font-weight: $bold;
     font-family: $english-second-font-family;
-    line-height: calc(18 / 16);
+    //line-height: calc(26 / 20);
+    font-size: rem(20);
   }
 }
 

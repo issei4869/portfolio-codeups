@@ -18,7 +18,7 @@
   <?php get_template_part('parts/breadcrumb') ?>
 
   <!-- Voice -->
-  <div class="layout-sub-voice sub-voice music">
+  <div class="layout-sub-voice sub-voice">
     <div class="sub-voice__inner inner">
       <!-- Tabの共通パーツ -->
       <?php if ( have_posts() ) : ?>
@@ -66,7 +66,7 @@
                     ?>
                   </div>
                   <!-- タイトル -->
-                  <div class="voice-card__title"><?php the_title(); ?></div>
+                  <div class="voice-card__title"><?php echo $replace = str_replace('非公開: ', '', get_the_title()); ?></div>
                 </div>
                 <!-- 右側の画像 -->
                 <div class="voice-card__img colorbox js-color">

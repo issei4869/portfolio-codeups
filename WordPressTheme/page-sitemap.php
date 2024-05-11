@@ -17,7 +17,7 @@
   <!-- パンくず -->
   <?php get_template_part('parts/breadcrumb') ?>
   
-  <div class="layout-sitemap sitemap music">
+  <div class="layout-sitemap sitemap">
     <div class="sitemap__inner inner">
       <div class="sitemap__content">
         <div class="sitemap__wrap nav-list">
@@ -88,7 +88,7 @@
               <a href="<?php echo esc_url( home_url( '/terms-of-service/' ) )?>"><span>利用規約</span></a>
             </li>
             <li class="nav-items__item nav-items__item--sitemap">
-              <a href="<?php echo esc_url( home_url( '/contact/' ) )?>"><span>お問合せ</span></a>
+              <a href="<?php echo esc_url( home_url( '/contact/' ) )?>"><span>無料体験</span></a>
             </li>
             <li class="nav-items__item nav-items__item--sitemap">
             <a href="<?php echo esc_url( home_url( '/sitemap/' ) )?>"><span>サイトマップ</span></a>

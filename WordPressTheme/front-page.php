@@ -5,6 +5,42 @@
     <!-- スライダー選択用ファイル -->
     <?php get_template_part('parts/project/mv'); ?>
 
+    <!-- About usセクション -->
+    <section class="layout-aboutus aboutus">
+      <div class="aboutus__inner inner">
+        <!-- セクションタイトルの共通パーツ -->
+        <div class="aboutus__title">
+          <h2 class="section-header">
+            <span class="section-header__title">About us</span>
+            <span class="section-header__subtitle">私たちについて</span>
+          </h2>
+        </div>
+        <div class="aboutus__wrap">
+          <picture class="aboutus__img">
+            <source media="(min-width: 767px)" srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/aboutus1.jpg">
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/aboutus4.jpg" alt="ライブハウスでのライブ画像">
+          </picture>
+          <div class="aboutus__wrap-right">
+            <div class="aboutus__main-title">
+              Let's do<br>some music
+            </div>
+            <p class="aboutus__text">
+              当サイトをご覧いただきありがとうございます！
+              <br>代表兼講師の長谷川一輝です。
+              <br>個々の生徒の目標やニーズに合わせて、自信を持って演奏できるよう全力でサポートします。
+              <br>音楽の力は無限大です。共に笑い楽しみ成長しましょう！
+            </p>
+            <div class="aboutus__btn">
+              <!-- ボタンの共通パーツ -->
+              <a href="<?php echo esc_url( home_url( '/about-us/' ) )?>" class="btn">
+                <span>View more</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Campaignセクション -->
     <section class="layout-campaign campaign">
       <div class="campaign__inner inner">
@@ -19,17 +55,23 @@
         );
         ?>
         <?php if ($recent_query->have_posts()) : ?>
-          <div class="campaign__title section-header">
-            <div class="section-header__title">Course</div>
-            <h2 class="section-header__subtitle">コース</h2>
+          <div class="campaign__title">
+            <h2 class="section-header">
+              <span class="section-header__title">Course</span>
+              <span class="section-header__subtitle">コース</span>
+            </h2>
           </div>
           <div class="campaign__swiper campaign-swiper">
             <div class="campaign-swiper__js swiper js-campaign-swiper">
               <ul class="campaign-swiper__wrapper swiper-wrapper">
+                
                 <?php while($recent_query->have_posts()) : ?>
                   <?php $recent_query->the_post(); ?>
                     <li class="campaign-swiper__slide swiper-slide">
-                      <div class="campaign-card">
+                    
+                   
+                      <a href="<?php the_permalink(); ?>" class="campaign-card">
+                              
                         <div class="campaign-card__img">
                         <?php if (has_post_thumbnail()) : ?>
                           <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>のアイキャッチ画像">
@@ -82,7 +124,7 @@
                             </div>
                           </div>
                         </div>
-                      </div>
+                      </a>
                     </li>
                 <?php endwhile; ?>            
               </ul>
@@ -102,52 +144,15 @@
       </div>
     </section>
 
-    <!-- About usセクション -->
-    <section class="layout-aboutus aboutus">
-      <div class="aboutus__inner inner">
-        <!-- セクションタイトルの共通パーツ -->
-        <div class="aboutus__title section-header">
-          <div class="section-header__title">About us</div>
-          <h2 class="section-header__subtitle">私たちについて</h2>
-        </div>
-        <div class="aboutus__wrap">
-          <div class="aboutus__img-left">
-            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/aboutus1.jpg" alt="弾き語りの画像">
-          </div>
-          <div class="aboutus__img-right">
-            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/aboutus4.jpg" alt="ライブハウスでのライブ画像">
-          </div>          
-          <!-- タイトル、ボタン用 -->
-          <div class="aboutus__content">
-            <div class="aboutus__main-title">
-              Let's do<br>some music
-            </div>
-            <div class="aboutus__text-wrap">
-              <div class="aboutus__text">
-                当サイトをご覧いただきありがとうございます！
-                <br>代表兼講師の長谷川一輝です。
-                <br>個々の生徒の目標やニーズに合わせて、自信を持って演奏できるよう全力でサポートします。
-                <br>音楽の力は無限大です。共に笑い楽しみ成長しましょう！
-              </div>
-              <div class="aboutus__btn">
-                <!-- ボタンの共通パーツ -->
-                <a href="<?php echo esc_url( home_url( '/about-us/' ) )?>" class="btn">
-                  <span>View more</span>
-                </a>
-              </div>
-            </div>  
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Informationセクション -->
     <section class="layout-information information">
       <div class="information__inner inner">
         <!-- セクションタイトルの共通パーツ -->
-        <div class="information__title section-header">
-          <div class="section-header__title">Service</div>
-          <h2 class="section-header__subtitle">サービス</h2>
+        <div class="information__title">
+          <h2 class="section-header">
+            <span class="section-header__title">Service</span>
+            <span class="section-header__subtitle">サービス</span>
+          </h2>
         </div>
         <div class="information__list information-list">
           <div class="information-list__img colorbox js-color">
@@ -185,9 +190,11 @@
           <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/blog-bg.jpeg" alt="Blogセクション背景画像">
         </div>
         <div class="blog__inner inner">
-          <div class="blog__title section-header section-header--white">
-            <div class="section-header__title">Blog</div>
-            <h2 class="section-header__subtitle">ブログ</h2>
+          <div class="blog__title">
+            <h2 class="section-header section-header--white">
+              <span class="section-header__title">Blog</span>
+              <span class="section-header__subtitle">ブログ</span>
+            </h2>
           </div>
           <ul class="blog__list blog-list">
             <?php while($recent_query->have_posts()) : ?>
@@ -236,9 +243,11 @@
       <section class="layout-voice voice">
         <div class="voice__inner inner">
           <!-- セクションタイトルの共通パーツ -->
-          <div class="voice__title section-header">
-            <div class="section-header__title">Voice</div>
-            <h2 class="section-header__subtitle">生徒様の声</h2>
+          <div class="voice__title">
+            <h2 class="section-header">
+              <span class="section-header__title">Voice</span>
+              <span class="section-header__subtitle">生徒様の声</span>
+            </h2>
           </div>
           <ul class="voice__list voice-list">
             <?php while($recent_query->have_posts()) : ?>
@@ -315,9 +324,11 @@
       <section class="layout-price price">
         <div class="price__inner inner">
           <!-- セクションタイトルの共通パーツ -->
-          <div class="price__title section-header">
-            <div class="section-header__title">Price</div>
-            <h2 class="section-header__subtitle">料金一覧</h2>
+          <div class="price__title">
+            <h2 class="section-header">
+              <span class="section-header__title">Price</span>
+              <span class="section-header__subtitle">料金一覧</span>
+            </h2>
           </div>
           <div class="price__content">
             <!-- 料金リスト -->
@@ -327,7 +338,7 @@
                 <!-- タイトル -->
                 <h3 class="price-list__title">入会金</h3>
                 <!-- コース内容 -->
-                <ul class="price-list__items">
+                <div class="price-list__items">
                   <!-- ループ -->
                   <?php
                     // $license = SCF::get_option_meta('price_options', 'license');
@@ -335,18 +346,18 @@
                       $course1 = esc_html($field['license_course1']);
                       $course2 = esc_html($field['license_course2']);
                       $price = esc_html($field['license_price']);
-                      echo '<li class="price-list__item">' . '<div class="price-list__text">' . $course1 . $course2 . '</div>';
-                      echo '<div class="price-list__yen">' . $price . '</div>' . '</li>';
+                      echo '<dl class="price-list__item">' . '<dt class="price-list__text">' . $course1 . $course2 . '</dt>';
+                      echo '<dd class="price-list__yen">' . $price . '</dd>' . '</dl>';
                       ?>                    
                   <?php endforeach; ?>
                   <!-- ループ終了 -->
-                </ul>
+                </div>
               </li>
               <li class="price-list__type">
                 <!-- タイトル -->
                 <h3 class="price-list__title">高校生～大人</h3>
                 <!-- コース内容 -->
-                <ul class="price-list__items">
+                <div class="price-list__items">
                   <!-- ループ -->
                   <?php
                     // $experience = SCF::get_option_meta('price_options', 'experience');
@@ -354,18 +365,18 @@
                       $course1 = esc_html($field['experience_course1']);
                       $course2 = esc_html($field['experience_course2']);
                       $price = esc_html($field['experience_price']);
-                      echo '<li class="price-list__item">' . '<div class="price-list__text">' . $course1 . $course2 . '</div>';
-                      echo '<div class="price-list__yen">' . $price . '</div>' . '</li>';
+                      echo '<dl class="price-list__item">' . '<dt class="price-list__text">' . $course1 . $course2 . '</dt>';
+                      echo '<dd class="price-list__yen">' . $price . '</dd>' . '</dl>';
                       ?>                    
                   <?php endforeach; ?>
                   <!-- ループ終了 -->
-                </ul>
+                </div>
               </li>
               <li class="price-list__type">
                 <!-- タイトル -->
                 <h3 class="price-list__title">中学生</h3>
                 <!-- コース内容 -->
-                <ul class="price-list__items">
+                <div class="price-list__items">
                   <!-- ループ -->
                   <?php
                     // $fun = SCF::get_option_meta('price_options', 'fun');
@@ -373,18 +384,18 @@
                       $course1 = esc_html($field['fun_course1']);
                       $course2 = esc_html($field['fun_course2']);
                       $price = esc_html($field['fun_price']);
-                      echo '<li class="price-list__item">' . '<div class="price-list__text">' . $course1 . $course2 . '</div>';
-                      echo '<div class="price-list__yen">' . $price . '</div>' . '</li>';
+                      echo '<dl class="price-list__item">' . '<dt class="price-list__text">' . $course1 . $course2 . '</dt>';
+                      echo '<dd class="price-list__yen">' . $price . '</dd>' . '</dl>';
                       ?>                    
                   <?php endforeach; ?>
                   <!-- ループ終了 -->
-                </ul>
+                </div>
               </li>
               <li class="price-list__type">
                 <!-- タイトル -->
                 <h3 class="price-list__title">幼児～小学生</h3>
                 <!-- コース内容 -->
-                <ul class="price-list__items">
+                <div class="price-list__items">
                   <!-- ループ -->
                   <?php
                     // $special = SCF::get_option_meta('price_options', 'special');
@@ -392,12 +403,12 @@
                       $course1 = esc_html($field['special_course1']);
                       $course2 = esc_html($field['special_course2']);
                       $price = esc_html($field['special_price']);
-                      echo '<li class="price-list__item">' . '<div class="price-list__text">' . $course1 . $course2 . '</div>';
-                      echo '<div class="price-list__yen">' . $price . '</div>' . '</li>';
+                      echo '<dl class="price-list__item">' . '<dt class="price-list__text">' . $course1 . $course2 . '</dt>';
+                      echo '<dd class="price-list__yen">' . $price . '</dd>' . '</dl>';
                       ?>                    
                   <?php endforeach; ?>
                   <!-- ループ終了 -->
-                </ul>
+                </div>
               </li>
               <!-- ループ終了 -->
             </ul>
@@ -412,6 +423,49 @@
             <a href="<?php echo esc_url( home_url( '/price/' ) )?>" class="btn">
               <span>View more</span>
             </a>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Accessセクション -->
+      <section class="layout-access access">
+        <div class="access__inner inner">
+          <!-- セクションタイトルの共通パーツ -->
+          <div class="price__title"> 
+            <h2 class="section-header">
+              <span class="section-header__title">Access</span>
+              <span class="section-header__subtitle">アクセス</span>
+            </h2>
+          </div>
+          <!-- Googleマップ -->
+          <div class="access__wrapper">
+            <!-- テキスト -->
+            <div class="access__address company-profile">
+              <dl class="company-profile__list">
+                <dt class="company-profile__term">アクセス</dt>
+                <dd class="company-profile__description">東武宇都宮駅/東武宇都宮線 徒歩17分</dd>
+              </dl>
+              <dl class="company-profile__list">
+                <dt class="company-profile__term">開校時間</dt>
+                <dd class="company-profile__description">9:00-21:00</dd>
+              </dl>
+              <dl class="company-profile__list">
+                <dt class="company-profile__term">休校日</dt>
+                <dd class="company-profile__description">毎週水曜日、年末年始</dd>
+              </dl>
+              <dl class="company-profile__list">
+                <dt class="company-profile__term">電話</dt>
+                <dd class="company-profile__description"><a href="tel:0120-000-0000">0120-000-0000</a></dd>
+              </dl>
+              <dl class="company-profile__list">
+                <dt class="company-profile__term">住所</dt>
+                <dd class="company-profile__description">栃木県宇都宮市河原町</dd>
+              </dl>
+            </div>
+            <!-- マップ -->
+            <div class="access__map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1602.5841614942458!2d139.88310398884965!3d36.5500541930799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601f6790924e9343%3A0xaf400a8827bab514!2z44CSMzIwLTA4MjIg5qCD5pyo55yM5a6H6YO95a6u5biC5rKz5Y6f55S6!5e0!3m2!1sja!2sjp!4v1713857348731!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
           </div>
         </div>
       </section>

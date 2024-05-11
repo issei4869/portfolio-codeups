@@ -18,7 +18,7 @@
   <?php get_template_part('parts/breadcrumb') ?>
 
   <!-- Price -->
-  <div class="layout-sub-price sub-price music">
+  <div class="layout-sub-price sub-price">
     <div class="sub-price__inner inner">
       <?php 
         $license = SCF::get_option_meta('price_options', 'license');
@@ -29,16 +29,16 @@
       <?php if (!empty($license)) : ?>
         <table id="sub-price1" data-id="#sub-price1" class="sub-price__list sub-price-list">
           <caption class="sub-price-list__head u-mobile">
-            <div class="sub-price-list__wrapper">
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/guitar-icon_white.png" alt="エレキギターアイコン">
+            <div class="sub-price-list__wrapper sub-price-list__wrapper--vocal">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/vocal-icon_white.png" alt="エレキギターアイコン">
               <span>入会金</span>
             </div>       
           </caption>
           <tbody>
             <tr>
               <th rowspan="1000" class="sub-price-list__head u-desktop">
-                <div class="sub-price-list__wrapper">
-                  <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/guitar-icon_white.png" alt="エレキギターアイコン">
+                <div class="sub-price-list__wrapper sub-price-list__wrapper--vocal">
+                  <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/vocal-icon_white.png" alt="エレキギターアイコン">
                   <span>入会金</span>
                 </div>
               </th>
@@ -90,7 +90,7 @@
         <table id="sub-price3" data-id="#sub-price3" class="sub-price__list sub-price-list">
           <caption class="sub-price-list__head u-mobile">
             <div class="sub-price-list__wrapper">
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/guitar-icon_white.png" alt="エレキギターアイコン">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/drum-icon_white.png" alt="エレキギターアイコン">
               <span>中学生</span>
             </div>       
           </caption>
@@ -98,7 +98,7 @@
             <tr class="sub-price-list__head">
               <th rowspan="1000" class="sub-price-list__head u-desktop">
                 <div class="sub-price-list__wrapper">
-                  <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/guitar-icon_white.png" alt="エレキギターアイコン">
+                  <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/drum-icon_white.png" alt="エレキギターアイコン">
                   <span>中学生</span>
                 </div>
               </th>
@@ -120,7 +120,7 @@
         <table id="sub-price4" data-id="#sub-price4" class="sub-price__list sub-price-list">
           <caption class="sub-price-list__head u-mobile">
             <div class="sub-price-list__wrapper">
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/guitar-icon_white.png" alt="エレキギターアイコン">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/piano-icon_white.png" alt="エレキギターアイコン">
               <span>幼児～小学生</span>
             </div>       
           </caption>
@@ -128,7 +128,7 @@
             <tr class="sub-price-list__head">
               <th rowspan="1000" class="sub-price-list__head u-desktop">
                 <div class="sub-price-list__wrapper">
-                  <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/guitar-icon_white.png" alt="エレキギターアイコン">
+                  <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/piano-icon_white.png" alt="エレキギターアイコン">
                   <span>幼児～小学生</span>
                 </div>
               </th>

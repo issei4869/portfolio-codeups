@@ -18,34 +18,23 @@
   <?php get_template_part('parts/breadcrumb') ?>
 
   <!-- About us -->
-  <div class="layout-sub-aboutus sub-aboutus">
-    <div class="sub-aboutus__inner inner">
-      <div class="sub-aboutus__wrap">
-        <div class="sub-aboutus__img-left u-desktop">
-          <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/aboutus1.jpg" alt="弾き語りの画像">
-        </div>
-        <div class="sub-aboutus__img-right">
+  <div class="layout-aboutus layout-aboutus--sub aboutus">
+    <div class="aboutus__inner inner">
+      <div class="aboutus__wrap aboutus__wrap--sub">
+        <picture class="aboutus__img">
+          <source media="(min-width: 767px)" srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/aboutus1.jpg">
           <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/aboutus4.jpg" alt="ライブハウスでのライブ画像">
-        </div>          
-        <!-- タイトル、ボタン用 -->
-        <div class="sub-aboutus__content">
-          <div class="sub-aboutus__main-title">
+        </picture>
+        <div class="aboutus__wrap-right">
+          <div class="aboutus__main-title">
             Let's do<br>some music
           </div>
-          <div class="sub-aboutus__text-wrap">
-            <div class="sub-aboutus__text u-desktop">
-              当サイトをご覧いただきありがとうございます！
-              <br>代表兼講師の長谷川一輝です。
-              <br>個々の生徒の目標やニーズに合わせて、自信を持って演奏できるよう全力でサポートします。
-              <br>音楽の力は無限大です。共に笑い楽しみ成長しましょう！
-            </div>
-          </div>
-        </div>
-        <div class="sub-aboutus__text u-mobile">
-          サイトをご覧いただきありがとうございます！
-          <br>代表兼講師の長谷川一輝です。
-          <br>個々の生徒の目標やニーズに合わせて、自信を持って演奏できるよう全力でサポートします。
-          <br>音楽の力は無限大です。共に笑い楽しみ成長しましょう！
+          <p class="aboutus__text">
+            当サイトをご覧いただきありがとうございます！
+            <br>代表兼講師の長谷川一輝です。
+            <br>個々の生徒の目標やニーズに合わせて、自信を持って演奏できるよう全力でサポートします。
+            <br>音楽の力は無限大です。共に笑い楽しみ成長しましょう！
+          </p>
         </div>
       </div>
     </div>
@@ -59,9 +48,11 @@
       ?>
       <?php if (!empty($fields)) : ?>
         <!-- セクションタイトルの共通パーツ -->
-        <div class="gallery__title section-header">
-          <div class="section-header__title"> Gallery</div>
-          <h2 class="section-header__subtitle">フォト</h2>
+        <div class="gallery__title">
+          <h2 class="section-header">
+            <span class="section-header__title"> Gallery</span>
+            <span class="section-header__subtitle">フォト</span>
+          </h2>
         </div>
         <ul class="gallery__list gallery-list">
         <?php

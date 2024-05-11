@@ -43,7 +43,7 @@
               <a href="<?php echo esc_url( home_url( '/faq/' ) )?>">FAQ<span>よくある質問</span></a>
             </li>
             <li class="header__nav-item">
-              <a href="<?php echo esc_url( home_url( '/contact/' ) )?>">Contact<span>お問合せ</span></a>
+              <a href="<?php echo esc_url( home_url( '/contact/' ) )?>">Trial<span>無料体験</span></a>
             </li>
           </ul>
         </nav>
@@ -123,7 +123,7 @@
                     <a href="<?php echo esc_url( home_url( '/terms-of-service/' ) )?>"><span>利用規約</span></a>
                   </li>
                   <li class="nav-items__item">
-                    <a href="<?php echo esc_url( home_url( '/contact/' ) )?>"><span>お問合せ</span></a>
+                    <a href="<?php echo esc_url( home_url( '/contact/' ) )?>"><span>無料体験</span></a>
                   </li>
                   <li class="nav-items__item">
                     <a href="<?php echo esc_url( home_url( '/sitemap/' ) )?>"><span>サイトマップ</span></a>

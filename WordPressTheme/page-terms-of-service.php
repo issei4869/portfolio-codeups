@@ -17,7 +17,7 @@
     <!-- パンくず -->
     <?php get_template_part('parts/breadcrumb') ?>
     
-    <section class="layout-privacypolicy terms-of-service music">
+    <section class="layout-privacypolicy terms-of-service">
       <div class="terms-of-service__inner inner">
         <div class="terms-of-service__explanation explanation">
           <h2 class="explanation__title">

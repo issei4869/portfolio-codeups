@@ -6,3 +6,10 @@
     margin-top: rem(138);
   }
 }
+
+.layout-aboutus--sub {
+  margin-top: rem(52);
+  @include mq('md') {
+    margin-top: rem(230);
+  }
+}

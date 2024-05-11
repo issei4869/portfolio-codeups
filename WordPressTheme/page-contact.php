@@ -8,7 +8,7 @@
       </div>
       <div class="mv__swiper">
         <picture class="mv__swiper-img">
-          <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/contact-mv.jpeg" alt="お問合せページMV画像">
+          <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/contact-mv.jpeg" alt="無料体験ページMV画像">
         </picture>
       </div>
     </div>
@@ -18,7 +18,7 @@
   <?php get_template_part('parts/breadcrumb') ?>
   
   <!-- お問い合わせフォーム -->
-  <div class="layout-contactform contactform music">
+  <div class="layout-contactform contactform">
     <div class="contactform__inner inner">
       <?php echo do_shortcode('[contact-form-7 id="049ca21" title="お問い合わせ"]'); ?>
     </div>

@@ -8,7 +8,7 @@
       </div>
       <div class="mv__swiper">
         <picture class="mv__swiper-img">
-          <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/contact-mv.jpeg" alt="お問合せページMV画像">
+          <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/contact-mv.jpeg" alt="無料体験ページMV画像">
         </picture>
       </div>
     </div>

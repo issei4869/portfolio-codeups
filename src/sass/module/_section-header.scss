@@ -1,7 +1,6 @@
 @use 'global' as *;
 
 .section-header {
-  // display: inline-block;
   text-align: center;
 }
 
@@ -9,6 +8,7 @@
   font-size: rem(32);
   font-family: $english-font-family;
   line-height: calc(40 / 32);
+  display: block;
   //height: auto;
   @include mq('md') {
     font-size: rem(40);
@@ -22,7 +22,7 @@
 
 .section-header__subtitle {
   margin-top: rem(4);
-  //display: block;
+  display: block;
   font-size: rem(12);
   line-height: calc(18 / 12);
   font-weight: $normal;
@@ -57,22 +57,4 @@
     color: $base-color;
   }
 
-}
-
-
-
-.section-header__title--contact {
-  font-size: rem(80);
-  line-height: 1;
-  @include mq('md') {
-    font-size: rem(80);
-  }
-}
-
-.section-header__subtitle--contact {
-  margin-top: rem(-6);
-  padding-bottom: 0;
-  @include mq('md') {
-    margin-top: rem(-6);
-  }
 }

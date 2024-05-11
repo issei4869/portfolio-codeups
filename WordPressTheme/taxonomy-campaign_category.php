@@ -16,7 +16,7 @@
   <!-- パンくず -->
   <?php get_template_part('parts/breadcrumb') ?>
   <!-- Campaignカード -->
-  <div class="layout-sub-campaign sub-campaign music">
+  <div class="layout-sub-campaign sub-campaign">
     <div class="sub-campaign__inner inner">
       <!-- Tabの共通パーツ -->
       <?php if ( have_posts() ) : ?>
@@ -108,7 +108,7 @@
                   </div>
                 <?php endif; ?>
                 <div class="campaign-card__comment">
-                  お問合せ・無料体験申込はコチラ
+                  無料体験・無料体験申込はコチラ
                 </div>
                 <div class="campaign-card__btn">
                   <a href="<?php echo esc_url( home_url( '/contact/' ) )?>" class="btn">

@@ -7,7 +7,7 @@
   row-gap: rem(16);
   column-gap: rem(21);
   @include mq('md') {
-    grid-template-columns: repeat(auto-fit, rem(162));
+    grid-template-columns: repeat(auto-fit, minmax(rem(162), 1fr));
     justify-content: left;
     column-gap: rem(32);
   }

@@ -5,6 +5,7 @@
 }
 
 .sub-price__inner.inner {
+  max-width: rem(540);
   @include mq('md') {
     max-width: rem(752);
   }

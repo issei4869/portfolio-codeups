@@ -10,10 +10,12 @@
 
 .voice-card__contents {
   display: flex;
+  flex-direction: column-reverse;
   align-items: end;
   gap: rem(8);
   justify-content: space-between;
   @include mq('md') {
+    flex-direction: row;
     gap: rem(16);
   }
 }
@@ -27,10 +29,10 @@
 }
 
 .voice-card__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
   @include mq('md') {
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
   }
 }
 
@@ -70,7 +72,6 @@
 
 .voice-card__img {
   width: 100%;
-  max-width: rem(151);
   @include mq('md') {
     max-width: rem(180);
   }

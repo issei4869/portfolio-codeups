@@ -11,8 +11,8 @@
 .toggle-list__item-question,
 .toggle-list__item-answer {
   color: $accent-color;
-  font-size: rem(24);
-  line-height: calc(35 / 24);
+  font-size: rem(20);
+  line-height: calc(35 / 20);
   padding-left: rem(32);
   cursor: pointer;
 }
@@ -51,7 +51,7 @@
 .toggle-list__item-answer::before {
   content: "";
   position: absolute;
-  top: 30%;
+  top: 25%;
   left: rem(3);
   height: calc(rem(21) / 2 * tan(60deg));
   width: rem(21);

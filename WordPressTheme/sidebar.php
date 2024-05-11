@@ -6,12 +6,7 @@
       <!-- 人気記事 -->
       <li class="blog-sidebar__item blog-sidebar-item">
         <!-- サイドバータイトル -->
-        <div class="blog-sidebar__title sidebar-header">
-          <div class="sidebar-header__icon">
-            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/guitar-icon2.png" alt="エレキギターアイコン">
-          </div>
-          <div class="sidebar-header__title">人気記事</div>
-        </div>
+        <div class="blog-sidebar__title sidebar-header">人気記事</div>
         <?php if ( have_posts() ) : ?>
           <!-- 人気記事カード -->
           <ul class="blog-sidebar-item__list blog-sidebar-cards">
@@ -51,12 +46,7 @@
       <!-- 口コミ -->
       <li class="blog-sidebar__review blog-sidebar-review">
         <!-- サイドバータイトル -->
-        <div class="blog-sidebar__title sidebar-header">
-          <div class="sidebar-header__icon">
-            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/guitar-icon2.png" alt="エレキギターアイコン">
-          </div>
-          <div class="sidebar-header__title">口コミ</div>
-        </div>
+        <div class="blog-sidebar__title sidebar-header">口コミ</div>
         <!-- 口コミカード -->
         <?php $recent_query = new WP_Query(
           array(
@@ -110,12 +100,7 @@
       <!-- キャンペーン -->
       <li class="blog-sidebar__campaign blog-sidebar-campaign">
         <!-- サイドバータイトル -->
-        <div class="blog-sidebar__title sidebar-header">
-          <div class="sidebar-header__icon">
-            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/guitar-icon2.png" alt="エレキギターアイコン">
-          </div>
-          <div class="sidebar-header__title">キャンペーン</div>
-        </div>
+        <div class="blog-sidebar__title sidebar-header">キャンペーン</div>
         <!-- キャンペーンカード -->
         <ul class="blog-sidebar-campaign__items blog-sidebar-items">
           <?php $recent_query = new WP_Query(
@@ -190,12 +175,7 @@
       <!-- トグルリスト -->
       <li class="blog-sidebar__archive blog-sidebar-archive">
         <!-- サイドバータイトル -->
-        <div class="blog-sidebar__title sidebar-header">
-          <div class="sidebar-header__icon">
-            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/guitar-icon2.png" alt="エレキギターアイコン">
-          </div>
-          <div class="sidebar-header__title">アーカイブ</div>
-        </div>
+        <div class="blog-sidebar__title sidebar-header">アーカイブ</div>
         <!-- トグルリスト -->
         <div class="blog-sidebar__toggle toggle">
           <div class="toggle__inner">  

@@ -1,8 +1,21 @@
 @use 'global' as *;
 
 .information-list {
+  animation: fade .3s;
+  display: block;
+  padding: rem(22);
   @include mq('md') {
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: rem(48);
+    padding: rem(16) rem(22) rem(20);
+  }
+}
+
+.information-list--second {
+  @include mq('md') {
+    flex-direction: row-reverse;
   }
 }
 
@@ -49,7 +62,6 @@
 }
 
 .information-list__wrap--sub {
-  margin-top: rem(0);
   @include mq('md') {
     padding-left: 0;
   }
@@ -60,7 +72,7 @@
   line-height: calc(24 / 20);
   font-weight: $bold;
   border-bottom: rem(1) solid $accent-color;
-  padding-bottom: calc(rem(4) - rem(1));
+  padding-bottom: rem(6);
   @include mq(md){
     font-size: rem(24);
     line-height: 1;

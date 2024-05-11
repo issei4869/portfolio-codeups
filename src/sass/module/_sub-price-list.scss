@@ -36,6 +36,13 @@
   }
 }
 
+.sub-price-list__wrapper--vocal img {
+  @include mq('md') {
+    width: rem(47);
+    height: rem(54);
+  }
+}
+
 .sub-price-list__wrapper span {
   color: $base-color;
   font-weight: $bold;
@@ -62,10 +69,9 @@
 
 .sub-price-list__text {
   width: calc((240 / 345) * 100%);
-  text-align: center;
+  text-align: left;
   @include mq('md') {
     width: calc((340 / 702) * 100%);
-    text-align: left;
   }
 }
 

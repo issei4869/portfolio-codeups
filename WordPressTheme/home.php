@@ -18,7 +18,7 @@
     <?php get_template_part('parts/breadcrumb') ?>
     
     <!-- Blog一覧 -->
-    <div class="layout-sub-blog sub-blog music">
+    <div class="layout-sub-blog sub-blog">
 		  <div class="sub-blog__inner inner">
         <div class="sub-blog__wrapper">
           <?php if ( have_posts() ) : ?>
