@@ -106,7 +106,7 @@
                   無料体験・無料体験申込はコチラ
                 </div>
                 <div class="campaign-card__btn">
-                  <a href="<?php echo esc_url( home_url( '/contact/' ) )?>" class="btn">
+                  <a href="<?php echo esc_url( home_url( '/contact/' ) )?>?inquiry[]=<?php the_title(); ?>" class="btn">
                     <span>Contact us</span>
                   </a>
                 </div>

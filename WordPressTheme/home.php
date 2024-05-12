@@ -51,11 +51,11 @@
           <!-- ページネーションボタン（共通パーツ） -->
           <div class="blog-list__pagenavi pagenavi">
             <div class="pagenavi__inner">
-              <div class="sub-blog__sidebar">
+              <!-- <div class="sub-blog__sidebar"> -->
                 <!-- WP-PageNaviで出力される部分 ここから -->
                 <?php wp_pagenavi(); ?>
                 <!-- WP-PageNaviで出力される部分 ここまで -->
-              </div>
+              <!-- </div> -->
             </div>
           </div>
         </div>

@@ -399,14 +399,36 @@ $("#grayDisplay").click(function () {
 // });
 
 
-jQuery(document).ready(function($){
-  $(".form-none").css("display", "none"); //クラス名がform-noneの要素は非表示
-  $("#show-checkbox01 span:last-child").click(function(){ //IDがshow-checkbox01の中にある最初のスパンがクリックされたときの動き
-  if($('input:checkbox[value="無料体験レッスン申込"]').is(':checked')) {//value値が例01のチェックボックスにチェックがついたら 
-    $('.form-none').show('slow');
-  }
-  else{
-    $('.form-none').hide('slow');
-  } //クラス名がform-noneの要素を表示させるよ、そうじゃなければ非表示だよ。
-  });
+//無料体験レッスン申込にチェックを入れると新たな項目がアコーディオンで現れる
+// jQuery(document).ready(function($){
+//   $(".form-none").css("display", "none"); //クラス名がform-noneの要素は非表示
+//   $("#show-checkbox01 span:last-child").click(function(){ //IDがshow-checkbox01の中にある最初のスパンがクリックされたときの動き
+//   if($('input:checkbox[value="無料体験レッスン申込"]').is(':checked')) {//value値が例01のチェックボックスにチェックがついたら 
+//     $('.form-none').show('slow');
+//   }
+//   else{
+//     $('.form-none').hide('slow');
+//   } //クラス名がform-noneの要素を表示させるよ、そうじゃなければ非表示だよ。
+//   });
+// });
+
+//お問い合わせフォームチェックボックスデフォルトチェック
+jQuery(function($) {
+	var url = location.protocol + "//" + location.host + location.pathname + location.search;
+	var params = url.split('?');
+	var paramms = params.length>1&&params[1].split('&');
+	var paramArray = [];
+	for(var i = 0; i < paramms.length; i++) {
+		var vl = paramms[i].split('=');
+		paramArray.push(vl[0]);
+		paramArray[vl[0]] = vl[1];
+		var terms = decodeURIComponent(vl[1]);
+		$('input').each(function(){
+			var val = $(this).val();
+			if(terms === val) {
+				$(this).prop("checked",true);
+			}
+		});
+	}
 });
+

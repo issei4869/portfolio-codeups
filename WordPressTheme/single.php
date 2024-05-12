@@ -71,12 +71,19 @@
                 }
               ?>
               <!-- WP-PageNaviで出力される部分 ここから -->
-              <div class='wp-pagenavi' role='navigation'>
+              <div class='wp-pagenavi wp-pagenavi--single' role='navigation'>
                 <?php if ( ! empty( $prev ) ) : ?>
-                  <a class="previouspostslink" rel="prev" href="<?php echo $prev_url; ?>">&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                  <!-- <div class="pagenavi-class"> -->
+                    <a class="previouspostslink previouspostslink--single" rel="prev" href="<?php echo $prev_url; ?>">&nbsp;&nbsp;&nbsp;&nbsp;前の記事</a>
+                  <!-- </div> -->
                 <?php endif; ?>
+                  <!-- <div class="pagenavi-class"> -->
+                    <a class="centarpostslink" href="<?php echo esc_url( home_url( '/blog/' ) )?>">一覧へ戻る</a>
+                  <!-- </div> -->
                 <?php if ( ! empty( $next ) ) : ?>
-                  <a class="nextpostslink" rel="next" href="<?php echo $next_url; ?>">&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                  <!-- <div class="pagenavi-class"> -->
+                    <a class="nextpostslink nextpostslink--single" rel="next" href="<?php echo $next_url; ?>">次の記事&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                  <!-- </div> -->
                 <?php endif; ?>
               </div>
               <!-- WP-PageNaviで出力される部分 ここまで -->
