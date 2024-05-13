@@ -41,6 +41,11 @@
           <div class="nav-list__items nav-items">
             <ul class="nav-items__item">
               <li class="nav-items__item-category">
+                <a href="<?php echo esc_url( home_url( '/about-us/' ) )?>">私たちについて</a>
+              </li>
+            </ul>
+            <ul class="nav-items__item">
+              <li class="nav-items__item-category">
                 <a href="<?php echo esc_url( home_url( '/campaign/' ) )?>">コース</a>
               </li>
               <?php
@@ -57,30 +62,30 @@
           <div class="nav-list__items nav-items">
             <ul class="nav-items__item">
               <li class="nav-items__item-category">
-                <a href="<?php echo esc_url( home_url( '/about-us/' ) )?>">私たちについて</a>
+                <a href="<?php echo esc_url( home_url( '/campaign/' ) )?>#sub-price0">料金一覧</a>
+              </li>
+              <li class="nav-items__item-category">
+                <a href="<?php echo esc_url( home_url( '/campaign/' ) )?>#sub-price1">入会金</a>
+              </li>
+              <li class="nav-items__item-category">
+                <a href="<?php echo esc_url( home_url( '/campaign/' ) )?>#sub-price2">高校生～大人</a>
+              </li>
+              <li class="nav-items__item-category">
+                <a href="<?php echo esc_url( home_url( '/campaign/' ) )?>#sub-price3">中学生</a>
+              </li>
+              <li class="nav-items__item-category">
+                <a href="<?php echo esc_url( home_url( '/campaign/' ) )?>#sub-price4">幼児～小学生</a>
               </li>
             </ul>
-            <ul class="nav-items__item">
-              <li class="nav-items__item-category">
-                <a href="<?php echo esc_url( home_url( '/information/' ) )?>">サービス</a>
-              </li>
-              <li class="nav-items__item-category">
-                <a class="js-link-menu" data-number="tab01" href="<?php echo esc_url( home_url( '/information/' ) )?>#tab01">防音室無料</a>
-              </li>
-              <li class="nav-items__item-category">
-                <a class="js-link-menu" data-number="tab02" href="<?php echo esc_url( home_url( '/information/' ) )?>#tab02">楽器貸出無料</a>
-              </li>
-              <li class="nav-items__item-category">
-                <a class="js-link-menu" data-number="tab03" href="<?php echo esc_url( home_url( '/information/' ) )?>#tab03">年2回の発表会</a>
-              </li>
-            </ul>
+            <!-- <div class="nav-items__item"> -->
+            <!-- </li> -->
+          </div>
+          <div class="nav-list__items nav-items">
             <ul class="nav-items__item">
               <li class="nav-items__item-category">
                 <a href="<?php echo esc_url( home_url( '/blog/' ) )?>">ブログ</a>
               </li>
             </ul>
-          </div>
-          <div class="nav-list__items nav-items">
             <ul class="nav-items__item">
               <li class="nav-items__item-category">
                 <a href="<?php echo esc_url( home_url( '/voice/' ) )?>">生徒様の声</a>
@@ -88,28 +93,11 @@
             </ul>
             <ul class="nav-items__item">
               <li class="nav-items__item-category">
-                <a href="<?php echo esc_url( home_url( '/price/' ) )?>">料金一覧</a>
-              </li>
-              <li class="nav-items__item-category">
-                <a href="<?php echo esc_url( home_url( '/price/' ) )?>#sub-price1">入会金</a>
-              </li>
-              <li class="nav-items__item-category">
-                <a href="<?php echo esc_url( home_url( '/price/' ) )?>#sub-price2">高校生～大人</a>
-              </li>
-              <li class="nav-items__item-category">
-                <a href="<?php echo esc_url( home_url( '/price/' ) )?>#sub-price3">中学生</a>
-              </li>
-              <li class="nav-items__item-category">
-                <a href="<?php echo esc_url( home_url( '/price/' ) )?>#sub-price4">幼児～小学生</a>
-              </li>
-            </ul>
-          </div>   
-          <div class="nav-list__items nav-items">
-            <ul class="nav-items__item">
-              <li class="nav-items__item-category">
                 <a href="<?php echo esc_url( home_url( '/faq/' ) )?>">よくある質問</a>
               </li>
             </ul>
+          </div>
+          <div class="nav-list__items nav-items">
             <ul class="nav-items__item">
               <li class="nav-items__item-category">
                 <a href="<?php echo esc_url( home_url( '/privacypolicy/' ) )?>">プライバシー<br class="u-mobile">ポリシー</a>
@@ -122,12 +110,12 @@
             </ul>
             <ul class="nav-items__item">
               <li class="nav-items__item-category">
-                <a href="<?php echo esc_url( home_url( '/contact/' ) )?>">無料体験</a>
+                <a href="<?php echo esc_url( home_url( '/sitemap/' ) )?>">サイトマップ</a>
               </li>
             </ul>
             <ul class="nav-items__item">
               <li class="nav-items__item-category">
-                <a href="<?php echo esc_url( home_url( '/sitemap/' ) )?>">サイトマップ</a>
+                <a href="<?php echo esc_url( home_url( '/contact/' ) )?>">無料体験</a>
               </li>
             </ul>
           </div>

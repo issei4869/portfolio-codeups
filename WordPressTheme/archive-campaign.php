@@ -133,7 +133,7 @@
   <div class="layout-sub-price sub-price">
     <div class="sub-price__inner inner">
       <!-- セクションタイトルの共通パーツ -->
-      <div class="aboutus__title">
+      <div id="sub-price0" data-id="#sub-price0" class="aboutus__title">
           <h2 class="section-header">
             <span class="section-header__title">Price</span>
             <span class="section-header__subtitle">料金</span>

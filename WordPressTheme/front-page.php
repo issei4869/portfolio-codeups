@@ -154,22 +154,47 @@
             <span class="section-header__subtitle">サービス</span>
           </h2>
         </div>
-        <div class="information__list information-list">
-          <div class="information-list__img colorbox js-color">
-            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/information1.jpeg" alt="楽器の画像">
-          </div>
-          <div class="information-list__wrap">
-            <div class="information-list__title">サービス、オプションの紹介</div>
-            <p class="information-list__text">当スクールはただレッスンを受けて終わり...ではありません。
-            <br>技術の向上、音楽を楽しむ環境づくりを徹底しております！その想いはレッスンだけにはとどまりません。</p>
-            <div class="information-list__btn">
-              <!-- ボタンの共通パーツ -->
-              <a href="<?php echo esc_url( home_url( '/information/' ) )?>" class="btn">
-                <span>View more</span>
-              </a>
+        <ul class="information__items">
+          <li class="information__item information-item">
+            <div class="information-item__img colorbox js-color">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/information2.jpeg" alt="音楽スタジオの画像">
             </div>
-          </div>
-        </div>
+            <div class="information-item__wrap">
+              <h3 class="information-item__title">防音室無料</h3>
+                <p class="information-item__text">
+                  レッスン以外の練習の場として防音室を2室開放しております。
+                  <br>空室＆一人一日2時間という条件がありますが、練習の場として是非ご利用ください！
+                  <br>また、レコーディングも無料のため、音源制作やYouTube発信が可能です。
+                </p>
+            </div>
+          </li>
+          <li class="information__item information-item information-item--second">
+            <div class="information-item__img colorbox js-color">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/information1.jpeg" alt="楽器の画像">
+            </div>
+            <div class="information-item__wrap information-item__wrap--second">
+              <h3 class="information-item__title">楽器貸出無料</h3>
+                <p class="information-item__text">
+                  レッスン中や防音室での練習時に使用する楽器を無料で貸出しております。
+                  <br>楽器ないからレッスン受けれない...といったご心配はいりません！
+                </p>
+            </div>
+          </li>
+          <li class="information__item information-item">
+            <div class="information-item__img colorbox js-color">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/information3.jpeg" alt="ライブハウスの画像">
+            </div>
+            <div class="information-item__wrap">
+              <h3 class="information-item__title">年2回の発表会</h3>
+                <p class="information-item__text">
+                  毎年3月と9月にスクール内で発表会を開催しております。
+                  <br>一般のお客様もご来場いただいており大盛況です。
+                  <br>発表会後、講師陣によるフィードバックがあり、更なる課題と成長に繋がります。
+                  <br>日頃の練習の成果を発揮する場として、思う存分音楽を楽しみましょう！
+                </p>
+            </div>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -310,122 +335,8 @@
           </div>
         </div>
       </section>
-    <?php endif; ?>
-    <?php wp_reset_postdata(); ?>
-
-    <!-- Priceセクション -->
-    <?php 
-      $license = SCF::get_option_meta('price_options', 'license');
-      $experience = SCF::get_option_meta('price_options', 'experience');
-      $fun = SCF::get_option_meta('price_options', 'fun');
-      $special = SCF::get_option_meta('price_options', 'special');
-    ?>
-    <?php if (!empty($license) || !empty($experience) || !empty($fun) || !empty($special) ) : ?>
-      <section class="layout-price price">
-        <div class="price__inner inner">
-          <!-- セクションタイトルの共通パーツ -->
-          <div class="price__title">
-            <h2 class="section-header">
-              <span class="section-header__title">Price</span>
-              <span class="section-header__subtitle">料金一覧</span>
-            </h2>
-          </div>
-          <div class="price__content">
-            <!-- 料金リスト -->
-            <ul class="price__list price-list">
-              <!-- ループ -->
-              <li class="price-list__type">
-                <!-- タイトル -->
-                <h3 class="price-list__title">入会金</h3>
-                <!-- コース内容 -->
-                <div class="price-list__items">
-                  <!-- ループ -->
-                  <?php
-                    // $license = SCF::get_option_meta('price_options', 'license');
-                    foreach ($license as $field):
-                      $course1 = esc_html($field['license_course1']);
-                      $course2 = esc_html($field['license_course2']);
-                      $price = esc_html($field['license_price']);
-                      echo '<dl class="price-list__item">' . '<dt class="price-list__text">' . $course1 . $course2 . '</dt>';
-                      echo '<dd class="price-list__yen">' . $price . '</dd>' . '</dl>';
-                      ?>                    
-                  <?php endforeach; ?>
-                  <!-- ループ終了 -->
-                </div>
-              </li>
-              <li class="price-list__type">
-                <!-- タイトル -->
-                <h3 class="price-list__title">高校生～大人</h3>
-                <!-- コース内容 -->
-                <div class="price-list__items">
-                  <!-- ループ -->
-                  <?php
-                    // $experience = SCF::get_option_meta('price_options', 'experience');
-                    foreach ($experience as $field):
-                      $course1 = esc_html($field['experience_course1']);
-                      $course2 = esc_html($field['experience_course2']);
-                      $price = esc_html($field['experience_price']);
-                      echo '<dl class="price-list__item">' . '<dt class="price-list__text">' . $course1 . $course2 . '</dt>';
-                      echo '<dd class="price-list__yen">' . $price . '</dd>' . '</dl>';
-                      ?>                    
-                  <?php endforeach; ?>
-                  <!-- ループ終了 -->
-                </div>
-              </li>
-              <li class="price-list__type">
-                <!-- タイトル -->
-                <h3 class="price-list__title">中学生</h3>
-                <!-- コース内容 -->
-                <div class="price-list__items">
-                  <!-- ループ -->
-                  <?php
-                    // $fun = SCF::get_option_meta('price_options', 'fun');
-                    foreach ($fun as $field):
-                      $course1 = esc_html($field['fun_course1']);
-                      $course2 = esc_html($field['fun_course2']);
-                      $price = esc_html($field['fun_price']);
-                      echo '<dl class="price-list__item">' . '<dt class="price-list__text">' . $course1 . $course2 . '</dt>';
-                      echo '<dd class="price-list__yen">' . $price . '</dd>' . '</dl>';
-                      ?>                    
-                  <?php endforeach; ?>
-                  <!-- ループ終了 -->
-                </div>
-              </li>
-              <li class="price-list__type">
-                <!-- タイトル -->
-                <h3 class="price-list__title">幼児～小学生</h3>
-                <!-- コース内容 -->
-                <div class="price-list__items">
-                  <!-- ループ -->
-                  <?php
-                    // $special = SCF::get_option_meta('price_options', 'special');
-                    foreach ($special as $field):
-                      $course1 = esc_html($field['special_course1']);
-                      $course2 = esc_html($field['special_course2']);
-                      $price = esc_html($field['special_price']);
-                      echo '<dl class="price-list__item">' . '<dt class="price-list__text">' . $course1 . $course2 . '</dt>';
-                      echo '<dd class="price-list__yen">' . $price . '</dd>' . '</dl>';
-                      ?>                    
-                  <?php endforeach; ?>
-                  <!-- ループ終了 -->
-                </div>
-              </li>
-              <!-- ループ終了 -->
-            </ul>
-            <!-- 画像 -->
-            <picture class="price__img colorbox js-color">
-              <source media="(min-width: 767px)" srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/top-price_pc.jpeg">
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/top-price_sp.jpeg" alt="エレキギターsp版用画像">
-            </picture>
-          </div>
-          <div class="price__btn">
-            <!-- ボタンの共通パーツ -->
-            <a href="<?php echo esc_url( home_url( '/price/' ) )?>" class="btn">
-              <span>View more</span>
-            </a>
-          </div>
-        </div>
-      </section>
+      <?php endif; ?>
+      <?php wp_reset_postdata(); ?>
       
       <!-- Accessセクション -->
       <section class="layout-access access">
@@ -469,5 +380,4 @@
           </div>
         </div>
       </section>
-    <?php endif; ?>
 <?php get_footer(); ?>

@@ -22,22 +22,16 @@
         <nav class="header__nav">
           <ul class="header__nav-items">
             <li class="header__nav-item">
-              <a href="<?php echo esc_url( home_url( '/campaign/' ) )?>">Course<span>コース</span></a>
-            </li>
-            <li class="header__nav-item">
               <a href="<?php echo esc_url( home_url( '/about-us/' ) )?>">About us<span>私たちについて</span></a>
             </li>
             <li class="header__nav-item">
-              <a href="<?php echo esc_url( home_url( '/information/' ) )?>">Service<span>サービス</span></a>
+              <a href="<?php echo esc_url( home_url( '/campaign/' ) )?>">Course<span>コース</span></a>
             </li>
             <li class="header__nav-item">
               <a href="<?php echo esc_url( home_url( '/blog/' ) )?>">Blog<span>ブログ</span></a>
             </li>
             <li class="header__nav-item">
               <a href="<?php echo esc_url( home_url( '/voice/' ) )?>">Voice<span>生徒様の声</span></a>
-            </li>
-            <li class="header__nav-item">
-              <a href="<?php echo esc_url( home_url( '/price/' ) )?>">Price<span>料金一覧</span></a>
             </li>
             <li class="header__nav-item">
               <a href="<?php echo esc_url( home_url( '/faq/' ) )?>">FAQ<span>よくある質問</span></a>
