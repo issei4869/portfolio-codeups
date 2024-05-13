@@ -15,6 +15,17 @@ pagetop.click(function () {
   }, 500);
   return false;
 });
+
+//スクロール後headerの色変更
+$(function () {
+  $(window).on('scroll', function () {
+    if ($(this).scrollTop()) {
+      $('.js-header').addClass('fixed');
+    } else {
+      $('.js-header').removeClass('fixed');
+    }
+  });
+});
 jQuery(function ($) {
   // この中であればWordpressでも「$」が使用可能になる
 
@@ -285,38 +296,40 @@ jQuery(function ($) {
   });
 
   //Informationページのリンククリックによる同ページスムーススクロール
-  $(function () {
-    $('a[href*="information.html#"]').on('click', function () {
-      var scrollSpeed = 400;
-      var scrollToElement = $('[data-id="' + this.hash + '"]');
-      if (!scrollToElement.length) return;
-      var locationOffset = scrollToElement.offset().top;
-      var navigationBarHeight = $('.header').innerHeight();
-      locationOffset = locationOffset - navigationBarHeight;
-      $('html, body').animate({
-        scrollTop: locationOffset
-      }, 300, 'swing');
-    });
-  });
+  // $(function() {
+  //   $('a[href*="information.html#"]').on('click', function() {
+  //     const scrollSpeed = 400;
+  //       let scrollToElement = $('[data-id="' + this.hash + '"]');
+  //       if (!scrollToElement.length) return;
+  //         let locationOffset = scrollToElement.offset().top;
+  //         let navigationBarHeight = $('.header').innerHeight();
+  //         locationOffset = locationOffset - navigationBarHeight;
+  //         $('html, body').animate({
+  //             scrollTop: locationOffset
+  //         }, 300, 'swing');
+  //   });
+  // });
 
   /*****Tab切り替え*****/
-  $('.js-tab-menu').on('click', function () {
-    $('.js-tab-menu').removeClass('is-active');
-    $('.js-tab-content').removeClass('is-active');
-    $(this).addClass('is-active');
-    var number = $(this).data("number");
-    $('#' + number).addClass('is-active');
-  });
-  $('.js-link-menu').on('click', function () {
-    var number = $(this).data("number");
-    $('.js-tab-menu[data-number="' + number + '"]').click();
-  });
-  $(document).ready(function () {
-    var hash = window.location.hash.substring(1); // Get the hash, removing the '#'
-    if (hash) {
-      $('.js-tab-menu[data-number="' + hash + '"]').click();
-    }
-  });
+  // $('.js-tab-menu').on('click', function () {
+  //   $('.js-tab-menu').removeClass('is-active');
+  //   $('.js-tab-content').removeClass('is-active');
+  //   $(this).addClass('is-active');
+  //   var number = $(this).data("number");
+  //   $('#' + number).addClass('is-active');
+  // });
+
+  // $('.js-link-menu').on('click', function () {
+  //   var number = $(this).data("number");
+  //   $('.js-tab-menu[data-number="' + number + '"]').click();
+  // });
+
+  // $(document).ready(function() {
+  //   var hash = window.location.hash.substring(1); // Get the hash, removing the '#'
+  //   if(hash) {
+  //     $('.js-tab-menu[data-number="' + hash + '"]').click();
+  //   }
+  // });
 
   // $(function () {
   //   //タブの実装

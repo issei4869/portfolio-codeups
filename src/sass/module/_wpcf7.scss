@@ -27,7 +27,8 @@ input.wpcf7-not-valid::placeholder {
 
 //「入力してください」を非表示
 .wpcf7-not-valid-tip {
-  display: none;
+  // display: none;
+  margin-top: rem(10);
 }
 
 .wpcf7 form.invalid .wpcf7-response-output {
@@ -35,6 +36,7 @@ input.wpcf7-not-valid::placeholder {
   text-align: center;
   color: #c94800;
   font-size: rem(14);
+  margin-top: rem(20);
 }
 
 

@@ -199,3 +199,58 @@ function wpcf7_autop_return_false() {
   return false;
 }
 
+//Contactフォーム　エラーメッセージ設定
+//名前
+function my_wpcf7_validation_error_message_name($result, $tag) {
+  if ('name1' == $tag->name) {
+      if (empty($_POST[$tag->name])) {
+          $result->invalidate($tag, '※正しいお名前をご入力ください。');
+      }
+  }
+  return $result;
+}
+add_filter('wpcf7_validate_text', 'my_wpcf7_validation_error_message_name', 10, 2);
+
+//メールアドレス
+function my_wpcf7_validation_error_message_kana($result, $tag) {
+  if ('email-963' == $tag->name) {
+      if (empty($_POST[$tag->name])) {
+          $result->invalidate($tag, '※正しいメールアドレスをご入力ください。');
+      }
+  }
+  return $result;
+}
+add_filter('wpcf7_validate_email', 'my_wpcf7_validation_error_message_kana', 10, 2);
+
+//電話番号
+function my_wpcf7_validation_error_message_tel($result, $tag) {
+  if ('tel' == $tag->name) {
+      if (empty($_POST[$tag->name])) {
+          $result->invalidate($tag, '※正しい電話番号をご入力ください。');
+      }
+  }
+  return $result;
+}
+add_filter('wpcf7_validate_tel', 'my_wpcf7_validation_error_message_tel', 10, 2);
+
+//チェックボックス
+function my_wpcf7_validation_error_message_type1($result, $tag) {
+   if ('checkbox-568' == $tag->name) {
+    if (empty($_POST[$tag->name])) {
+        $result->invalidate($tag, '※チェックを入れてください。');
+    }
+  }
+  return $result;
+}
+add_filter('wpcf7_validate_checkbox', 'my_wpcf7_validation_error_message_type1', 10, 2);
+
+//チェックボックス
+function my_wpcf7_validation_error_message_type2($result, $tag) {
+  if ('checkbox-489' == $tag->name) {
+   if (empty($_POST[$tag->name])) {
+       $result->invalidate($tag, '※チェックを入れてください。');
+   }
+ }
+ return $result;
+}
+add_filter('wpcf7_validate_checkbox', 'my_wpcf7_validation_error_message_type2', 10, 2);

@@ -12,11 +12,11 @@
 </head>
 <body>
   <?php if (is_404()){ echo '<div class="background">'; }; ?>
-    <header class="layout-header header">
+    <header class="layout-header header js-header">
       <div class="header__inner">
         <h1 class="header__logo">
           <a href="<?php echo esc_url( home_url( '/' ) )?>">
-            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/logo_white1.png" alt="白いCodeUpsのロゴ">
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/logo_yellow8.png" alt="白いCodeUpsのロゴ">
           </a>
         </h1>
         <nav class="header__nav">

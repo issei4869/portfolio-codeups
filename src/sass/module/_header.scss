@@ -2,10 +2,15 @@
 
 .header {
   height: rem(80);
-  background: rgba(152, 232, 188, 0.75);
+  background: $base-color;
+  transition: all .3s;
   @include mq("md") {
     height: rem(90);
   }
+}
+
+.header.fixed {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
 }
 
 .header__inner {
@@ -81,7 +86,7 @@
   flex-direction: column;
   font-size: rem(18);
   font-family: $english-font-family;
-  color: $base-color;
+  color: $font-color;
   position: relative;
 }
 
@@ -95,7 +100,7 @@
   /*線の形状*/
   width: 80%;
   height: rem(1);
-  background: $base-color;
+  background: $font-color;
   /*アニメーションの指定*/
   transition: all .3s;
   transform: scale(0, 1);/*X方向0、Y方向1*/

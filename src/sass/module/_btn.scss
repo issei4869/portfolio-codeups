@@ -1,14 +1,49 @@
 @use 'global' as *;
 
 .btn {
+  background: transparent;
   padding: calc(rem(16) - rem(1)) calc(rem(88) - rem(1)) calc(rem(16) - rem(1)) calc(rem(40) - rem(1));
+  border: 1px solid $accent-color;
+  box-sizing: border-box;
+  border-radius: 75px;
   position: relative;
-  display: inline-block;
-  border: rem(1) solid $accent-color;
-  background-color: $accent-color;
-  transition: .5s;
   z-index: 1;
+  display: inline-block;
+  transition: .5s;
 }
+
+.btn::before,
+.btn::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 75px;
+}
+
+.btn::before {
+  background: $accent-color;
+  z-index: -1;
+  transition: transform ease .5s, opacity .5s;
+}
+
+.btn::after {
+  border: 1px solid $accent-color;
+  box-sizing: border-box;
+}
+
+.btn:hover {
+  color: $accent-color;
+}
+
+.btn:hover::before {
+  transform: scale(0);
+  opacity: 0;
+}
+
+
 
 .btn--404 {
   padding-left: rem(40);
@@ -17,50 +52,16 @@
   background-color: $base-color;
 }
 
-
-.btn:hover {
-  opacity: 1;
-}
-
-.btn::before {
-  content: "";
-  position: absolute;
-  top: calc(rem(4) + rem(1));
-  left: rem(4);
-  display: block;
-  width: 100%;
-  height: 100%;
-  border: rem(1) solid $accent-color;
-  z-index: -2;
-}
-
-.btn--404::before {
-  border: rem(1) solid $base-color;
-}
-
-.btn::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: $base-color;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: .5s;
-  transition-property: transform;
-  z-index: -1;
-}
-
 .btn--404::after {
   background: $accent-color;
 }
 
 .btn:hover::after {
-  transform: scaleX(1);
-  transform-origin: left;
+  // transform: scaleX(1);
+  // transform-origin: left;
+  transition: all .5s ease-in;
+  z-index: -1;
+  border-radius: 75px;
 }
 
 .btn span,
@@ -80,38 +81,26 @@
   color: $accent-color;
 }
 
-.btn span::before,
-.btn span::after,
-.btn-contactform span::before,
-.btn-contactform span::after {
-  content: "";
-  position: absolute;
-  background-color: $base-color;
-  border-radius: 2px;
-  transition: .5s;
-}
+// .btn-contactform span::after {
+//   content: "";
+//   position: absolute;
+//   background-color: $base-color;
+//   border-radius: 2px;
+//   transition: .5s;
+// }
 
-.btn--404 span::before,
-.btn--404 span::after {
-  background-color: $accent-color;
-}
+// .btn--404 span::after {
+//   background-color: $accent-color;
+// }
 
-.btn span::before,
-.btn-contactform span::before {
-  top: 50%;
-  width: rem(40);
-  height: rem(1);
-  right: rem(-49);
-}
-
-.btn span::after,
-.btn-contactform span::after {
-  top: 35%;
-  width: rem(1);
-  height: rem(9);
-  right: rem(-46);
-  transform: translateY(-35%) rotate(-45deg);
-}
+// .btn span::after,
+// .btn-contactform span::after {
+//   top: 35%;
+//   width: rem(1);
+//   height: rem(9);
+//   right: rem(-46);
+//   transform: translateY(-35%) rotate(-45deg);
+// }
 
 .btn:hover span {
   color: $accent-color;
@@ -121,15 +110,13 @@
   color: $base-color;
 }
 
-.btn:hover span::before,
-.btn:hover span::after {
-  background-color: $accent-color;
-}
+// .btn:hover span::after {
+//   background-color: $accent-color;
+// }
 
-.btn--404:hover span::before,
-.btn--404:hover span::after {
-  background-color: $base-color;
-}
+// .btn--404:hover span::after {
+//   background-color: $base-color;
+// }
 
 
 

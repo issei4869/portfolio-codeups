@@ -111,7 +111,7 @@
                   無料体験・無料体験申込はコチラ
                 </div>
                 <div class="campaign-card__btn">
-                  <a href="<?php echo esc_url( home_url( '/contact/' ) )?>" class="btn">
+                  <a href="<?php echo esc_url( home_url( '/contact/' ) )?>?inquiry[]=<?php the_title(); ?>" class="btn">
                     <span>Contact us</span>
                   </a>
                 </div>
@@ -131,6 +131,145 @@
           <?php wp_pagenavi(); ?>
         </div>
         <!-- WP-PageNaviで出力される部分 ここまで -->
+      </div>
+    </div>
+  </div>
+  <div class="layout-sub-price sub-price">
+    <div class="sub-price__inner inner">
+      <!-- セクションタイトルの共通パーツ -->
+      <div class="aboutus__title">
+          <h2 class="section-header">
+            <span class="section-header__title">Price</span>
+            <span class="section-header__subtitle">料金</span>
+          </h2>
+        </div>
+      <?php 
+        $license = SCF::get_option_meta('price_options', 'license');
+        $experience = SCF::get_option_meta('price_options', 'experience');
+        $fun = SCF::get_option_meta('price_options', 'fun');
+        $special = SCF::get_option_meta('price_options', 'special');
+      ?>
+      <div class="sub-price__wrapper">
+        <?php if (!empty($license)) : ?>
+          <table id="sub-price1" data-id="#sub-price1" class="sub-price__list sub-price-list">
+            <caption class="sub-price-list__head u-mobile">
+              <div class="sub-price-list__wrapper sub-price-list__wrapper--vocal">
+                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/vocal-icon_white.png" alt="エレキギターアイコン">
+                <span>入会金</span>
+              </div>
+            </caption>
+            <tbody>
+              <tr>
+                <th rowspan="1000" class="sub-price-list__head u-desktop">
+                  <div class="sub-price-list__wrapper sub-price-list__wrapper--vocal">
+                    <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/vocal-icon_white.png" alt="エレキギターアイコン">
+                    <span>入会金</span>
+                  </div>
+                </th>
+              </tr>
+              <?php
+                // $license = SCF::get_option_meta('price_options', 'license');
+                foreach ($license as $field):
+                  $course1 = esc_html($field['license_course1']);
+                  $course2 = esc_html($field['license_course2']);
+                  $price = esc_html($field['license_price']);
+                  echo '<tr>' . '<td class="sub-price-list__text">' . $course1 . '<br class="u-mobile">' . $course2 . '</td>';
+                  echo '<td class="sub-price-list__yen">' . $price . '</td>' . '</tr>';
+                  ?>
+              <?php endforeach; ?>
+            </tbody>
+          </table>
+        <?php endif; ?>
+        <?php if (!empty($experience)) : ?>
+          <table id="sub-price2" data-id="#sub-price2" class="sub-price__list sub-price-list">
+            <caption class="sub-price-list__head u-mobile">
+              <div class="sub-price-list__wrapper">
+                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/guitar-icon_white.png" alt="エレキギターアイコン">
+                <span>高校生～大人</span>
+              </div>
+            </caption>
+            <tbody>
+              <tr class="sub-price-list__head">
+                <th rowspan="1000" class="sub-price-list__head u-desktop">
+                  <div class="sub-price-list__wrapper">
+                    <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/guitar-icon_white.png" alt="エレキギターアイコン">
+                    <span>高校生～大人</span>
+                  </div>
+                </th>
+              </tr>
+              <?php
+                // $experience = SCF::get_option_meta('price_options', 'experience');
+                foreach ($experience as $field):
+                  $course1 = esc_html($field['experience_course1']);
+                  $course2 = esc_html($field['experience_course2']);
+                  $price = esc_html($field['experience_price']);
+                  echo '<tr>' . '<td class="sub-price-list__text">' . $course1 . '<br class="u-mobile">' . $course2 . '</td>';
+                  echo '<td class="sub-price-list__yen">' . $price . '</td>' . '</tr>';
+                  ?>
+              <?php endforeach; ?>
+            </tbody>
+          </table>
+        <?php endif; ?>
+        <?php if (!empty($fun)) : ?>
+          <table id="sub-price3" data-id="#sub-price3" class="sub-price__list sub-price-list">
+            <caption class="sub-price-list__head u-mobile">
+              <div class="sub-price-list__wrapper">
+                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/drum-icon_white.png" alt="エレキギターアイコン">
+                <span>中学生</span>
+              </div>
+            </caption>
+            <tbody>
+              <tr class="sub-price-list__head">
+                <th rowspan="1000" class="sub-price-list__head u-desktop">
+                  <div class="sub-price-list__wrapper">
+                    <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/drum-icon_white.png" alt="エレキギターアイコン">
+                    <span>中学生</span>
+                  </div>
+                </th>
+              </tr>
+              <?php
+                // $fun = SCF::get_option_meta('price_options', 'fun');
+                foreach ($fun as $field):
+                  $course1 = esc_html($field['fun_course1']);
+                  $course2 = esc_html($field['fun_course2']);
+                  $price = esc_html($field['fun_price']);
+                  echo '<tr>' . '<td class="sub-price-list__text">' . $course1 . '<br class="u-mobile">' . $course2 . '</td>';
+                  echo '<td class="sub-price-list__yen">' . $price . '</td>' . '</tr>';
+                  ?>
+              <?php endforeach; ?>
+            </tbody>
+          </table>
+        <?php endif; ?>
+        <?php if (!empty($special)) : ?>
+          <table id="sub-price4" data-id="#sub-price4" class="sub-price__list sub-price-list">
+            <caption class="sub-price-list__head u-mobile">
+              <div class="sub-price-list__wrapper">
+                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/piano-icon_white.png" alt="エレキギターアイコン">
+                <span>幼児～小学生</span>
+              </div>
+            </caption>
+            <tbody>
+              <tr class="sub-price-list__head">
+                <th rowspan="1000" class="sub-price-list__head u-desktop">
+                  <div class="sub-price-list__wrapper">
+                    <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/piano-icon_white.png" alt="エレキギターアイコン">
+                    <span>幼児～小学生</span>
+                  </div>
+                </th>
+              </tr>
+              <?php
+                // $special = SCF::get_option_meta('price_options', 'special');
+                foreach ($special as $field):
+                  $course1 = esc_html($field['special_course1']);
+                  $course2 = esc_html($field['special_course2']);
+                  $price = esc_html($field['special_price']);
+                  echo '<tr>' . '<td class="sub-price-list__text">' . $course1 . '<br class="u-mobile">' . $course2 . '</td>';
+                  echo '<td class="sub-price-list__yen">' . $price . '</td>' . '</tr>';
+                  ?>
+              <?php endforeach; ?>
+            </tbody>
+          </table>
+        <?php endif; ?>
       </div>
     </div>
   </div>

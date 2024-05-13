@@ -736,13 +736,46 @@ a {
 }
 
 .btn {
-	background-color: #B7AA00;
-	border: 0.0625rem solid #B7AA00;
+	background: transparent;
+	border: 1px solid #B7AA00;
+	border-radius: 75px;
+	box-sizing: border-box;
 	display: inline-block;
 	padding: 0.9375rem 5.4375rem 0.9375rem 2.4375rem;
 	position: relative;
 	transition: 0.5s;
 	z-index: 1;
+}
+
+.btn::before,
+.btn::after {
+	border-radius: 75px;
+	content: "";
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.btn::before {
+	background: #B7AA00;
+	transition: transform ease 0.5s, opacity 0.5s;
+	z-index: -1;
+}
+
+.btn::after {
+	border: 1px solid #B7AA00;
+	box-sizing: border-box;
+}
+
+.btn:hover {
+	color: #B7AA00;
+}
+
+.btn:hover::before {
+	opacity: 0;
+	transform: scale(0);
 }
 
 .btn--404 {
@@ -752,49 +785,14 @@ a {
 	padding-right: 6.25rem;
 }
 
-.btn:hover {
-	opacity: 1;
-}
-
-.btn::before {
-	border: 0.0625rem solid #B7AA00;
-	content: "";
-	display: block;
-	height: 100%;
-	left: 0.25rem;
-	position: absolute;
-	top: 0.3125rem;
-	width: 100%;
-	z-index: -2;
-}
-
-.btn--404::before {
-	border: 0.0625rem solid #fff;
-}
-
-.btn::after {
-	background: #fff;
-	content: "";
-	display: block;
-	height: 100%;
-	left: 0;
-	position: absolute;
-	top: 0;
-	transform: scaleX(0);
-	transform-origin: left;
-	transition: 0.5s;
-	transition-property: transform;
-	width: 100%;
-	z-index: -1;
-}
-
 .btn--404::after {
 	background: #B7AA00;
 }
 
 .btn:hover::after {
-	transform: scaleX(1);
-	transform-origin: left;
+	border-radius: 75px;
+	transition: all 0.5s ease-in;
+	z-index: -1;
 }
 
 .btn span,
@@ -814,55 +812,12 @@ a {
 	color: #B7AA00;
 }
 
-.btn span::before,
-.btn span::after,
-.btn-contactform span::before,
-.btn-contactform span::after {
-	background-color: #fff;
-	border-radius: 2px;
-	content: "";
-	position: absolute;
-	transition: 0.5s;
-}
-
-.btn--404 span::before,
-.btn--404 span::after {
-	background-color: #B7AA00;
-}
-
-.btn span::before,
-.btn-contactform span::before {
-	height: 0.0625rem;
-	right: -3.0625rem;
-	top: 50%;
-	width: 2.5rem;
-}
-
-.btn span::after,
-.btn-contactform span::after {
-	height: 0.5625rem;
-	right: -2.875rem;
-	top: 35%;
-	transform: translateY(-35%) rotate(-45deg);
-	width: 0.0625rem;
-}
-
 .btn:hover span {
 	color: #B7AA00;
 }
 
 .btn--404:hover span {
 	color: #fff;
-}
-
-.btn:hover span::before,
-.btn:hover span::after {
-	background-color: #B7AA00;
-}
-
-.btn--404:hover span::before,
-.btn--404:hover span::after {
-	background-color: #fff;
 }
 
 .campaign-card {
@@ -1708,8 +1663,13 @@ a {
 }
 
 .header {
-	background: rgba(152, 232, 188, 0.75);
+	background: #fff;
 	height: 5rem;
+	transition: all 0.3s;
+}
+
+.header.fixed {
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
 }
 
 .header__inner {
@@ -1770,7 +1730,7 @@ a {
 
 .header__nav-item a {
 	align-items: center;
-	color: #fff;
+	color: #0D2936;
 	display: flex;
 	flex-direction: column;
 	font-family: "Gotu", sans-serif;
@@ -1781,7 +1741,7 @@ a {
 }
 
 .header__nav-item a::after {
-	background: #fff;
+	background: #0D2936;
 	bottom: 0.625rem;
 	content: "";
 	height: 0.0625rem;
@@ -2492,6 +2452,10 @@ a {
 	max-width: 33.75rem;
 }
 
+.sub-price__wrapper {
+	margin-top: 1.5rem;
+}
+
 .sub-price__list + .sub-price__list {
 	margin-top: 2.5rem;
 }
@@ -2807,13 +2771,14 @@ input.wpcf7-not-valid::placeholder {
 }
 
 .wpcf7-not-valid-tip {
-	display: none;
+	margin-top: 0.625rem;
 }
 
 .wpcf7 form.invalid .wpcf7-response-output {
 	border: none;
 	color: #c94800;
 	font-size: 0.875rem;
+	margin-top: 1.25rem;
 	text-align: center;
 }
 
@@ -3728,6 +3693,10 @@ html {
 
 .sub-price__inner.inner {
 	max-width: 47rem;
+}
+
+.sub-price__wrapper {
+	margin-top: 2.5rem;
 }
 
 .sub-price__list + .sub-price__list {
