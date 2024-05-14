@@ -1,6 +1,7 @@
 @use 'global' as *;
 
 .blog-sidebar-card {
+  background-color: $base-color;
   padding: rem(16);
   box-shadow: rem(2) rem(2) rem(10) 0 rgba(0, 0, 0, 0.25);
 }

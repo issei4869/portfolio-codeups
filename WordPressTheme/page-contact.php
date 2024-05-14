@@ -4,7 +4,7 @@
   <section class="mv mv--sub">
     <div class="mv__inner">
       <div class="mv__title-wrap mv__title-wrap--sub">
-        <h2 class="mv__main-title mv__main-title--sub">Contact</h2>
+        <h2 class="mv__main-title mv__main-title--sub">Trial</h2>
       </div>
       <div class="mv__swiper">
         <picture class="mv__swiper-img">

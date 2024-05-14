@@ -2,6 +2,11 @@
 
 .campaign {
   overflow: hidden;
+  background-color: #FFFAE5;
+  padding: rem(80) 0;
+  @include mq('md') {
+    padding: rem(100) 0 rem(76);
+  }
 }
 
 .campaign__inner {
@@ -17,8 +22,8 @@
 
 .campaign__swiper {
   margin-top: rem(24);
-  margin-right: calc(50% - 50vw);
-  //width: 100vw;
+  margin: 0 calc(50% - 50vw);
+  width: 100vw;
   @include mq('md') {
     margin-top: rem(40);
   }

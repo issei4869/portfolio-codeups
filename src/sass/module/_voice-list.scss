@@ -1,20 +1,11 @@
 @use 'global' as *;
 
 .voice-list {
-  width: 100%;
-  @include mq(md){
-    // display: flex;
-    display: grid;
-    // flex-wrap: wrap;
-    max-width: initial;
-    column-gap: rem(40);
-    row-gap: rem(83);
-    grid-template-columns: repeat(2, 1fr);
-  }
+  
 }
 
 .voice-list__item {
-
+  
 }
 
 .voice-list__item + .voice-list__item {

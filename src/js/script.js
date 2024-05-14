@@ -17,9 +17,9 @@ pagetop.click(function () {
 $(function () {
   $(window).on('scroll', function () {
       if ($(this).scrollTop()) {
-          $('.js-header').addClass('fixed');
+        $('.js-header').addClass('fixed');
     } else {
-          $('.js-header').removeClass('fixed');
+        $('.js-header').removeClass('fixed');
     }
   });
 });
@@ -111,16 +111,16 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   var service_swiper = new Swiper(".js-campaign-swiper", {
     loop: true,
       speed: 2000,
-      slidesPerView: 1.27,
+      slidesPerView: 1.5,
       spaceBetween: 24,
-      // autoplay: {
-      //   delay: 2000,
-      //   disableOnInteraction: false,
-      // },
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
       breakpoints: {
         768: {
-          slidesPerView: 3.485,
-          spaceBetween: 39
+          slidesPerView: 4,
+          spaceBetween: 40
         }
       },
       navigation: {

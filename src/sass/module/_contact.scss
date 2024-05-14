@@ -2,6 +2,8 @@
 
 .contact {
   position: relative;
+  background-color: $accent-color;
+  padding: rem(30) 0;
   @include mq('md') {
     
   }
@@ -19,12 +21,14 @@
   // }
 }
 
-.contact__link {
-  color: $accent-color;
-  font-size: rem(14);
-  line-height: calc(18 / 14);
-  margin-top: rem(8);
+.contact__text {
+  color: $font-color;
+  line-height: calc(24 / 16);
+  margin-top: rem(24);
   text-align: center;
+  @include mq('md') {
+    margin-top: rem(40);
+  }
 }
 
 .contact__btn {

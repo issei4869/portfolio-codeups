@@ -112,6 +112,13 @@
   transform: scale(1, 1);/*X方向にスケール拡大*/
 }
 
+.header__btn {
+  display: none;
+  @include mq('md') {
+    display: block;
+  }
+}
+
 .header__hamburger {
   margin: 0;
   padding: 0;
@@ -139,7 +146,7 @@
   display: block;
   width: rem(32);
   height: rem(1);
-  background-color: #fff;
+  background-color: $accent-color;
   transition: .5s;
 }
 

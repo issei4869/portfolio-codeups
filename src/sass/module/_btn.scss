@@ -2,7 +2,7 @@
 
 .btn {
   background: transparent;
-  padding: calc(rem(16) - rem(1)) calc(rem(88) - rem(1)) calc(rem(16) - rem(1)) calc(rem(40) - rem(1));
+  padding: rem(24) rem(80);
   border: 1px solid $accent-color;
   box-sizing: border-box;
   border-radius: 75px;
@@ -10,6 +10,15 @@
   z-index: 1;
   display: inline-block;
   transition: .5s;
+  color: $base-color;
+}
+
+.btn--red {
+  border: 1px solid $accent2-color;
+}
+
+.btn--sp {
+  padding: 0;
 }
 
 .btn::before,
@@ -29,13 +38,29 @@
   transition: transform ease .5s, opacity .5s;
 }
 
+.btn--red::before {
+  background: $accent2-color;
+}
+
 .btn::after {
   border: 1px solid $accent-color;
   box-sizing: border-box;
 }
 
+.btn--red::after {
+  border: 1px solid $accent2-color;
+}
+
 .btn:hover {
-  color: $accent-color;
+  color: $accent-color;                                                          
+}
+
+.btn--red:hover {
+  color: $accent2-color;
+}
+
+.btn--sp:hover {
+  background-color: $base-color;
 }
 
 .btn:hover::before {
@@ -43,43 +68,48 @@
   opacity: 0;
 }
 
-
-
-.btn--404 {
-  padding-left: rem(40);
-  padding-right: rem(100);
-  border: rem(1) solid $base-color;
-  background-color: $base-color;
+.btn--sp,
+.btn--sp::before,
+.btn--sp::after {
+  border-radius: 0;
 }
 
-.btn--404::after {
-  background: $accent-color;
-}
 
-.btn:hover::after {
-  // transform: scaleX(1);
-  // transform-origin: left;
-  transition: all .5s ease-in;
-  z-index: -1;
-  border-radius: 75px;
-}
+// .btn--404 {
+//   padding-left: rem(40);
+//   padding-right: rem(100);
+//   border: rem(1) solid $base-color;
+//   background-color: $base-color;
+// }
 
-.btn span,
-.btn-contactform span {
-  font-size: rem(14);
-  line-height: calc(22 / 14);
-  color: $base-color;
-  font-family: $english-font-family;
-  transition: .5s;
-}
+// .btn--404::after {
+//   background: $accent-color;
+// }
 
-.btn span {
-  position: relative;
-}
+// .btn:hover::after {
+//   // transform: scaleX(1);
+//   // transform-origin: left;
+//   transition: all .5s ease-in;
+//   z-index: -1;
+//   border-radius: 75px;
+// }
 
-.btn--404 span {
-  color: $accent-color;
-}
+// .btn span,
+// .btn-contactform span {
+//   font-size: rem(14);
+//   line-height: calc(22 / 14);
+//   color: $base-color;
+//   font-family: $english-font-family;
+//   transition: .5s;
+// }
+
+// .btn span {
+//   position: relative;
+// }
+
+// .btn--404 span {
+//   color: $accent-color;
+// }
 
 // .btn-contactform span::after {
 //   content: "";
@@ -102,13 +132,13 @@
 //   transform: translateY(-35%) rotate(-45deg);
 // }
 
-.btn:hover span {
-  color: $accent-color;
-}
+// .btn:hover span {
+//   color: $accent-color;
+// }
 
-.btn--404:hover span {
-  color: $base-color;
-}
+// .btn--404:hover span {
+//   color: $base-color;
+// }
 
 // .btn:hover span::after {
 //   background-color: $accent-color;

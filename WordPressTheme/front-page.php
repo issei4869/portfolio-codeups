@@ -57,8 +57,8 @@
         <?php if ($recent_query->have_posts()) : ?>
           <div class="campaign__title">
             <h2 class="section-header">
-              <span class="section-header__title">Course</span>
-              <span class="section-header__subtitle">コース</span>
+              <span class="section-header__title">Course & Price</span>
+              <span class="section-header__subtitle">コースと料金</span>
             </h2>
           </div>
           <div class="campaign__swiper campaign-swiper">
@@ -68,10 +68,7 @@
                 <?php while($recent_query->have_posts()) : ?>
                   <?php $recent_query->the_post(); ?>
                     <li class="campaign-swiper__slide swiper-slide">
-                    
-                   
-                      <a href="<?php the_permalink(); ?>" class="campaign-card">
-                              
+                      <div class="campaign-card">                        
                         <div class="campaign-card__img">
                         <?php if (has_post_thumbnail()) : ?>
                           <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>のアイキャッチ画像">
@@ -124,7 +121,7 @@
                             </div>
                           </div>
                         </div>
-                      </a>
+                      </div>
                     </li>
                 <?php endwhile; ?>            
               </ul>
@@ -196,11 +193,18 @@
           </li>
         </ul>
       </div>
-    </section>
+    </section>                  
 
-    <!-- blogセクション -->
-    <!-- セクションタイトルの共通パーツ -->
-    <?php $recent_query = new WP_Query(
+    <?php $blog_query = new WP_Query(
+      array(
+        'post_type' => 'voice',
+        'posts_per_page' => 1,
+        'orderby' => 'date',
+        'order' => 'DESC',
+      )
+    );
+    ?>
+    <?php $voice_query = new WP_Query(
       array(
         'post_type' => 'post',
         'posts_per_page' => 3,
@@ -209,175 +213,166 @@
       )
     );
     ?>
-    <?php if ($recent_query->have_posts()) : ?>
-      <section class="layout-blog blog">
-        <div class="blog__bg u-desktop">
-          <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/blog-bg.jpeg" alt="Blogセクション背景画像">
+
+    <!-- Price & Blog -->
+    <div class="layout-wrapper wrapper">
+      <div class="wrapper__inner inner">
+        <!-- Voice -->
+        <div class="wrapper__voice">
+          <?php if ($blog_query->have_posts()) : ?>
+            <!-- セクションタイトルの共通パーツ -->
+            <div class="wrapper__title">
+              <h2 class="section-header">
+                <span class="section-header__title">Voice</span>
+                <span class="section-header__subtitle">生徒様の声</span>
+              </h2>
+            </div>
+            <ul class="wrapper__list voice-list">
+              <?php while($blog_query->have_posts()) : ?>
+                <?php $blog_query->the_post(); ?>
+                  <li class="voice-list__item voice-card">
+                    <!-- 上のコンテンツ -->
+                    <div class="voice-card__contents">
+                      <!--左側のコンテンツ -->
+                      <div class="voice-card__content">
+                        <?php
+                          $voice_group = get_field('voice_group');
+                          $voice_text = get_field("voice_text");
+                        ?>
+                        <!-- 年齢とカテゴリー -->
+                        <div class="voice-card__meta">
+                          <?php if($voice_group) : ?>
+                            <div class="voice-card__age">
+                              <?php echo $voice_group['voice_age']; ?><?php echo $voice_group['voice_gender']; ?>
+                            </div>
+                          <?php endif; ?>
+                          <?php
+                            $terms = get_the_terms(get_the_ID(), 'voice_category'); // カスタムタクソノミーのタームを取得
+                            if ($terms && !is_wp_error($terms)) { // タームが取得されているか確認
+                                $term = array_shift($terms); // 最初のタームを取得
+                                $cat_name = $term->name; // ターム名を取得
+                                echo '<p class="voice-card__category">' . $cat_name . '</p>'; // ターム名を表示
+                            }
+                          ?>
+                        </div>
+                        <!-- タイトル -->
+                        <div class="voice-card__title"><?php the_title(); ?></div>
+                      </div>
+                      <!-- 右側の画像 -->
+                      <div class="voice-card__img colorbox js-color">
+                        <?php if (has_post_thumbnail()) : ?>
+                          <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>のアイキャッチ画像">
+                        <?php else: ?>
+                          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/noimage.png" alt="NOIMAGE表示">
+                        <?php endif; ?>
+                      </div>
+                    </div>
+                    <!-- 下のテキスト -->
+                    <?php if(get_field('voice_text')) : ?>
+                      <div class="voice-card__text">
+                        <?php if (mb_strlen($voice_text) > 169) : ?>
+                          <?php echo mb_substr($voice_text, 0, 169, 'UTF-8') . '...'; ?>
+                        <?php else : ?>
+                          <?php echo $voice_text; ?>
+                        <?php endif; ?>
+                      </div>
+                    <?php endif; ?>
+                  </li>
+              <?php endwhile; ?>
+            </ul>
+            <div class="wrapper__btn">
+              <!-- ボタンの共通パーツ -->
+              <a href="<?php echo esc_url( home_url( '/voice/' ) )?>" class="btn">
+                <span>View more</span>
+              </a>
+            </div>
+          <?php endif; ?>
+          <?php wp_reset_postdata(); ?>
         </div>
-        <div class="blog__inner inner">
-          <div class="blog__title">
-            <h2 class="section-header section-header--white">
+        <!-- Blog -->
+        <div class="wrapper__blog">
+          <!-- セクションタイトルの共通パーツ -->
+          <div class="wrapper__title">
+            <h2 class="section-header">
               <span class="section-header__title">Blog</span>
               <span class="section-header__subtitle">ブログ</span>
             </h2>
           </div>
-          <ul class="blog__list blog-list">
-            <?php while($recent_query->have_posts()) : ?>
-              <?php $recent_query->the_post(); ?>
-                <li class="blog-list__item blog-card">
-                  <a href="<?php the_permalink(); ?>">
-                    <div class="blog-card__img">
-                      <?php if (has_post_thumbnail()) : ?>
-                        <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>のアイキャッチ画像">
-                      <?php else: ?>
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/noimage.png" alt="NOIMAGE表示">
-                      <?php endif; ?>
-                    </div>
-                    <div class="blog-card__meta">
-                      <time datetime="<?php the_time('c'); ?>" class="blog-card__date"><?php the_time('Y.m.d'); ?>
-                      </time>
-                      <p class="blog-card__title"><?php the_title(); ?></p>
-                      <p class="blog-card__text"><?php echo wp_trim_words( get_the_content(), 85, '' ); ?></p>
-                    </div>
-                  </a>
-                </li>
-            <?php endwhile; ?>
-          </ul>
-          <div class="blog__btn">
-            <!-- ボタンの共通パーツ -->
-            <a href="<?php echo esc_url( home_url( '/blog/' ) )?>" class="btn">
-              <span>View more</span>
-            </a>
-          </div>
-        </div>
-      </section>
-    <?php endif; ?>
-    <?php wp_reset_postdata(); ?>
-
-    <!-- Voiceセクション -->
-    <?php $recent_query = new WP_Query(
-      array(
-        'post_type' => 'voice',
-        'posts_per_page' => 2,
-        'orderby' => 'date',
-        'order' => 'DESC',
-      )
-    );
-    ?>
-    <?php if ($recent_query->have_posts()) : ?>
-      <section class="layout-voice voice">
-        <div class="voice__inner inner">
-          <!-- セクションタイトルの共通パーツ -->
-          <div class="voice__title">
-            <h2 class="section-header">
-              <span class="section-header__title">Voice</span>
-              <span class="section-header__subtitle">生徒様の声</span>
-            </h2>
-          </div>
-          <ul class="voice__list voice-list">
-            <?php while($recent_query->have_posts()) : ?>
-              <?php $recent_query->the_post(); ?>
-                <li class="voice-list__item voice-card">
-                  <!-- 上のコンテンツ -->
-                  <div class="voice-card__contents">
-                    <!--左側のコンテンツ -->
-                    <div class="voice-card__content">
-                      <?php 
-                        $voice_group = get_field('voice_group');
-                        $voice_text = get_field("voice_text");
-                      ?>
-                      <!-- 年齢とカテゴリー -->
-                      <div class="voice-card__meta">
-                        <?php if($voice_group) : ?>
-                          <div class="voice-card__age">
-                            <?php echo $voice_group['voice_age']; ?><?php echo $voice_group['voice_gender']; ?>
+          <?php if ($voice_query->have_posts()) : ?>
+            <!-- 人気記事カード -->
+            <ul class="wrapper__cards blog-sidebar-cards">
+              <?php while($voice_query->have_posts()) : ?>
+                <?php $voice_query->the_post(); ?>
+                  <li class="blog-sidebar-cards__card blog-sidebar-card">
+                    <div class="blog-sidebar-card__popularity">
+                      <a class="blog-sidebar-card__link" href="<?php the_permalink(); ?>">
+                        <div class="blog-sidebar-card__wrap">
+                          <div class="blog-sidebar-card__img colorbox js-color">
+                            <?php if (has_post_thumbnail()) : ?>
+                              <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>のアイキャッチ画像">
+                            <?php else: ?>
+                              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/noimage.png" alt="NOIMAGE表示">
+                            <?php endif; ?>
                           </div>
-                        <?php endif; ?>
-                        <?php
-                          $terms = get_the_terms(get_the_ID(), 'voice_category'); // カスタムタクソノミーのタームを取得
-                          if ($terms && !is_wp_error($terms)) { // タームが取得されているか確認
-                              $term = array_shift($terms); // 最初のタームを取得
-                              $cat_name = $term->name; // ターム名を取得
-                              echo '<p class="voice-card__category">' . $cat_name . '</p>'; // ターム名を表示
-                          }
-                        ?>
-                      </div>
-                      <!-- タイトル -->
-                      <div class="voice-card__title"><?php the_title(); ?></div>
+                          <div class="blog-sidebar-card__content">
+                            <time datetime="<?php the_time("c"); ?>" class="blog-sidebar-card__date"><?php the_time("Y.m.d"); ?>
+                            </time>
+                            <p class="blog-sidebar-card__title blog-sidebar-card__title--sub"><?php the_title(); ?></p>
+                          </div>
+                        </div>
+                      </a>
                     </div>
-                    <!-- 右側の画像 -->
-                    <div class="voice-card__img colorbox js-color">
-                      <?php if (has_post_thumbnail()) : ?>
-                        <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>のアイキャッチ画像">
-                      <?php else: ?>
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/noimage.png" alt="NOIMAGE表示">
-                      <?php endif; ?>
-                    </div>
-                  </div>
-                  <!-- 下のテキスト -->
-                  <?php if(get_field('voice_text')) : ?>
-                    <div class="voice-card__text">
-                      <?php if (mb_strlen($voice_text) > 169) : ?>
-                        <?php echo mb_substr($voice_text, 0, 169, 'UTF-8') . '...'; ?>
-                      <?php else : ?> 
-                        <?php echo $voice_text; ?>
-                      <?php endif; ?>
-                    </div>
-                  <?php endif; ?>
-                </li>
-            <?php endwhile; ?>
-          </ul>
-          <div class="voice__btn">
-            <!-- ボタンの共通パーツ -->
-            <a href="<?php echo esc_url( home_url( '/voice/' ) )?>" class="btn">
-              <span>View more</span>
-            </a>
+                  </li>
+                <?php endwhile; ?>
+                <?php wp_reset_postdata(); wp_reset_query(); ?>
+            </ul>
+          <?php else : ?>
+            <p class="no-post">投稿が見つかりませんでした</p>
+          <?php endif; ?>
+        </div>
+      </div>
+    </div>
+     
+    <!-- Accessセクション -->
+    <section class="layout-access access">
+      <div class="access__inner inner">
+        <!-- セクションタイトルの共通パーツ -->
+        <div class="price__title"> 
+          <h2 class="section-header">
+            <span class="section-header__title">Access</span>
+            <span class="section-header__subtitle">アクセス</span>
+          </h2>
+        </div>
+        <!-- Googleマップ -->
+        <div class="access__wrapper">
+          <!-- テキスト -->
+          <div class="access__address company-profile">
+            <dl class="company-profile__list">
+              <dt class="company-profile__term">アクセス</dt>
+              <dd class="company-profile__description">東武宇都宮駅/東武宇都宮線 徒歩17分</dd>
+            </dl>
+            <dl class="company-profile__list">
+              <dt class="company-profile__term">開校時間</dt>
+              <dd class="company-profile__description">9:00-21:00</dd>
+            </dl>
+            <dl class="company-profile__list">
+              <dt class="company-profile__term">休校日</dt>
+              <dd class="company-profile__description">毎週水曜日、年末年始</dd>
+            </dl>
+            <dl class="company-profile__list">
+              <dt class="company-profile__term">電話</dt>
+              <dd class="company-profile__description"><a href="tel:0120-000-0000">0120-000-0000</a></dd>
+            </dl>
+            <dl class="company-profile__list">
+              <dt class="company-profile__term">住所</dt>
+              <dd class="company-profile__description">栃木県宇都宮市河原町</dd>
+            </dl>
+          </div>
+          <!-- マップ -->
+          <div class="access__map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1602.5841614942458!2d139.88310398884965!3d36.5500541930799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601f6790924e9343%3A0xaf400a8827bab514!2z44CSMzIwLTA4MjIg5qCD5pyo55yM5a6H6YO95a6u5biC5rKz5Y6f55S6!5e0!3m2!1sja!2sjp!4v1713857348731!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
-      </section>
-      <?php endif; ?>
-      <?php wp_reset_postdata(); ?>
-      
-      <!-- Accessセクション -->
-      <section class="layout-access access">
-        <div class="access__inner inner">
-          <!-- セクションタイトルの共通パーツ -->
-          <div class="price__title"> 
-            <h2 class="section-header">
-              <span class="section-header__title">Access</span>
-              <span class="section-header__subtitle">アクセス</span>
-            </h2>
-          </div>
-          <!-- Googleマップ -->
-          <div class="access__wrapper">
-            <!-- テキスト -->
-            <div class="access__address company-profile">
-              <dl class="company-profile__list">
-                <dt class="company-profile__term">アクセス</dt>
-                <dd class="company-profile__description">東武宇都宮駅/東武宇都宮線 徒歩17分</dd>
-              </dl>
-              <dl class="company-profile__list">
-                <dt class="company-profile__term">開校時間</dt>
-                <dd class="company-profile__description">9:00-21:00</dd>
-              </dl>
-              <dl class="company-profile__list">
-                <dt class="company-profile__term">休校日</dt>
-                <dd class="company-profile__description">毎週水曜日、年末年始</dd>
-              </dl>
-              <dl class="company-profile__list">
-                <dt class="company-profile__term">電話</dt>
-                <dd class="company-profile__description"><a href="tel:0120-000-0000">0120-000-0000</a></dd>
-              </dl>
-              <dl class="company-profile__list">
-                <dt class="company-profile__term">住所</dt>
-                <dd class="company-profile__description">栃木県宇都宮市河原町</dd>
-              </dl>
-            </div>
-            <!-- マップ -->
-            <div class="access__map">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1602.5841614942458!2d139.88310398884965!3d36.5500541930799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601f6790924e9343%3A0xaf400a8827bab514!2z44CSMzIwLTA4MjIg5qCD5pyo55yM5a6H6YO95a6u5biC5rKz5Y6f55S6!5e0!3m2!1sja!2sjp!4v1713857348731!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-          </div>
-        </div>
-      </section>
+      </div>
+    </section>
 <?php get_footer(); ?>

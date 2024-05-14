@@ -1,11 +1,7 @@
 @use 'global' as *;
 
 .information {
-  padding: rem(80) 0;
-  background-color: #FFFAE5;
-  @include mq('md') {
-    padding: rem(100) 0 rem(76);
-  }
+  
 }
 
 .information__inner {

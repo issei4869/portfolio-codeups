@@ -3,6 +3,7 @@
 .campaign-card {
   display: flex;
   flex-direction: column;
+  background-color: $base-color;
   height: 100%;
   box-shadow: rem(2) rem(2) rem(10) 0 rgba(0, 0, 0, .25);
 }
@@ -195,7 +196,7 @@
   content: "";
   display: block;
   transform: translateY(-50%);
-  background-color: #C94800;
+  background-color: $accent2-color;
   width: 100%;
   height: rem(3);
   top: 50%;
@@ -203,7 +204,7 @@
 }
 
 .campaign-card__true {
-  color: #f26651;
+  color: $accent2-color;
   //margin-left: rem(16);
   @include mq('md') {
     //margin-left: rem(24);

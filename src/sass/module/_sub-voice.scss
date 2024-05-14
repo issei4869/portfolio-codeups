@@ -13,6 +13,14 @@
 
 .sub-voice__list {
   margin-top: rem(40);
+  width: 100%;
+  @include mq(md){
+    display: grid;
+    max-width: initial;
+    column-gap: rem(40);
+    row-gap: rem(83);
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .sub-voice__pagenavi {

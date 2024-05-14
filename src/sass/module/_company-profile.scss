@@ -1,33 +1,32 @@
 @use 'global' as *;
 
 .company-profile__list {
-    padding-bottom: rem(15);
-    display: flex;
-    font-size: rem(13);
-    line-height: 1.3;
-    letter-spacing: 0.08em;
-    border-bottom: 1px solid #000;
-    width: 100%;
-    @include mq(md){
-        padding-bottom: rem(25);
-        font-size: rem(16);
-        max-width: rem(800);
-        margin: 0 auto;
-    }
+  padding-bottom: rem(15);
+  display: flex;
+  font-size: rem(13);
+  line-height: 1.3;
+  letter-spacing: 0.08em;
+  border-bottom: 1px solid #000;
+  width: 100%;
+  @include mq(md){
+    padding-bottom: rem(25);
+    font-size: rem(16);
+    margin: 0 auto;
+  }
 }
   
 .company-profile__list + .company-profile__list {
-    margin-top: rem(15);
-    @include mq(md){
-        margin-top: rem(25);
-    }
+  margin-top: rem(15);
+  @include mq(md){
+      margin-top: rem(25);
+  }
 }
 
 .company-profile__term {
-    max-width: rem(120);
-    width: 100%;
-    flex-shrink: 0;
-    @include mq(md){
-        max-width: rem(140);
-    }
+  max-width: rem(120);
+  width: 100%;
+  flex-shrink: 0;
+  @include mq(md){
+      max-width: rem(140);
+  }
 }

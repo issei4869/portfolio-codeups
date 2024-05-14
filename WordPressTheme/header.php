@@ -25,7 +25,7 @@
               <a href="<?php echo esc_url( home_url( '/about-us/' ) )?>">About us<span>私たちについて</span></a>
             </li>
             <li class="header__nav-item">
-              <a href="<?php echo esc_url( home_url( '/campaign/' ) )?>">Course<span>コース</span></a>
+              <a href="<?php echo esc_url( home_url( '/campaign/' ) )?>">Course & Price<span>コースと料金</span></a>
             </li>
             <li class="header__nav-item">
               <a href="<?php echo esc_url( home_url( '/blog/' ) )?>">Blog<span>ブログ</span></a>
@@ -36,11 +36,14 @@
             <li class="header__nav-item">
               <a href="<?php echo esc_url( home_url( '/faq/' ) )?>">FAQ<span>よくある質問</span></a>
             </li>
-            <li class="header__nav-item">
-              <a href="<?php echo esc_url( home_url( '/contact/' ) )?>">Trial<span>無料体験</span></a>
-            </li>
           </ul>
         </nav>
+        <div class="header__btn">
+          <!-- ボタンの共通パーツ -->
+          <a href="<?php echo esc_url( home_url( '/contact/' ) )?>" class="btn btn--red">
+            <span>無料体験レッスン受付中</span>
+          </a>
+        </div>
         <button class="header__hamburger js-hamburger">
           <span></span>
           <span></span>

@@ -114,16 +114,16 @@ jQuery(function ($) {
   var service_swiper = new Swiper(".js-campaign-swiper", {
     loop: true,
     speed: 2000,
-    slidesPerView: 1.27,
+    slidesPerView: 1.5,
     spaceBetween: 24,
-    // autoplay: {
-    //   delay: 2000,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false
+    },
     breakpoints: {
       768: {
-        slidesPerView: 3.485,
-        spaceBetween: 39
+        slidesPerView: 4,
+        spaceBetween: 40
       }
     },
     navigation: {
