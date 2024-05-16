@@ -62,7 +62,7 @@
         <div class="footer__bottom nav-list">
           <ul class="nav-list__items nav-items">
             <li>
-              <a href="<?php echo esc_url( home_url( '/aboutus/' ) )?>">私たちについて</a>
+              <a href="<?php echo esc_url( home_url( '/about-us/' ) )?>">私たちについて</a>
             </li>
             <li>
               <a href="<?php echo esc_url( home_url( '/campaign/' ) )?>">コース</a>

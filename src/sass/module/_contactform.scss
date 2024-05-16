@@ -1,7 +1,11 @@
 @use 'global' as *;
 
 .contactform {
-  
+  background-color: $accent-color;
+  padding: rem(80) rem(60);
+  @include mq('md') {
+    padding: rem(100) rem(80);
+  }
 }
 
 .contactform__inner {

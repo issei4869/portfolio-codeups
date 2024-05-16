@@ -14,9 +14,14 @@
   display: inline-block;
   font-weight: $bold;
   position: relative;
+  transition: all .3s;
   @include mq('md') {
     // max-width: rem(160);
   }
+}
+
+.nav-items > li > a:hover {
+  opacity: 0.7;
 }
 
 .nav-items--drawer > li > a  {

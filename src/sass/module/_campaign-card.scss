@@ -6,11 +6,13 @@
   background-color: $base-color;
   height: 100%;
   box-shadow: rem(2) rem(2) rem(10) 0 rgba(0, 0, 0, .25);
+  border-radius: 45px;
 }
 
 .campaign-card__img {
   width: 100%;
   overflow: hidden;
+  border-radius: 45px 45px 0 0;
 }
 
 .campaign-card__img img {

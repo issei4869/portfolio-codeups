@@ -19,8 +19,10 @@
   
   <!-- お問い合わせフォーム -->
   <div class="layout-contactform contactform">
-    <div class="contactform__inner inner">
-      <?php echo do_shortcode('[contact-form-7 id="049ca21" title="お問い合わせ"]'); ?>
+    <div class="background">
+      <div class="contactform__inner inner">
+          <?php echo do_shortcode('[contact-form-7 id="049ca21" title="お問い合わせ"]'); ?>
+      </div>
     </div>
   </div>
 <?php get_footer(); ?>

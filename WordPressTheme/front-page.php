@@ -307,7 +307,7 @@
                     <div class="blog-sidebar-card__popularity">
                       <a class="blog-sidebar-card__link" href="<?php the_permalink(); ?>">
                         <div class="blog-sidebar-card__wrap">
-                          <div class="blog-sidebar-card__img colorbox js-color">
+                          <div class="blog-sidebar-card__img colorbox colorbox--blog js-color">
                             <?php if (has_post_thumbnail()) : ?>
                               <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>のアイキャッチ画像">
                             <?php else: ?>

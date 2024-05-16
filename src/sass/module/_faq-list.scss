@@ -15,11 +15,24 @@
   background-color: $accent-color;
   color: $base-color;
   cursor: pointer;
+  border-radius: 45px;
   @include mq(md){
     padding: rem(26) rem(80) rem(26) rem(40);
     font-size: rem(20);
   }
 }
+
+.faq-list__item-answer {
+  line-height: calc(23 / 16);
+  padding: rem(24) rem(16) rem(22);
+  border: rem(1) solid $accent-color;
+  border-radius: 45px;
+  margin-top: rem(15);
+  @include mq(md){
+    padding: rem(39) rem(40) rem(39) rem(39);
+  }
+}
+
 
 .faq-list__item-question::before,
 .faq-list__item-question::after {
@@ -44,14 +57,4 @@
 
 .faq-list__item-question.is-open::after {
   transform: rotate(90deg);
-}
-
-.faq-list__item-answer {
-  line-height: calc(23 / 16);
-  padding: rem(24) rem(16) rem(22);
-  border: rem(1) solid $accent-color;
-  @include mq(md){
-    padding: rem(39) rem(40) rem(39) rem(39);
-    margin-top: rem(15);
-  }
 }

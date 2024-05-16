@@ -41,7 +41,7 @@
         <div class="header__btn">
           <!-- ボタンの共通パーツ -->
           <a href="<?php echo esc_url( home_url( '/contact/' ) )?>" class="btn btn--red">
-            <span>無料体験レッスン受付中</span>
+            <span>無料体験受付中</span>
           </a>
         </div>
         <button class="header__hamburger js-hamburger">
@@ -55,7 +55,7 @@
               <div class="header__drawer--btn">
                 <!-- ボタンの共通パーツ -->
                 <a href="<?php echo esc_url( home_url( '/contact/' ) )?>" class="btn btn--red btn--drawer">
-                  <span>無料体験レッスン受付中</span>
+                  <span>無料体験受付中</span>
                 </a>
               </div>
               <li>

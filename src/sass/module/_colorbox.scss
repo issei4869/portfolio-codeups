@@ -12,6 +12,11 @@
   height: 100%;
   z-index: 2;
   background-color: $accent-color;
+  border-radius: 45px;
+}
+
+.colorbox--blog .color{
+  border-radius: 20px;
 }
 
 .colorbox img{
