@@ -82,36 +82,13 @@
 }
 
 
-
-//太字
-.nav-items__item a {
-  
+//サイトマップ用
+.nav-items--sitemap > li > a,
+.nav-items__item-category--sitemap a {
+  color: $font-color;
 }
 
-
-
-.nav-items__item--sitemap a {
-  // color: $font-color;
-}
-
-.nav-items__item:nth-child(n + 2) {
-  // margin-top: rem(40);
-}
-
-.nav-items__item-category:nth-child(1) {
-  // font-weight: $bold;
-  // position: relative;
-}
-
-.nav-items__item-category:nth-child(1) a{
-  // font-weight: $bold;
-  // position: relative;
-}
-
-.nav-items__item--sitemap a span::before {
+.nav-items--sitemap > li > a::before {
   background-color: $font-color;
 }
-
-
-
 

@@ -39,6 +39,7 @@
     grid-template-columns: rem(180) rem(80) 1fr;
     gap: rem(40);
     margin: 0 auto; 
+    padding-left: rem(70);
     // max-width: rem(200);
     // margin: initial;
   }
@@ -101,18 +102,14 @@
 
 .footer__bottom {
   margin-top: rem(40);
-  row-gap: rem(40);
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  justify-content: center;
+  gap: rem(50);
   @include mq(md){
     margin-top: rem(24);
-    // display: block;
-    row-gap: 0;
-    padding-left: rem(22);
-    // max-width: rem(550);
-    // width: 100%;
+    gap: rem(80);
   }
-}
+} 
 
 .footer__logo,
 .footer__sns-icon {

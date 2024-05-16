@@ -118,15 +118,6 @@
             <li>
               <a href="<?php echo esc_url( home_url( '/sitemap/' ) )?>">サイトマップ</a>
             </li>
-            
-            <!-- <div class="nav-items__item"> -->
-            <!-- </li> -->
-          </ul>
-          <ul class="nav-list__items nav-items">
-            
-          </ul>
-          <ul class="nav-list__items nav-items">
-            
           </ul>
         </div>
       </div>
