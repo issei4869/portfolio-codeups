@@ -78,14 +78,11 @@
                 ?>
               </ul>
             </li>
-            <!-- </li> -->
-          </ul>
-          <ul class="nav-list__items nav-items">
             <li>
               <a href="<?php echo esc_url( home_url( '/campaign/' ) )?>#sub-price0">料金一覧</a>
             </li>
             <li>
-              <ul class="nav-items__item">
+              <ul class="nav-items__item nav-items__item--price">
                 <li class="nav-items__item-category">
                   <a href="<?php echo esc_url( home_url( '/campaign/' ) )?>#sub-price1">入会金</a>
                 </li>
@@ -100,8 +97,6 @@
                 </li>
               </ul>
             </li>
-            
-            <!-- <div class="nav-items__item"> -->
             <!-- </li> -->
           </ul>
           <ul class="nav-list__items nav-items">
@@ -114,8 +109,6 @@
             <li>
               <a href="<?php echo esc_url( home_url( '/faq/' ) )?>">よくある質問</a>
             </li>
-          </ul>
-          <ul class="nav-list__items nav-items">
             <li>
               <a href="<?php echo esc_url( home_url( '/privacypolicy/' ) )?>">プライバシー<br class="u-mobile">ポリシー</a>
             </li>
@@ -125,6 +118,15 @@
             <li>
               <a href="<?php echo esc_url( home_url( '/sitemap/' ) )?>">サイトマップ</a>
             </li>
+            
+            <!-- <div class="nav-items__item"> -->
+            <!-- </li> -->
+          </ul>
+          <ul class="nav-list__items nav-items">
+            
+          </ul>
+          <ul class="nav-list__items nav-items">
+            
           </ul>
         </div>
       </div>

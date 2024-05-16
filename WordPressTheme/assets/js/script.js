@@ -68,17 +68,20 @@ jQuery(function ($) {
     // });
     $(window).resize(function () {
       if ($(window).width() > 768) {
-        $(".js-hamburger").removeClass("is-active");
-        $(".js-drawer").fadeOut();
+        $(".js-hamburger").removeClass("is-open");
+        // $(".js-drawer").fadeOut();
+        $(".js-drawer").removeClass("is-open");
       }
     });
   });
   function openDrawer() {
-    $(".js-drawer").fadeIn();
+    // $(".js-drawer").fadeIn();
+    $(".js-drawer").addClass("is-open");
     $(".js-hamburger").addClass("is-open");
   }
   function closeDrawer() {
-    $(".js-drawer").fadeOut();
+    // $(".js-drawer").fadeOut();
+    $(".js-drawer").removeClass("is-open");
     $(".js-hamburger").removeClass("is-open");
   }
 

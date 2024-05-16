@@ -165,6 +165,7 @@
 .header__hamburger.is-open span:nth-of-type(1) {
   top: 0;
   transform: translateX(-50%) rotate(37deg) scale(1.2);
+  background-color: $base-color;
 }
 
 .header__hamburger.is-open span:nth-of-type(2) {
@@ -174,96 +175,57 @@
 .header__hamburger.is-open span:nth-of-type(3) {
   top: rem(-2);
   transform: translateX(-50%) rotate(-37deg) scale(1.2);
+  background-color: $base-color
 }
 
 .header__drawer {
-  padding-top: rem(80);
-  display: none;
+  padding: rem(82) 0;
   position: absolute;
   z-index: 900;
   top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  right: -120%;
+  width: 46%;
   height: 100vh;
-  background-color: $accent-color;
-  // overflow-y: scroll;
-  // scrollbar-width: none;
+  background-color: rgba($color: $accent-color, $alpha: .95);
+  overflow-y: scroll;
+  scrollbar-width: none;
+  transition: .6s;
+}
+
+.header__drawer.is-open {
+  right: 0;
 }
 
 .header__drawer::-webkit-scrollbar {
-  display: none;
+  // display:none;
 }
 
-.header__drawer-inner {
-  padding: 0 rem(14);
-  height: 100%;
-  overflow-y: scroll;
-  scrollbar-width: none;
+.header__drawer--btn {
+  // position: fixed;
+  // z-index: 1;
+  text-align: center;
 }
 
-.header__drawer-contents {
+.header__drawer-nav {
+  padding-left: rem(24);
   margin-top: rem(24);
-  display: flex;
-  //gap: rem(29);
-  padding-left: rem(23);
 }
 
-.header__drawer-wrap {
-  width: 50%;
-}
-
-.header__drawer-wrap + .header__drawer-wrap {
-  padding-left: rem(11);
-}
-
-// .header__drawer-nav {
-
-// }
-
-// .header__drawer-nav:nth-child(2n) {
-//   margin-top: rem(40);
-// }
-
-// .header__drawer-items {
-//   flex-shrink: 0;
-// }
-
-// .header__drawer-item a {
-//   max-width: rem(144);
-//   display: block;
-//   color: $base-color;
-//   line-height: calc(18 / 16);
-//   position: relative;
-// }
-
-// .header__drawer-item:nth-child(n + 2) a {
-//   margin-top: rem(24);
-// }
-
-// .header__drawer-item a span {
-//   position: relative;
-//   display: inline-block;
-//   font-weight: $bold;
-//   max-width: rem(112);
-// }
-
-// .header__drawer-item:nth-child(n + 2) a span  {
-//   margin-top: rem(16);
-// }
-
-// .header__drawer-item a span::before {
-//   content: "";
-//   position: absolute;
+// .header__drawer-bg {
+//   display: none;
+//   position: fixed;
 //   top: 0;
-//   left: rem(-22);
-//   right: 0;
-//   width: rem(18);
-//   height: rem(18);
-//   background-image: url(../images/common/starmusic.png);
-//   background-repeat: no-repeat;
-//   background-position: center center;
-//   background-size: contain;
+//   left: 0;
+//   width: 100%;
+//   height: 100vh;
+//   background-color: #3E3E3E;
+//   opacity: 0.7;
+//   z-index: 899;
+//   transition: .6s;
+// }
+
+// .header__drawer-bg.is-open {
+//   display: block;
+//   transition: .6s;
 // }
 

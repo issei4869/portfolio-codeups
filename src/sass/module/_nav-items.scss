@@ -19,6 +19,10 @@
   }
 }
 
+.nav-items--drawer > li > a  {
+  color: $base-color;
+}
+
 //アイコン付与
 .nav-items > li > a::before {
   content: "";
@@ -35,13 +39,23 @@
   background-color: $accent-color;
 }
 
+.nav-items--drawer > li > a::before  {
+  background-color: $base-color;
+}
+
 .nav-items__item {
   // max-width: rem(144);
   width: 100%;
   @include mq(md){
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: rem(20);
+    grid-template-columns: repeat(4, 1fr);
+    gap: rem(3);
+  }
+}
+
+.nav-items__item--price {
+  @include mq('md') {
+    
   }
 }
 
@@ -52,6 +66,10 @@
   line-height: calc(18 / 16);
   width: 100%;
   display: inline-block;
+}
+
+.nav-items__item-category--drawer a {
+  color: $base-color;
 }
 
 .nav-items__item-category a:hover {
