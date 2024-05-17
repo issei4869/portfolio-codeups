@@ -1,14 +1,14 @@
 <?php get_header(); ?>
 <main>
   <!-- MVセクション -->
-  <section class="mv mv--sub">
+  <section class="mv mv--sub dark">
     <div class="mv__inner">
       <div class="mv__title-wrap mv__title-wrap--sub">
         <h2 class="mv__main-title mv__main-title--sub">Course & Price</h2>
       </div>
       <div class="mv__swiper">
         <picture class="mv__swiper-img">
-          <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/campaign-mv.jpeg" alt="コースページMV画像">
+          <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/campaign-mv.jpeg" alt="">
         </picture>
       </div>
     </div>
@@ -44,9 +44,9 @@
             <li id="sub-campaign1" data-id="#sub-campaign1" class="sub-campaign-items__item campaign-card">
               <div class="campaign-card__img">
                 <?php if (has_post_thumbnail()) : ?>
-                  <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>のアイキャッチ画像">
+                  <img src="<?php the_post_thumbnail_url('full'); ?>" alt="">
                 <?php else: ?>
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/noimage.png" alt="NOIMAGE表示">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/noimage.png" alt="">
                 <?php endif; ?>
               </div>
               <div class="campaign-card__content campaign-card__content--sub">
@@ -154,7 +154,7 @@
           <table id="sub-price1" data-id="#sub-price1" class="sub-price__list sub-price-list">
             <caption class="sub-price-list__head u-mobile">
               <div class="sub-price-list__wrapper sub-price-list__wrapper--vocal">
-                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/vocal-icon_white.png" alt="エレキギターアイコン">
+                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/vocal-icon_white.png" alt="マイク">
                 <span>入会金</span>
               </div>
             </caption>
@@ -162,7 +162,7 @@
               <tr>
                 <th rowspan="1000" class="sub-price-list__head u-desktop">
                   <div class="sub-price-list__wrapper sub-price-list__wrapper--vocal">
-                    <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/vocal-icon_white.png" alt="エレキギターアイコン">
+                    <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/vocal-icon_white.png" alt="マイク">
                     <span>入会金</span>
                   </div>
                 </th>
@@ -184,7 +184,7 @@
           <table id="sub-price2" data-id="#sub-price2" class="sub-price__list sub-price-list">
             <caption class="sub-price-list__head u-mobile">
               <div class="sub-price-list__wrapper">
-                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/guitar-icon_white.png" alt="エレキギターアイコン">
+                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/guitar-icon_white.png" alt="エレキギター">
                 <span>高校生～大人</span>
               </div>
             </caption>
@@ -192,7 +192,7 @@
               <tr class="sub-price-list__head">
                 <th rowspan="1000" class="sub-price-list__head u-desktop">
                   <div class="sub-price-list__wrapper">
-                    <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/guitar-icon_white.png" alt="エレキギターアイコン">
+                    <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/guitar-icon_white.png" alt="エレキギター">
                     <span>高校生～大人</span>
                   </div>
                 </th>
@@ -214,7 +214,7 @@
           <table id="sub-price3" data-id="#sub-price3" class="sub-price__list sub-price-list">
             <caption class="sub-price-list__head u-mobile">
               <div class="sub-price-list__wrapper">
-                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/drum-icon_white.png" alt="エレキギターアイコン">
+                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/drum-icon_white.png" alt="ドラム">
                 <span>中学生</span>
               </div>
             </caption>
@@ -222,7 +222,7 @@
               <tr class="sub-price-list__head">
                 <th rowspan="1000" class="sub-price-list__head u-desktop">
                   <div class="sub-price-list__wrapper">
-                    <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/drum-icon_white.png" alt="エレキギターアイコン">
+                    <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/drum-icon_white.png" alt="ドラム">
                     <span>中学生</span>
                   </div>
                 </th>
@@ -244,7 +244,7 @@
           <table id="sub-price4" data-id="#sub-price4" class="sub-price__list sub-price-list">
             <caption class="sub-price-list__head u-mobile">
               <div class="sub-price-list__wrapper">
-                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/piano-icon_white.png" alt="エレキギターアイコン">
+                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/piano-icon_white.png" alt="ピアノ">
                 <span>幼児～小学生</span>
               </div>
             </caption>
@@ -252,7 +252,7 @@
               <tr class="sub-price-list__head">
                 <th rowspan="1000" class="sub-price-list__head u-desktop">
                   <div class="sub-price-list__wrapper">
-                    <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/piano-icon_white.png" alt="エレキギターアイコン">
+                    <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/piano-icon_white.png" alt="ピアノ">
                     <span>幼児～小学生</span>
                   </div>
                 </th>

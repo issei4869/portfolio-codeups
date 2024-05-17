@@ -1,4 +1,4 @@
-<section class="mv">
+<section class="mv dark">
   <div class="mv__inner">
     <div class="mv__title-wrap">
       <h2 class="mv__main-title">MUSIC</h2>

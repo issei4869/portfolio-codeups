@@ -1,14 +1,14 @@
 <?php get_header(); ?>
 <main>
   <!-- MVセクション -->
-  <section class="mv mv--sub">
+  <section class="mv mv--sub dark">
     <div class="mv__inner">
       <div class="mv__title-wrap mv__title-wrap--sub">
         <h2 class="mv__main-title mv__main-title--sub">FAQ</h2>
       </div>
       <div class="mv__swiper">
         <picture class="mv__swiper-img">
-          <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/faq-mv.jpeg" alt="よくある質問ページMV画像">
+          <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/faq-mv.jpeg" alt="">
         </picture>
       </div>
     </div>

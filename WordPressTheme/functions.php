@@ -128,10 +128,7 @@ function my_widget_init() {
       'id' => 'sidebar',
       'before_widget' => '<div id ="%1$s" class="widget %2$s">',
       'after_widget' => '</div>',
-      'before_title' => '<div class="blog-sidebar__title sidebar-header">
-      <span class="sidebar-header__icon">
-      <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/sub-information-tab-img1.svg" alt="クジラのアイコン">
-      <div class="sidebar-header__title">',
+      'before_title' => '<div class="blog-sidebar__title sidebar-header">',
       'after_title' => '</div>
       </div>',
     )

@@ -1,8 +1,6 @@
 <?php get_header(); ?>
 <main>
-    <!-- MVセクション -->
-
-    <!-- スライダー選択用ファイル -->
+    <!-- MVスライダー選択用ファイル -->
     <?php get_template_part('parts/project/mv'); ?>
 
     <!-- About usセクション -->
@@ -18,7 +16,7 @@
         <div class="aboutus__wrap">
           <picture class="aboutus__img">
             <source media="(min-width: 767px)" srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/aboutus1.jpg">
-            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/aboutus4.jpg" alt="ライブハウスでのライブ画像">
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/aboutus4.jpg" alt="">
           </picture>
           <div class="aboutus__wrap-right">
             <div class="aboutus__main-title">
@@ -71,9 +69,9 @@
                       <div class="campaign-card">                        
                         <div class="campaign-card__img">
                         <?php if (has_post_thumbnail()) : ?>
-                          <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>のアイキャッチ画像">
+                          <img src="<?php the_post_thumbnail_url('full'); ?>" alt="">
                         <?php else: ?>
-                          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/noimage.png" alt="NOIMAGE表示">
+                          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/noimage.png" alt="">
                         <?php endif; ?>
                         </div>
                         <div class="campaign-card__content">
@@ -154,7 +152,7 @@
         <ul class="information__items">
           <li class="information__item information-item">
             <div class="information-item__img colorbox js-color">
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/information2.jpeg" alt="音楽スタジオの画像">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/information2.jpeg" alt="">
             </div>
             <div class="information-item__wrap">
               <h3 class="information-item__title">防音室無料</h3>
@@ -167,7 +165,7 @@
           </li>
           <li class="information__item information-item information-item--second">
             <div class="information-item__img colorbox js-color">
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/information1.jpeg" alt="楽器の画像">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/information1.jpeg" alt="">
             </div>
             <div class="information-item__wrap information-item__wrap--second">
               <h3 class="information-item__title">楽器貸出無料</h3>
@@ -179,7 +177,7 @@
           </li>
           <li class="information__item information-item">
             <div class="information-item__img colorbox js-color">
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/information3.jpeg" alt="ライブハウスの画像">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/information3.jpeg" alt="">
             </div>
             <div class="information-item__wrap">
               <h3 class="information-item__title">年2回の発表会</h3>
@@ -261,9 +259,9 @@
                       <!-- 右側の画像 -->
                       <div class="voice-card__img colorbox js-color">
                         <?php if (has_post_thumbnail()) : ?>
-                          <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>のアイキャッチ画像">
+                          <img src="<?php the_post_thumbnail_url('full'); ?>" alt="">
                         <?php else: ?>
-                          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/noimage.png" alt="NOIMAGE表示">
+                          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/noimage.png" alt="">
                         <?php endif; ?>
                       </div>
                     </div>
@@ -309,9 +307,9 @@
                         <div class="blog-sidebar-card__wrap">
                           <div class="blog-sidebar-card__img colorbox colorbox--blog js-color">
                             <?php if (has_post_thumbnail()) : ?>
-                              <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>のアイキャッチ画像">
+                              <img src="<?php the_post_thumbnail_url('full'); ?>" alt="">
                             <?php else: ?>
-                              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/noimage.png" alt="NOIMAGE表示">
+                              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/noimage.png" alt="">
                             <?php endif; ?>
                           </div>
                           <div class="blog-sidebar-card__content">

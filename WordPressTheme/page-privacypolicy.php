@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <main>
   <!-- MVセクション -->
-  <section class="mv mv--sub">
+  <section class="mv mv--sub dark">
     <div class="mv__inner">
       <div class="mv__title-wrap mv__title-wrap--sub">
         <h2 class="mv__main-title mv__main-title--sub">Privacy Policy</h2>

@@ -918,6 +918,7 @@ a {
 
 .campaign-card__category {
 	border: 0.0625rem solid #B7AA00;
+	border-radius: 20px;
 	color: #B7AA00;
 	display: inline-block;
 	flex-shrink: 0;
@@ -1030,6 +1031,7 @@ a {
 .category-tab-item {
 	background-color: #fff;
 	border: 1px solid #B7AA00;
+	border-radius: 20px;
 	color: #B7AA00;
 	cursor: pointer;
 	flex-shrink: 0;
@@ -1233,6 +1235,22 @@ a {
 .contactform__inner.inner {
 	max-width: 46.875rem;
 	width: 100%;
+}
+
+.dark {
+	position: relative;
+}
+
+.dark::before {
+	background: rgba(0, 0, 0, 0.3);
+	content: "";
+	display: block;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 2;
 }
 
 .error {
@@ -2039,6 +2057,10 @@ a {
 	margin-top: 1rem;
 }
 
+.information {
+	position: relative;
+}
+
 .information__items {
 	margin: 0 auto;
 	margin-top: 1.5rem;
@@ -2581,6 +2603,7 @@ a {
 
 .voice-card__category {
 	border: 0.0625rem solid #B7AA00;
+	border-radius: 20px;
 	color: #B7AA00;
 	display: inline-block;
 	flex-shrink: 0;
@@ -2922,6 +2945,26 @@ html {
 
 .layout-wrapper {
 	margin-top: 8.75rem;
+}
+
+.aboutus::before {
+	-webkit-mask-image: url(../images/common/musicalnote1.png);
+	-webkit-mask-position: center center;
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-size: cover;
+	background-color: #B7AA00;
+	bottom: -5.5625rem;
+	content: "";
+	height: 9.75rem;
+	mask-image: url(../images/common/musicalnote1.png);
+	mask-position: center center;
+	mask-repeat: no-repeat;
+	mask-size: cover;
+	position: absolute;
+	right: calc(50% - min(48%, 39.8125rem));
+	transform: rotate(15deg);
+	width: 9.75rem;
+	z-index: 100;
 }
 
 .aboutus__inner.inner {
@@ -3490,6 +3533,44 @@ html {
 
 .information-tab__content {
 	margin-top: 1.5rem;
+}
+
+.information::before {
+	-webkit-mask-image: url(../images/common/musicalnote3.png);
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center center;
+	-webkit-mask-size: cover;
+	background-color: #B7AA00;
+	content: "";
+	left: calc(50% - min(48%, 38.6875rem));
+	mask-image: url(../images/common/musicalnote3.png);
+	mask-position: center center;
+	mask-repeat: no-repeat;
+	mask-size: cover;
+	min-height: 7rem;
+	min-width: 7rem;
+	position: absolute;
+	top: -7.375rem;
+	transform: rotate(-15deg);
+}
+
+.information::after {
+	-webkit-mask-image: url(../images/common/musicalnote2.png);
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center center;
+	-webkit-mask-size: cover;
+	background-color: #B7AA00;
+	bottom: -4.25rem;
+	content: "";
+	mask-image: url(../images/common/musicalnote2.png);
+	mask-position: center center;
+	mask-repeat: no-repeat;
+	mask-size: cover;
+	min-height: 5rem;
+	min-width: 6.4375rem;
+	position: absolute;
+	right: calc(50% - min(47%, 33.75rem));
+	transform: rotate(15deg);
 }
 
 .information__items {

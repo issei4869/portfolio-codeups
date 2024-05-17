@@ -41,15 +41,15 @@
       <div class="footer__top">
         <div class="footer__logo">
           <a href="<?php echo esc_url( home_url( '/' ) )?>">
-            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/logo_yellow8.png" alt="白いCodeUpsのロゴ">
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/logo_yellow8.png" alt="ハセガワミュージックスクール">
           </a>
         </div>
         <div class="footer__sns">
           <a class="footer__sns-icon" href="https://www.facebook.com" target="_blank" rel="noopener">
-            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/facebookLogo-yellow.svg" alt="Facebookのアイコン">
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/facebookLogo-yellow.svg" alt="Facebook">
           </a>
           <a class="footer__sns-icon" href="https://www.instagram.com" target="_blank" rel="noopener">
-            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/InstagramLogo-yellow.svg" alt="インスタグラムのアイコン">
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/InstagramLogo-yellow.svg" alt="Instagram">
           </a>
         </div>
         <div class="footer__btn">
@@ -124,7 +124,7 @@
     <small class="footer__copyright">Copyright &copy; 2024 Hasegawa Music School LLC. All Rights Reserved.</small>
   </div>
 </footer>
-<div class="page-top" id="page-topbtn"><a href="#"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/totop-yellow1.png" alt="上にスクロールするボタン"></a></div>
+<div class="page-top" id="page-topbtn"><a href="#"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/totop-yellow1.png" alt="上スクロール"></a></div>
 <!-- functions.phpを読み込むために必要 -->
 <?php wp_footer(); ?>
 <?php if (is_404()){ echo '</div>'; }; ?>

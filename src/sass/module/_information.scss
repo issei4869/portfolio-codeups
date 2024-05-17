@@ -1,11 +1,45 @@
 @use 'global' as *;
 
 .information {
-  
+  position: relative;
 }
 
 .information__inner {
   
+}
+
+.information::before {
+  @include mq('md') {
+    content: "";
+    position: absolute;
+    mask-image: url(../images/common/musicalnote3.png);
+    mask-repeat: no-repeat;
+    mask-position: center center;
+    mask-size: cover;
+    background-color: $accent-color;
+    top: rem(-118);
+    left: calc(50% - min(48%, rem(619)));
+    min-width: rem(112);
+    min-height: rem(112);
+    transform: rotate(-15deg);
+  }
+}
+
+.information::after {
+  @include mq('md') {
+    content: "";
+    position: absolute;
+    mask-image: url(../images/common/musicalnote2.png);
+    mask-repeat: no-repeat;
+    mask-position: center center;
+    mask-size: cover;
+    background-color: $accent-color;
+    bottom: rem(-68);
+    right: calc(50% - min(47%, rem(540)));
+    min-width: rem(103);
+    min-height: rem(80);
+    transform: rotate(15deg);
+  }
 }
 
 .information__items {

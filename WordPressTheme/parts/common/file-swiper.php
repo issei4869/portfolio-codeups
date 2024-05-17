@@ -11,10 +11,10 @@
         $image_pc = wp_get_attachment_image_src($image_pc_id, 'large');
         //$image_pcが配列であることを確認し、配列の場合、[0]番目の要素（画像のURL）を取得、そうでない場合、""とする
         $image_pc_src = is_array($image_pc) ? $image_pc[0] : '';
-        $image_sp_id = get_post_meta(get_the_ID(), 'slide_img_sp', true);
-        $image_sp = wp_get_attachment_image_src($image_sp_id, 'large');
+        // $image_sp_id = get_post_meta(get_the_ID(), 'slide_img_sp', true);
+        // $image_sp = wp_get_attachment_image_src($image_sp_id, 'large');
         //$image_spが配列であることを確認し、配列の場合、[0]番目の要素（画像のURL）を取得、そうでない場合、$image_pc_srcとする
-        $image_sp_src = is_array($image_sp) ? $image_sp[0] : $image_pc_src;
+        // $image_sp_src = is_array($image_sp) ? $image_sp[0] : $image_pc_src;
 
         $image_alt = get_post_meta(get_the_ID(), 'slide_img_alt', true);
         $image_url = get_post_meta(get_the_ID(), 'slide_img_url', true);
@@ -27,8 +27,9 @@
           <<?php echo $tag . $href; ?> class="file-swiper__slide swiper-slide">
             <picture class="file-swiper__img">
               <!-- スマホ用画像とPC用画像を指定 -->
-              <source media="(min-width: 376px)" srcset="<?php echo esc_url($image_pc_src); ?>">
-              <img src="<?php echo esc_url($image_sp_src); ?>" alt="<?php echo esc_attr($image_alt); ?>" loading="lazy">
+              <!-- <source media="(min-width: 376px)" srcset="<?php echo esc_url($image_pc_src); ?>"> -->
+              <!-- <img src="<?php echo esc_url($image_sp_src); ?>" alt="<?php echo esc_attr($image_alt); ?>" loading="lazy"> -->
+              <img src="<?php echo esc_url($image_pc_src); ?>" alt="<?php echo esc_attr($image_alt); ?>" loading="lazy">
             </picture>
 
             <!-- 以下は、image_textを使用する場合使います -->
@@ -48,8 +49,7 @@
     ?>
       <div class="file-swiper__slide swiper-slide">
         <picture class="file-swiper__img">
-          <source media="(min-width: 376px)" srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/mv1_pc.jpg">
-          <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/mv1_sp.jpg" alt="亀の画像">
+          <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/mv1_sp.jpg" alt="">
         </picture>
       </div>
     <?php

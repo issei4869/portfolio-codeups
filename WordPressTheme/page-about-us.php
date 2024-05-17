@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <main>
     <!-- MVセクション -->
-    <section class="mv mv--sub">
+    <section class="mv mv--sub dark">
     <div class="mv__inner">
       <div class="mv__title-wrap mv__title-wrap--sub">
         <h2 class="mv__main-title mv__main-title--sub">About us</h2>
@@ -23,7 +23,7 @@
       <div class="aboutus__wrap aboutus__wrap--sub">
         <picture class="aboutus__img">
           <source media="(min-width: 767px)" srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/aboutus1.jpg">
-          <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/aboutus4.jpg" alt="ライブハウスでのライブ画像">
+          <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/aboutus4.jpg" alt="">
         </picture>
         <div class="aboutus__wrap-right">
           <div class="aboutus__main-title">
@@ -59,9 +59,12 @@
           // $fields = SCF::get_option_meta('aboutus_options', 'aboutus');
           foreach ($fields as $field):
           $image_url = wp_get_attachment_image_src($field['gallery'] , 'full');
+          $image_alt = esc_html($field['alttext'] , 'full');
+          // $sample_image_data = get_post(SCF::get('aboutus_options'));
+          // $image_alt = get_post_meta($sample_image_data->ID, '_wp_attachment_image_alt', true );
         ?>
           <li class="gallery-list__item js-gallery-list__item">
-            <img src="<?php echo $image_url[0]; ?>" alt="ギャラリー画像" />
+            <img src="<?php echo $image_url[0]; ?>" alt="<?php echo $image_alt; ?>" />
           </li>
         <?php endforeach; ?>
         </ul>

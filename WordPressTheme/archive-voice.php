@@ -1,14 +1,14 @@
 <?php get_header(); ?>
 <main>
   <!-- MVセクション -->
-  <section class="mv mv--sub">
+  <section class="mv mv--sub dark">
     <div class="mv__inner">
       <div class="mv__title-wrap mv__title-wrap--sub">
         <h2 class="mv__main-title mv__main-title--sub">Voice</h2>
       </div>
       <div class="mv__swiper">
         <picture class="mv__swiper-img">
-          <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/voice-mv.jpeg" alt="生徒様の声ページMV画像">
+          <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/voice-mv.jpeg" alt="">
         </picture>
       </div>
     </div>
@@ -69,9 +69,9 @@
                 <!-- 右側の画像 -->
                 <div class="voice-card__img colorbox js-color">
                   <?php if (has_post_thumbnail()) : ?>
-                    <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>のアイキャッチ画像">
+                    <img src="<?php the_post_thumbnail_url('full'); ?>" alt="">
                   <?php else: ?>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/noimage.png" alt="NOIMAGE表示">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/noimage.png" alt="">
                   <?php endif; ?>
                 </div>
               </div>

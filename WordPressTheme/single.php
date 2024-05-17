@@ -6,7 +6,7 @@
         <?php get_template_part( '404' ); ?>
       <?php else : ?>
   <!-- MVセクション -->
-  <section class="mv mv--sub">
+  <section class="mv mv--sub dark">
     <div class="mv__inner">
       <div class="mv__title-wrap mv__title-wrap--sub">
         <h2 class="mv__main-title mv__main-title--sub">Blog</h2>
@@ -36,9 +36,9 @@
               </div>
               <div class="single-blog__img">
                 <?php if (has_post_thumbnail()) : ?>
-                  <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>のアイキャッチ画像">
+                  <img src="<?php the_post_thumbnail_url('full'); ?>" alt="">
                 <?php else: ?>
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/noimage.png" alt="NOIMAGE表示">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/noimage.png" alt="">
                 <?php endif; ?>
               </div>
               <!-- ループ -->
