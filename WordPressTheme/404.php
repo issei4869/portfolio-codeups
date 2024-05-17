@@ -3,7 +3,7 @@
 <!-- パンくず -->
 <?php get_template_part('parts/breadcrumb') ?>
 
-<section class="error">
+<section class="layout-error error">
   <div class="error__inner">
     <div class="error__content">
       <h2 class="error__title">404</h2>

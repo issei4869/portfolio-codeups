@@ -197,7 +197,7 @@ a {
 }
 
 .layout-error {
-	margin-top: 0.5rem;
+	margin-top: -0.0625rem;
 }
 
 .layout-faq {
@@ -737,30 +737,6 @@ a {
 	color: #B7AA00;
 }
 
-.btn-h {
-	bottom: 0;
-	display: table;
-	height: 3.75rem;
-	margin: 0 auto;
-	opacity: 0;
-	position: fixed;
-	transition: 0.3s;
-	width: 100%;
-	z-index: -1;
-}
-
-.btn-h.fixed {
-	opacity: 1;
-	z-index: 100;
-}
-
-.btn-h a {
-	color: #fff;
-	display: table-cell;
-	text-align: center;
-	vertical-align: middle;
-}
-
 .btn {
 	background: transparent;
 	border: 1px solid #B7AA00;
@@ -772,24 +748,6 @@ a {
 	position: relative;
 	transition: 0.5s;
 	z-index: 1;
-}
-
-.btn--red {
-	border: 1px solid #f26651;
-}
-
-.btn--drawer {
-	align-items: center;
-	display: inline-flex;
-	height: 3.125rem;
-	justify-content: center;
-	max-width: 14.375rem;
-	padding: 1.5rem 1.25rem;
-	width: 100%;
-}
-
-.btn--sp {
-	padding: 0;
 }
 
 .btn::before,
@@ -809,27 +767,47 @@ a {
 	z-index: -1;
 }
 
-.btn--red::before {
-	background: #f26651;
-}
-
 .btn::after {
 	border: 1px solid #B7AA00;
 	box-sizing: border-box;
 	z-index: -1;
 }
 
+.btn:hover::before {
+	opacity: 0;
+	transform: scale(0);
+}
+
+.btn span {
+	position: relative;
+}
+
+.btn:hover span {
+	color: #B7AA00;
+}
+
+.btn--red {
+	border: 1px solid #f26651;
+}
+
+.btn--red::before {
+	background: #f26651;
+}
+
 .btn--red::after {
 	border: 1px solid #f26651;
 }
 
-.btn--sp:hover {
-	background-color: #fff;
+.btn--red:hover span {
+	color: #f26651;
 }
 
-.btn:hover::before {
-	opacity: 0;
-	transform: scale(0);
+.btn--sp {
+	padding: 0;
+}
+
+.btn--sp:hover {
+	background-color: #fff;
 }
 
 .btn--sp,
@@ -838,43 +816,35 @@ a {
 	border-radius: 0;
 }
 
-.btn--404 {
-	background-color: #fff;
-	border: 0.0625rem solid #fff;
-	padding-left: 2.5rem;
-	padding-right: 6.25rem;
+.btn--drawer {
+	align-items: center;
+	display: inline-flex;
+	height: 3.125rem;
+	justify-content: center;
+	max-width: 14.375rem;
+	padding: 1.5rem 1.25rem;
+	width: 100%;
 }
 
-.btn--404::after {
+.btn--404 {
+	background-color: #fff;
+	border: 1px solid #fff;
+}
+
+.btn--404::before {
 	background: #B7AA00;
 }
 
-.btn span {
-	position: relative;
+.btn--404::after {
+	border: 1px solid #fff;
 }
 
-.btn--404 span {
-	color: #B7AA00;
-}
-
-.btn--404 span::after {
-	background-color: #B7AA00;
-}
-
-.btn:hover span {
-	color: #B7AA00;
-}
-
-.btn--red:hover span {
-	color: #f26651;
-}
-
-.btn--404:hover span {
+.btn--404::span {
 	color: #fff;
 }
 
-.btn--404:hover span::after {
-	background-color: #fff;
+.btn--404:hover {
+	color: #B7AA00;
 }
 
 .campaign-card {
@@ -1254,6 +1224,7 @@ a {
 }
 
 .error {
+	background-color: #B7AA00;
 	background-image: url(../images/common/404.png);
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -2877,10 +2848,6 @@ html {
 
 .layout-contactform {
 	margin-top: 9.375rem;
-}
-
-.layout-error {
-	margin-top: 0.5rem;
 }
 
 .layout-faq {
