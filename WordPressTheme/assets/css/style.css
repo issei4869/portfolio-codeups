@@ -1392,6 +1392,11 @@ a {
 	padding: 0 0.875rem;
 }
 
+.footer__logo {
+	margin: 0 auto;
+	max-width: 10rem;
+}
+
 .footer__logo a {
 	display: block;
 }
@@ -3297,6 +3302,13 @@ html {
 	margin: 0 auto;
 	margin-top: 0;
 	padding-left: 4.375rem;
+}
+
+.footer__logo {
+	margin: 0;
+	margin: initial;
+	max-width: none;
+	max-width: initial;
 }
 
 .footer__sns {

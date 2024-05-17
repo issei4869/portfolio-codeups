@@ -59,7 +59,7 @@
                 </a>
               </div>
               <li>
-                <a href="<?php echo esc_url( home_url( '/aboutus/' ) )?>">私たちについて</a>
+                <a href="<?php echo esc_url( home_url( '/about-us/' ) )?>">私たちについて</a>
               </li>
               <li>
                 <a href="<?php echo esc_url( home_url( '/campaign/' ) )?>">コース</a>

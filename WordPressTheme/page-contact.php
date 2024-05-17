@@ -21,7 +21,7 @@
   <div class="layout-contactform contactform">
     <div class="background">
       <div class="contactform__inner inner">
-          <?php echo do_shortcode('[contact-form-7 id="049ca21" title="お問い合わせ"]'); ?>
+          <?php echo do_shortcode('[contact-form-7 id="049ca21" title="無料体験申込"]'); ?>
       </div>
     </div>
   </div>

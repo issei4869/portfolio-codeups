@@ -45,6 +45,15 @@
   }
 }
 
+.footer__logo {
+  max-width: rem(160);
+  margin: 0 auto;
+  @include mq('md') {
+    max-width: initial;
+    margin: initial;
+  }
+}
+
 .footer__logo a {
   //padding: rem(10) 0;
   display: block;
