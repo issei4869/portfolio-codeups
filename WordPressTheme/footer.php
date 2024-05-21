@@ -46,7 +46,7 @@
         </div>
         <div class="footer__sns">
           <a class="footer__sns-icon" href="https://www.facebook.com" target="_blank" rel="noopener">
-            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/facebookLogo-yellow.svg" alt="Facebook">
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/FacebookLogo-yellow.svg" alt="Facebook">
           </a>
           <a class="footer__sns-icon" href="https://www.instagram.com" target="_blank" rel="noopener">
             <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/InstagramLogo-yellow.svg" alt="Instagram">

@@ -1,7 +1,7 @@
 @use 'global' as *;
 
 .blog-card {
- 
+  transition: all .3s;
 }
 
 .blog-card a {
@@ -21,12 +21,11 @@
   width: 100%;
   aspect-ratio: 301/201;
   object-fit: cover;
-  transition: all .3s;
   border-radius: 45px;
 }
 
-.blog-card:hover .blog-card__img img {
-  opacity: 0.7;
+.blog-card:hover {
+  opacity: 0.5;
 }
 
 .blog-card__meta {

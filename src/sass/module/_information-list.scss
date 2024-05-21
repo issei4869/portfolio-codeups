@@ -62,15 +62,16 @@
   line-height: calc(24 / 20);
   font-weight: $bold;
   border-bottom: rem(1) solid $accent-color;
-  padding-bottom: rem(6);
+  padding-bottom: rem(11);
   @include mq(md){
     font-size: rem(24);
     line-height: 1;
+    padding-bottom: rem(10);
   }
 }
 
 .information-item__text {
-  margin-top: rem(8);
+  margin-top: rem(12);
   line-height: calc(24 / 16);
   @include mq(md){
 

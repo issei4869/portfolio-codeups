@@ -344,28 +344,28 @@
         <!-- Googleマップ -->
         <div class="access__wrapper">
           <!-- テキスト -->
-          <div class="access__address company-profile">
-            <dl class="company-profile__list">
+          <dl class="access__address company-profile">
+            <div class="company-profile__list">
               <dt class="company-profile__term">アクセス</dt>
               <dd class="company-profile__description">東武宇都宮駅/東武宇都宮線 徒歩17分</dd>
-            </dl>
-            <dl class="company-profile__list">
+            </div>
+            <div class="company-profile__list">
               <dt class="company-profile__term">開校時間</dt>
               <dd class="company-profile__description">9:00-21:00</dd>
-            </dl>
-            <dl class="company-profile__list">
+            </div>
+            <div class="company-profile__list">
               <dt class="company-profile__term">休校日</dt>
               <dd class="company-profile__description">毎週水曜日、年末年始</dd>
-            </dl>
-            <dl class="company-profile__list">
+            </div>
+            <div class="company-profile__list">
               <dt class="company-profile__term">電話</dt>
               <dd class="company-profile__description"><a href="tel:0120-000-0000">0120-000-0000</a></dd>
-            </dl>
-            <dl class="company-profile__list">
+            </div>
+            <div class="company-profile__list">
               <dt class="company-profile__term">住所</dt>
               <dd class="company-profile__description">栃木県宇都宮市河原町</dd>
-            </dl>
-          </div>
+            </div>
+          </dl>
           <!-- マップ -->
           <div class="access__map">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1602.5841614942458!2d139.88310398884965!3d36.5500541930799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601f6790924e9343%3A0xaf400a8827bab514!2z44CSMzIwLTA4MjIg5qCD5pyo55yM5a6H6YO95a6u5biC5rKz5Y6f55S6!5e0!3m2!1sja!2sjp!4v1713857348731!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

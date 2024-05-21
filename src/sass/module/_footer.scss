@@ -1,7 +1,7 @@
 @use 'global' as *;
 
 .footer {
-  padding: rem(48) 0 rem(56);
+  padding: rem(48) 0 rem(116);
   background-color: $base-color;
   @include mq(md){
     padding: rem(80) 0;
@@ -127,7 +127,7 @@
 
 .footer__logo:hover,
 .footer__sns-icon:hover {
-  opacity: 0.7;
+  opacity: 0.5;
 }
 
 .footer__copyright {

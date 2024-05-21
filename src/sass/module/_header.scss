@@ -36,7 +36,7 @@
 }
 
 .header__logo:hover {
-  opacity: 0.7;
+  opacity: 0.5;
 }
 
 .header__logo a {
@@ -126,7 +126,7 @@
   border: none;
   position: relative;
   z-index: 999;
-  width: rem(32);
+  width: rem(40);
   height: inherit;
   cursor: pointer;
   transition: .3s;
@@ -144,14 +144,14 @@
   left: 50%;
   transform: translateX(-50%);
   display: block;
-  width: rem(32);
+  width: rem(40);
   height: rem(1);
   background-color: $accent-color;
   transition: .5s;
 }
 
 .header__hamburger span:nth-of-type(1) {
-  top: rem(-11);
+  top: rem(-15);
 }
 
 .header__hamburger span:nth-of-type(2) {
@@ -159,7 +159,7 @@
 }
 
 .header__hamburger span:nth-of-type(3) {
-  top: rem(11);
+  top: rem(15);
 }
 
 .header__hamburger.is-open span:nth-of-type(1) {
@@ -184,7 +184,7 @@
   z-index: 900;
   top: 0;
   right: -120%;
-  width: 46%;
+  width: 50%;
   height: 100vh;
   background-color: rgba($color: $accent-color, $alpha: .95);
   overflow-y: scroll;

@@ -22,7 +22,7 @@
 
 .form-submit input:hover {
   @include mq(md){
-    opacity: .8;
+    opacity: 0.5;
   }
 }
 

@@ -8,7 +8,7 @@
       </div>
       <div class="mv__swiper">
         <picture class="mv__swiper-img">
-          <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/campaign-mv.jpeg" alt="">
+          <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/campaign-mv2.jpeg" alt="">
         </picture>
       </div>
     </div>
